@@ -7,7 +7,7 @@ by Jesús Gil Ruiz (Science and Aerospace Department, Universidad Europea
 de Madrid), Yudith Cardinale and David Ariza Ruiz (Universidad
 Internacional de Valencia).
 
-[![DOI](https://zenodo.org/badge/DOI/ZENODO_CONCEPT_DOI.svg)](https://doi.org/ZENODO_CONCEPT_DOI)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22862639.svg)](https://doi.org/10.5281/zenodo.22862639)
 
 This deposit contains **data, code, results and figures only**. It does
 not contain the manuscript text, and is not a preprint.
@@ -103,7 +103,9 @@ Cite the manuscript and this deposit. The concept DOI below always
 resolves to the latest version; the version DOI pins the exact snapshot
 used by the manuscript.
 
-- Concept DOI (all versions): `ZENODO_CONCEPT_DOI`
-- Version DOI (v1.0.0): `ZENODO_VERSION_DOI`
+- Concept DOI (all versions): `10.5281/zenodo.22862639`
+
+Each release also gets its own version DOI, listed on the concept DOI's
+Zenodo page; the manuscript cites the exact version it used.
 
 Author metadata for the archived record comes from `CITATION.cff`.
