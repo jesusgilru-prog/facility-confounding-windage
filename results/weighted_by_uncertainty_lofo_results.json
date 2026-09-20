@@ -1,0 +1,23 @@
+{
+  "n": 114,
+  "weighted_1_over_error_pct_sq": {
+    "per_facility_r2": {
+      "Guo2024": -9.116077226863887,
+      "Liu2024": -165.46238335406485,
+      "Vrancik1968": -1.724576310033954,
+      "Zheng2024": -342.3359113978791
+    },
+    "pooled_r2": -0.8356648279271361
+  },
+  "unweighted_baseline_pooled_r2_for_reference": -0.885,
+  "excluding_worst_uncertainty_point_error_pct_ge_83": {
+    "n_excluded": 1,
+    "per_facility_r2": {
+      "Guo2024": -8.90432479946174,
+      "Liu2024": -113.5235891759608,
+      "Vrancik1968": -1.7570952563290794,
+      "Zheng2024": -6406.776212069275
+    },
+    "pooled_r2": -0.8339957009678531
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "n_points": 114,
+  "facilities": [
+    "Guo2024",
+    "Liu2024",
+    "Vrancik1968",
+    "Zheng2024"
+  ],
+  "feature_sets": {
+    "M6_Re_gap_conf_asp": {
+      "feature_names": [
+        "log_Re",
+        "log_Pi_gap",
+        "log_Pi_confinement",
+        "log_Pi_aspect_axial"
+      ],
+      "models": {
+        "OLS": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "held_out_r2_log": -8.986612059551176,
+              "held_out_rmse_log": 2.574584388755978,
+              "held_out_mean_resid_log": -2.3711219074235528,
+              "held_out_std_resid_log": 1.0031279454596436
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "held_out_r2_log": -118.63018606035297,
+              "held_out_rmse_log": 0.9556084177859699,
+              "held_out_mean_resid_log": 0.9192090685199428,
+              "held_out_std_resid_log": 0.26123195917441594
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "held_out_r2_log": -1.8542073187456354,
+              "held_out_rmse_log": 0.9486800428416801,
+              "held_out_mean_resid_log": -0.17741441526581764,
+              "held_out_std_resid_log": 0.9319431039188926
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "held_out_r2_log": -553.7587044467122,
+              "held_out_rmse_log": 2.555916609227858,
+              "held_out_mean_resid_log": -2.5497104527286654,
+              "held_out_std_resid_log": 0.1780065183441677
+            }
+          },
+          "pooled_r2_log": -0.8848004392997506,
+          "pooled_rmse_log": 1.8864870078455402,
+          "train_outlier_fraction_by_held_out_fold": {}
+        },
+        "Huber": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "held_out_r2_log": -10.856979158783693,
+              "held_out_rmse_log": 2.805337195536813,
+              "held_out_mean_resid_log": -2.6061936862294113,
+              "held_out_std_resid_log": 1.0381094597971396
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "held_out_r2_log": -197.7428686236436,
+              "held_out_rmse_log": 1.231701171966156,
+              "held_out_mean_resid_log": 1.2172337767048576,
+              "held_out_std_resid_log": 0.1882278137567112
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "held_out_r2_log": -1.9317073098207294,
+              "held_out_rmse_log": 0.9614734844523858,
+              "held_out_mean_resid_log": 0.07045420636425932,
+              "held_out_std_resid_log": 0.9588886619991888
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "held_out_r2_log": -697.393473199745,
+              "held_out_rmse_log": 2.8677725510530108,
+              "held_out_mean_resid_log": -2.8632036860382772,
+              "held_out_std_resid_log": 0.1618148844510819
+            }
+          },
+          "pooled_r2_log": -1.2679591311237597,
+          "pooled_rmse_log": 2.069372834095953,
+          "train_outlier_fraction_by_held_out_fold": {
+            "Guo2024": 0.463768115942029,
+            "Liu2024": 0.40425531914893614,
+            "Vrancik1968": 0.3698630136986301,
+            "Zheng2024": 0.4056603773584906
+          }
+        },
+        "RANSAC": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "held_out_r2_log": -13.330454218604963,
+              "held_out_rmse_log": 3.0840969352539465,
+              "held_out_mean_resid_log": -2.8855089995309964,
+              "held_out_std_resid_log": 1.0888028837527983
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "held_out_r2_log": -118.63018606035297,
+              "held_out_rmse_log": 0.9556084177859699,
+              "held_out_mean_resid_log": 0.9192090685199428,
+              "held_out_std_resid_log": 0.26123195917441594
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "held_out_r2_log": -1.8542073187456354,
+              "held_out_rmse_log": 0.9486800428416801,
+              "held_out_mean_resid_log": -0.17741441526581764,
+              "held_out_std_resid_log": 0.9319431039188926
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "held_out_r2_log": -431.30708177188825,
+              "held_out_rmse_log": 2.2562685639159783,
+              "held_out_mean_resid_log": -2.2467853872066734,
+              "held_out_std_resid_log": 0.20664766233864798
+            }
+          },
+          "pooled_r2_log": -1.4339564887610066,
+          "pooled_rmse_log": 2.1437667786997148,
+          "train_outlier_fraction_by_held_out_fold": {
+            "Guo2024": 0.10144927536231885,
+            "Liu2024": 0.0,
+            "Vrancik1968": 0.0,
+            "Zheng2024": 0.07547169811320753
+          }
+        }
+      }
+    },
+    "M1_Re_only": {
+      "feature_names": [
+        "log_Re"
+      ],
+      "models": {
+        "OLS": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "held_out_r2_log": -2.360583794947484,
+              "held_out_rmse_log": 1.4935006163639908,
+              "held_out_mean_resid_log": -1.3101787449088935,
+              "held_out_std_resid_log": 0.716921018989244
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "held_out_r2_log": -61.710872369920054,
+              "held_out_rmse_log": 0.6918803537001886,
+              "held_out_mean_resid_log": 0.467783885974103,
+              "held_out_std_resid_log": 0.5097809920537107
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "held_out_r2_log": 0.467597109295917,
+              "held_out_rmse_log": 0.4097294768898187,
+              "held_out_mean_resid_log": -0.14035363907584983,
+              "held_out_std_resid_log": 0.3849403852943603
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "held_out_r2_log": -9.59452703803485,
+              "held_out_rmse_log": 0.3532119630237197,
+              "held_out_mean_resid_log": -0.10115205673176841,
+              "held_out_std_resid_log": 0.33841830955490965
+            }
+          },
+          "pooled_r2_log": 0.452597178445569,
+          "pooled_rmse_log": 1.0166574494063996,
+          "train_outlier_fraction_by_held_out_fold": {}
+        },
+        "Huber": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "held_out_r2_log": -2.4700556409093104,
+              "held_out_rmse_log": 1.5176312513187522,
+              "held_out_mean_resid_log": -1.336138150032632,
+              "held_out_std_resid_log": 0.7196801088029998
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "held_out_r2_log": -56.01167857071121,
+              "held_out_rmse_log": 0.6596924163777554,
+              "held_out_mean_resid_log": 0.4428257415147808,
+              "held_out_std_resid_log": 0.4889779615465369
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "held_out_r2_log": 0.4823516762476818,
+              "held_out_rmse_log": 0.40401213774502037,
+              "held_out_mean_resid_log": -0.15551000587608793,
+              "held_out_std_resid_log": 0.3728839571739718
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "held_out_r2_log": -8.915401890360938,
+              "held_out_rmse_log": 0.3417037763131139,
+              "held_out_mean_resid_log": -0.11316587579298998,
+              "held_out_std_resid_log": 0.3224204635296093
+            }
+          },
+          "pooled_r2_log": 0.4426325346075375,
+          "pooled_rmse_log": 1.0258690762788123,
+          "train_outlier_fraction_by_held_out_fold": {
+            "Guo2024": 0.34782608695652173,
+            "Liu2024": 0.3404255319148936,
+            "Vrancik1968": 0.3972602739726027,
+            "Zheng2024": 0.3018867924528302
+          }
+        },
+        "RANSAC": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "held_out_r2_log": -2.5565099425772404,
+              "held_out_rmse_log": 1.5364203660234204,
+              "held_out_mean_resid_log": -1.355467654434249,
+              "held_out_std_resid_log": 0.7233913041460044
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "held_out_r2_log": -57.07322164390294,
+              "held_out_rmse_log": 0.6658057436612693,
+              "held_out_mean_resid_log": 0.43990925644089174,
+              "held_out_std_resid_log": 0.49977708469872606
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "held_out_r2_log": 0.4738308518141372,
+              "held_out_rmse_log": 0.4073237155454682,
+              "held_out_mean_resid_log": -0.16347444964303443,
+              "held_out_std_resid_log": 0.3730800363992591
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "held_out_r2_log": -8.776128660220401,
+              "held_out_rmse_log": 0.3392954781920063,
+              "held_out_mean_resid_log": -0.1386658617758606,
+              "held_out_std_resid_log": 0.30966627246037004
+            }
+          },
+          "pooled_r2_log": 0.4294324957256038,
+          "pooled_rmse_log": 1.0379457337504,
+          "train_outlier_fraction_by_held_out_fold": {
+            "Guo2024": 0.2753623188405797,
+            "Liu2024": 0.021276595744680882,
+            "Vrancik1968": 0.04109589041095896,
+            "Zheng2024": 0.12264150943396224
+          }
+        }
+      }
+    }
+  }
+}

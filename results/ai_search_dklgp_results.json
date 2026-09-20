@@ -1,0 +1,168 @@
+{
+  "approach": "Deep Kernel Learning GP (torch nn.Module feature extractor -> gpytorch ExactGP RBF-ARD kernel, jointly trained on exact marginal log likelihood)",
+  "slug": "dklgp",
+  "substituted_proxy": false,
+  "libraries_used": [
+    "torch",
+    "gpytorch",
+    "numpy",
+    "pandas"
+  ],
+  "hyperparameters": {
+    "hidden_layers": [
+      8,
+      4
+    ],
+    "latent_dim": 2,
+    "n_epochs": 400,
+    "lr": 0.01,
+    "weight_decay": 0.001,
+    "seeds_per_fold": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "seed_selection": "best 3 of 5 seeds by lowest final train negative-MLL, averaged (no test-set peeking)"
+  },
+  "features": [
+    "Re_Omega",
+    "Pi_confinement",
+    "Pi_gap",
+    "Pi_aspect_axial"
+  ],
+  "target": "Cp",
+  "space": "log10",
+  "pooled_r2_log": -2.376871384925017,
+  "per_facility_r2_log": {
+    "Guo2024": -13.71651258115041,
+    "Vrancik1968": -20.349789055211243,
+    "Liu2024": -57.24904571320541,
+    "Zheng2024": -24.64473697716069
+  },
+  "n_per_facility": {
+    "Guo2024": 45,
+    "Vrancik1968": 41,
+    "Liu2024": 20,
+    "Zheng2024": 8
+  },
+  "decision_rule": "pooled R2 substantially positive AND every per-facility R2 >= 0",
+  "clears_decision_rule": false,
+  "seed_diagnostics": {
+    "Guo2024": [
+      {
+        "seed": 1,
+        "final_neg_mll": -0.9385671840815112,
+        "train_r2": 0.9178346478460969
+      },
+      {
+        "seed": 4,
+        "final_neg_mll": -0.927496222245844,
+        "train_r2": 0.9153240131270941
+      },
+      {
+        "seed": 3,
+        "final_neg_mll": -0.9205342444374348,
+        "train_r2": 0.9243570449091101
+      },
+      {
+        "seed": 2,
+        "final_neg_mll": -0.9087706956662839,
+        "train_r2": 0.9185451076516484
+      },
+      {
+        "seed": 0,
+        "final_neg_mll": -0.8884180898589237,
+        "train_r2": 0.9182144267031427
+      }
+    ],
+    "Vrancik1968": [
+      {
+        "seed": 1,
+        "final_neg_mll": -0.2870062287283654,
+        "train_r2": 0.9242455674015042
+      },
+      {
+        "seed": 4,
+        "final_neg_mll": -0.2831300031254288,
+        "train_r2": 0.9204118773967878
+      },
+      {
+        "seed": 0,
+        "final_neg_mll": -0.26949723193693725,
+        "train_r2": 0.9238728147690826
+      },
+      {
+        "seed": 2,
+        "final_neg_mll": -0.2683894436600524,
+        "train_r2": 0.9247730822910295
+      },
+      {
+        "seed": 3,
+        "final_neg_mll": -0.2527174529232968,
+        "train_r2": 0.9210535371355739
+      }
+    ],
+    "Liu2024": [
+      {
+        "seed": 1,
+        "final_neg_mll": -0.3533623476931329,
+        "train_r2": 0.9459983967956566
+      },
+      {
+        "seed": 2,
+        "final_neg_mll": -0.34624512054158524,
+        "train_r2": 0.948656052631141
+      },
+      {
+        "seed": 3,
+        "final_neg_mll": -0.32607818778732983,
+        "train_r2": 0.9478918011362036
+      },
+      {
+        "seed": 4,
+        "final_neg_mll": -0.31016317953989825,
+        "train_r2": 0.9446793644754292
+      },
+      {
+        "seed": 0,
+        "final_neg_mll": -0.29488402167834965,
+        "train_r2": 0.943439275289743
+      }
+    ],
+    "Zheng2024": [
+      {
+        "seed": 0,
+        "final_neg_mll": -0.39663199761608636,
+        "train_r2": 0.9522592568341285
+      },
+      {
+        "seed": 4,
+        "final_neg_mll": -0.3942362171929788,
+        "train_r2": 0.952059980956048
+      },
+      {
+        "seed": 1,
+        "final_neg_mll": -0.39042740161171857,
+        "train_r2": 0.948837722163884
+      },
+      {
+        "seed": 2,
+        "final_neg_mll": -0.3775594921914959,
+        "train_r2": 0.9517754527214386
+      },
+      {
+        "seed": 3,
+        "final_neg_mll": -0.3621309796892958,
+        "train_r2": 0.9463019976459901
+      }
+    ]
+  },
+  "known_baselines": {
+    "best_linear_4pred_pooled_r2_log": -0.885,
+    "reynolds_only_linear_pooled_r2_log": 0.4526,
+    "reynolds_only_linear_per_facility_note": "positive pooled R2 hides -2.36, -61.7, -9.59 on three facilities -- fails decision rule",
+    "already_failed_methods_range": "-0.55 to -2.67 pooled R2_log (plain MLP, RF, GBM, KRR x2, plain GP, symbolic regression, Huber)"
+  }
+}

@@ -1,0 +1,534 @@
+{
+  "per_facility": {
+    "Guo2024": {
+      "n_total_facility": 45,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -4.546590569786015,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot: meta-learned theta, no inner-loop adaptation, evaluated on ALL of f."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -0.9542245773949546,
+          "std_r2": 1.5682575785759978,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -0.42102134861237206,
+          "std_r2": 0.4755773805871785,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -0.2471362259527779,
+          "std_r2": 0.3260869434502546,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -0.15497726455294356,
+          "std_r2": 0.21445035384867847,
+          "n_reps_used": 20
+        }
+      }
+    },
+    "Liu2024": {
+      "n_total_facility": 20,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -1144.582810260431,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot: meta-learned theta, no inner-loop adaptation, evaluated on ALL of f."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -30.924918655187145,
+          "std_r2": 41.6123393591371,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -6.045976452174841,
+          "std_r2": 5.9489949281618895,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -5.492876333106099,
+          "std_r2": 5.806136296880896,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -6.6093276110485775,
+          "std_r2": 10.447593640764007,
+          "n_reps_used": 20
+        }
+      }
+    },
+    "Vrancik1968": {
+      "n_total_facility": 41,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -9.885700897957719,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot: meta-learned theta, no inner-loop adaptation, evaluated on ALL of f."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -0.9450608326444796,
+          "std_r2": 0.973167640385027,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -0.4160943821434153,
+          "std_r2": 0.5023208211569079,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -0.2561997862496675,
+          "std_r2": 0.32574638185817995,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -0.35065070574704166,
+          "std_r2": 0.35125742369148805,
+          "n_reps_used": 20
+        }
+      }
+    },
+    "Zheng2024": {
+      "n_total_facility": 8,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -66.35184094948208,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot: meta-learned theta, no inner-loop adaptation, evaluated on ALL of f."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -23.098853381400797,
+          "std_r2": 33.58232083316587,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -3.2628613348343314,
+          "std_r2": 2.8335195577059005,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -5.602582934672062,
+          "std_r2": 14.267398205950725,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": false,
+          "reason": "facility Zheng2024 has only 8 points; holding out 10 for calibration leaves -2 < 2 for testing",
+          "mean_r2": null,
+          "std_r2": null,
+          "n_reps_used": 0
+        }
+      }
+    }
+  },
+  "pooled_by_n_cal": {
+    "0": {
+      "mean_r2_pooled": -1.2654298284900642,
+      "std_r2_pooled": 0.0,
+      "n_reps_used": 1,
+      "note": "zero-shot meta-learned theta, all 4 held-out facilities pooled."
+    },
+    "1": {
+      "mean_r2_pooled": 0.5968304399756932,
+      "std_r2_pooled": 0.23507325652214303,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute"
+    },
+    "3": {
+      "mean_r2_pooled": 0.711740622426668,
+      "std_r2_pooled": 0.0734502716347523,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute"
+    },
+    "5": {
+      "mean_r2_pooled": 0.7421091774454796,
+      "std_r2_pooled": 0.043961434632571864,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute"
+    },
+    "10": {
+      "mean_r2_pooled": 0.7438286702063432,
+      "std_r2_pooled": 0.05092354422786363,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": true,
+      "note": "Zheng2024 (n=8) cannot supply test points for this pooled round when n_f - n_cal < 2; excluded ONLY from this pooled round."
+    }
+  },
+  "meta_train_diagnostics": {
+    "Guo2024": {
+      "loss_trace_every_50_iters": [
+        {
+          "iter": 0,
+          "mean_query_mse_std_space": 0.6984165138557241
+        },
+        {
+          "iter": 50,
+          "mean_query_mse_std_space": 0.23612926440566953
+        },
+        {
+          "iter": 100,
+          "mean_query_mse_std_space": 0.11855399385019146
+        },
+        {
+          "iter": 150,
+          "mean_query_mse_std_space": 0.07091478795919133
+        },
+        {
+          "iter": 200,
+          "mean_query_mse_std_space": 0.05862294724551994
+        },
+        {
+          "iter": 250,
+          "mean_query_mse_std_space": 0.0887844665308749
+        },
+        {
+          "iter": 300,
+          "mean_query_mse_std_space": 0.06383572574404449
+        },
+        {
+          "iter": 350,
+          "mean_query_mse_std_space": 0.06627657072136836
+        },
+        {
+          "iter": 400,
+          "mean_query_mse_std_space": 0.08122182456023834
+        },
+        {
+          "iter": 450,
+          "mean_query_mse_std_space": 0.06568653545870244
+        },
+        {
+          "iter": 500,
+          "mean_query_mse_std_space": 0.0648376606624486
+        },
+        {
+          "iter": 550,
+          "mean_query_mse_std_space": 0.07493651206414903
+        },
+        {
+          "iter": 600,
+          "mean_query_mse_std_space": 0.06855048821270311
+        },
+        {
+          "iter": 650,
+          "mean_query_mse_std_space": 0.05453609344704527
+        },
+        {
+          "iter": 700,
+          "mean_query_mse_std_space": 0.07867342069823724
+        },
+        {
+          "iter": 750,
+          "mean_query_mse_std_space": 0.05343727614108849
+        },
+        {
+          "iter": 799,
+          "mean_query_mse_std_space": 0.06085671711423135
+        }
+      ],
+      "note": "mean query-set MSE (standardized log-space) across the 3 training-facility tasks, after adaptation, during meta-training. Should decrease and stabilize; this is NOT LOFO, only a convergence check."
+    },
+    "Liu2024": {
+      "loss_trace_every_50_iters": [
+        {
+          "iter": 0,
+          "mean_query_mse_std_space": 0.19764503593309643
+        },
+        {
+          "iter": 50,
+          "mean_query_mse_std_space": 0.08439447883597347
+        },
+        {
+          "iter": 100,
+          "mean_query_mse_std_space": 0.08889762369799781
+        },
+        {
+          "iter": 150,
+          "mean_query_mse_std_space": 0.055585813688495606
+        },
+        {
+          "iter": 200,
+          "mean_query_mse_std_space": 0.06999735582878604
+        },
+        {
+          "iter": 250,
+          "mean_query_mse_std_space": 0.05064743283113016
+        },
+        {
+          "iter": 300,
+          "mean_query_mse_std_space": 0.048540463227209306
+        },
+        {
+          "iter": 350,
+          "mean_query_mse_std_space": 0.04867330658474383
+        },
+        {
+          "iter": 400,
+          "mean_query_mse_std_space": 0.18055900012171625
+        },
+        {
+          "iter": 450,
+          "mean_query_mse_std_space": 0.0452554531261093
+        },
+        {
+          "iter": 500,
+          "mean_query_mse_std_space": 0.06545218934306324
+        },
+        {
+          "iter": 550,
+          "mean_query_mse_std_space": 0.04580958751587199
+        },
+        {
+          "iter": 600,
+          "mean_query_mse_std_space": 0.058071013914755255
+        },
+        {
+          "iter": 650,
+          "mean_query_mse_std_space": 0.05232413885867295
+        },
+        {
+          "iter": 700,
+          "mean_query_mse_std_space": 0.06244846209472387
+        },
+        {
+          "iter": 750,
+          "mean_query_mse_std_space": 0.12112660064239816
+        },
+        {
+          "iter": 799,
+          "mean_query_mse_std_space": 0.05947054521068585
+        }
+      ],
+      "note": "mean query-set MSE (standardized log-space) across the 3 training-facility tasks, after adaptation, during meta-training. Should decrease and stabilize; this is NOT LOFO, only a convergence check."
+    },
+    "Vrancik1968": {
+      "loss_trace_every_50_iters": [
+        {
+          "iter": 0,
+          "mean_query_mse_std_space": 0.23108458434096216
+        },
+        {
+          "iter": 50,
+          "mean_query_mse_std_space": 0.105285946356538
+        },
+        {
+          "iter": 100,
+          "mean_query_mse_std_space": 0.04119683021532071
+        },
+        {
+          "iter": 150,
+          "mean_query_mse_std_space": 0.04658669652573962
+        },
+        {
+          "iter": 200,
+          "mean_query_mse_std_space": 0.18575337138242778
+        },
+        {
+          "iter": 250,
+          "mean_query_mse_std_space": 0.044937737230204465
+        },
+        {
+          "iter": 300,
+          "mean_query_mse_std_space": 0.04948337473514624
+        },
+        {
+          "iter": 350,
+          "mean_query_mse_std_space": 0.04595918615665175
+        },
+        {
+          "iter": 400,
+          "mean_query_mse_std_space": 0.05035394905279675
+        },
+        {
+          "iter": 450,
+          "mean_query_mse_std_space": 0.08010499518229548
+        },
+        {
+          "iter": 500,
+          "mean_query_mse_std_space": 0.04802607687748214
+        },
+        {
+          "iter": 550,
+          "mean_query_mse_std_space": 0.056471751625740196
+        },
+        {
+          "iter": 600,
+          "mean_query_mse_std_space": 0.05346000351957864
+        },
+        {
+          "iter": 650,
+          "mean_query_mse_std_space": 0.07681283982815051
+        },
+        {
+          "iter": 700,
+          "mean_query_mse_std_space": 0.14895019446366317
+        },
+        {
+          "iter": 750,
+          "mean_query_mse_std_space": 0.048727331350889046
+        },
+        {
+          "iter": 799,
+          "mean_query_mse_std_space": 0.07159797886563317
+        }
+      ],
+      "note": "mean query-set MSE (standardized log-space) across the 3 training-facility tasks, after adaptation, during meta-training. Should decrease and stabilize; this is NOT LOFO, only a convergence check."
+    },
+    "Zheng2024": {
+      "loss_trace_every_50_iters": [
+        {
+          "iter": 0,
+          "mean_query_mse_std_space": 0.6548081336882831
+        },
+        {
+          "iter": 50,
+          "mean_query_mse_std_space": 0.05461643913225836
+        },
+        {
+          "iter": 100,
+          "mean_query_mse_std_space": 0.06511267280882867
+        },
+        {
+          "iter": 150,
+          "mean_query_mse_std_space": 0.05543134494243008
+        },
+        {
+          "iter": 200,
+          "mean_query_mse_std_space": 0.056850381840052554
+        },
+        {
+          "iter": 250,
+          "mean_query_mse_std_space": 0.13875076268204836
+        },
+        {
+          "iter": 300,
+          "mean_query_mse_std_space": 0.10618869325054477
+        },
+        {
+          "iter": 350,
+          "mean_query_mse_std_space": 0.05905456153019353
+        },
+        {
+          "iter": 400,
+          "mean_query_mse_std_space": 0.06022046218019281
+        },
+        {
+          "iter": 450,
+          "mean_query_mse_std_space": 0.06596472318635856
+        },
+        {
+          "iter": 500,
+          "mean_query_mse_std_space": 0.048676422589020586
+        },
+        {
+          "iter": 550,
+          "mean_query_mse_std_space": 0.05433475584705757
+        },
+        {
+          "iter": 600,
+          "mean_query_mse_std_space": 0.08461642690207748
+        },
+        {
+          "iter": 650,
+          "mean_query_mse_std_space": 0.0477078738952203
+        },
+        {
+          "iter": 700,
+          "mean_query_mse_std_space": 0.05551258960763933
+        },
+        {
+          "iter": 750,
+          "mean_query_mse_std_space": 0.053514670558923755
+        },
+        {
+          "iter": 799,
+          "mean_query_mse_std_space": 0.047616838448307074
+        }
+      ],
+      "note": "mean query-set MSE (standardized log-space) across the 3 training-facility tasks, after adaptation, during meta-training. Should decrease and stabilize; this is NOT LOFO, only a convergence check."
+    }
+  },
+  "hyperparameters": {
+    "hidden": 8,
+    "inner_steps": 5,
+    "inner_lr": 0.1,
+    "meta_lr": 0.01,
+    "meta_weight_decay": 0.001,
+    "meta_iters": 800,
+    "n_repeats": 20,
+    "n_cal_grid": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "method": "second-order MAML (Finn et al. 2017), full backprop through the inner loop via create_graph=True, PyTorch autograd.grad"
+  },
+  "comparison_vs_james_stein": {
+    "0": {
+      "james_stein_pooled_r2": -0.8848004392997484,
+      "maml_pooled_r2": -1.2654298284900642,
+      "maml_minus_js": -0.38062938919031586
+    },
+    "1": {
+      "james_stein_pooled_r2": -0.8594553795566364,
+      "maml_pooled_r2": 0.5968304399756932,
+      "maml_minus_js": 1.4562858195323296
+    },
+    "3": {
+      "james_stein_pooled_r2": -0.8179778180758814,
+      "maml_pooled_r2": 0.711740622426668,
+      "maml_minus_js": 1.5297184405025495
+    },
+    "5": {
+      "james_stein_pooled_r2": -0.7428989686137879,
+      "maml_pooled_r2": 0.7421091774454796,
+      "maml_minus_js": 1.4850081460592675
+    },
+    "10": {
+      "james_stein_pooled_r2": -0.683270527499946,
+      "maml_pooled_r2": 0.7438286702063432,
+      "maml_minus_js": 1.4270991977062892
+    }
+  },
+  "headline": {
+    "n_cal": "5",
+    "pooled_r2_log": 0.7421091774454796,
+    "per_facility_r2_log": {
+      "Guo2024": -0.2471362259527779,
+      "Liu2024": -5.492876333106099,
+      "Vrancik1968": -0.2561997862496675,
+      "Zheng2024": -5.602582934672062
+    },
+    "decision_rule_clears": false,
+    "decision_rule": "pooled R2 substantially positive AND every per-facility held-out R2 >= 0; chosen at n_cal=5, the largest grid point where all 4 facilities (incl. Zheng2024, n=8) still have >=2 held-out test points."
+  }
+}

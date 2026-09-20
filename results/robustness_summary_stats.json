@@ -1,0 +1,22 @@
+{
+  "daily_nece_ratio_regression": {
+    "formula": "log(Cp / C_M_DailyNece_regimeIV) ~ log(Re_Omega)",
+    "intercept": 9.788472255796918,
+    "slope": -0.4522579218527992,
+    "r2": 0.7164332896219645,
+    "n": 114
+  },
+  "eta_squared_facility_identity": {
+    "log_Re_Omega": 0.8050421140208415,
+    "log_Pi_gap": 0.926372448155655,
+    "log_Pi_confinement": 0.9912601270490059,
+    "log_Pi_aspect_axial": 0.9344502934774664
+  },
+  "reynolds_slope_per_facility": {
+    "Guo2024": -0.5747575707019685,
+    "Liu2024": -0.04918430127919334,
+    "Vrancik1968": -0.438760348738027,
+    "Zheng2024": -0.12770189806373286
+  },
+  "reynolds_slope_spread_ratio": 11.685793144429823
+}

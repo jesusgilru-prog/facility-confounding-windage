@@ -1,0 +1,105 @@
+{
+  "issue": "Guo2024's 8 T2 rows use total-machine power (motor/CFD-sim, kW); the other 37 rows use per-arm torque*omega, with no arm-count multiplier applied in either case. This is distinct from the misattribution already documented in Limitations point 7 (T2 matches ZJU400, not CHIEF).",
+  "n_t2_rows": 8,
+  "n_rest_rows": 37,
+  "sample_unit_checks_on_rest_rows": [
+    {
+      "case_id": "Guo2024_F7_R4350",
+      "torque_Nm": 21800.0,
+      "omega": 57.0,
+      "expected_P_w": 1242600.0,
+      "recorded_P_w": 1242600.0,
+      "matches_per_arm_torque_times_omega": true
+    },
+    {
+      "case_id": "Guo2024_F7_R4400",
+      "torque_Nm": 22300.0,
+      "omega": 57.0,
+      "expected_P_w": 1271100.0,
+      "recorded_P_w": 1271100.0,
+      "matches_per_arm_torque_times_omega": true
+    },
+    {
+      "case_id": "Guo2024_F7_R4450",
+      "torque_Nm": 22700.0,
+      "omega": 57.0,
+      "expected_P_w": 1293900.0,
+      "recorded_P_w": 1293900.0,
+      "matches_per_arm_torque_times_omega": true
+    }
+  ],
+  "homogeneity_check": {
+    "method": "fit log(Cp)~log(Re_Omega) on the 37 non-T2 rows, compare T2's actual Cp to that trend's prediction at T2's own Re_Omega",
+    "rest_fit_slope": 0.0873979556498757,
+    "rest_fit_intercept": -6.777965599795331,
+    "t2_actual_over_predicted_ratio": {
+      "Guo2024_T2_010g": 9.851389201555687,
+      "Guo2024_T2_020g": 8.305195417288608,
+      "Guo2024_T2_030g": 7.52930070417307,
+      "Guo2024_T2_045g": 7.034166687865527,
+      "Guo2024_T2_060g": 6.373700035257375,
+      "Guo2024_T2_075g": 6.446950468492369,
+      "Guo2024_T2_090g": 6.037541305432983,
+      "Guo2024_T2_120g": 6.322549039633479
+    },
+    "median_ratio": 6.740558578178948
+  },
+  "baseline_headline_lofo": {
+    "pooled_r2": -0.8848004451819813,
+    "per_facility_r2": {
+      "Guo2024": -8.986612097814858,
+      "Liu2024": -118.63018851238135,
+      "Vrancik1968": -1.8542072280392068,
+      "Zheng2024": -553.7587142297133
+    }
+  },
+  "t2_exclusion_result_reference": "code/t2_exclusion_sensitivity.py gives pooled R2=-6.811 with T2 excluded entirely",
+  "correction_factor_sweep": {
+    "divide_by_4.00": {
+      "pooled_r2": -10.372723247601275,
+      "per_facility_r2": {
+        "Guo2024": -37.78124798155808,
+        "Liu2024": -210.26340274056005,
+        "Vrancik1968": -167.4265908028712,
+        "Zheng2024": -656.642452239629
+      }
+    },
+    "divide_by_6.00": {
+      "pooled_r2": -15.981059755869328,
+      "per_facility_r2": {
+        "Guo2024": -47.76417011338312,
+        "Liu2024": -243.03029948843303,
+        "Vrancik1968": -277.4271026982996,
+        "Zheng2024": -688.433462918743
+      }
+    },
+    "divide_by_6.74": {
+      "pooled_r2": -17.75234270212839,
+      "per_facility_r2": {
+        "Guo2024": -48.56570711786455,
+        "Liu2024": -252.93435143673787,
+        "Vrancik1968": -314.14884536359347,
+        "Zheng2024": -697.7007088429482
+      }
+    },
+    "divide_by_8.00": {
+      "pooled_r2": -20.465377945004235,
+      "per_facility_r2": {
+        "Guo2024": -47.61277876932366,
+        "Liu2024": -267.9162899813727,
+        "Vrancik1968": -372.37446743666595,
+        "Zheng2024": -711.4559438443582
+      }
+    },
+    "divide_by_10.00": {
+      "pooled_r2": -24.156446082209143,
+      "per_facility_r2": {
+        "Guo2024": -43.32942722854592,
+        "Liu2024": -288.15541998152554,
+        "Vrancik1968": -455.6820164452786,
+        "Zheng2024": -729.5802810951303
+      }
+    }
+  },
+  "conclusion": "Correcting T2's apparent scale (dividing its Cp by any factor in the plausible 4-10x range identified by the homogeneity check) makes the pooled LOFO R2 substantially MORE negative (-10.4 to -24.2), not less -- consistent with excluding T2 entirely (-6.811). Neither correcting nor excluding the disputed rows rescues the headline result; both make it worse, because T2 is the only Guo2024 sub-study spanning a wide Reynolds range, and this paper's fit is pooled across facilities."
+}

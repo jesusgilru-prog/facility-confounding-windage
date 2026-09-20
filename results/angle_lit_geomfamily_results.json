@@ -1,0 +1,91 @@
+{
+  "angle": "lit_geomfamily",
+  "type": "literature+small_confirmatory_check",
+  "facility_geometry_crosstab": {
+    "Guo2024": [
+      "enclosed_arm_in_chamber"
+    ],
+    "Liu2024": [
+      "arm_in_cylinder"
+    ],
+    "Vrancik1968": [
+      "disk_in_cylinder",
+      "enclosed_salient_in_stator",
+      "salient_in_stator"
+    ],
+    "Zheng2024": [
+      "arm_in_cylinder"
+    ]
+  },
+  "facility_n": {
+    "Guo2024": 45,
+    "Vrancik1968": 41,
+    "Liu2024": 20,
+    "Zheng2024": 8
+  },
+  "vrancik_geom_counts": {
+    "enclosed_salient_in_stator": 23,
+    "disk_in_cylinder": 12,
+    "salient_in_stator": 6
+  },
+  "within_Vrancik1968_check": {
+    "n_total": 41,
+    "n_geometry_types": 3,
+    "global_logRe_slope": -0.4387603487380269,
+    "residual_ss_total": 3.788045615593508,
+    "residual_r2_explained_by_geometry_type": 0.395038744263369,
+    "per_geometry_type_residual_stats": {
+      "disk_in_cylinder": {
+        "n": 12,
+        "mean_resid_logCp": 0.06485613987274497,
+        "std_resid_logCp": 0.27972775830031477
+      },
+      "enclosed_salient_in_stator": {
+        "n": 23,
+        "mean_resid_logCp": -0.14005871784289053,
+        "std_resid_logCp": 0.24989875722838187
+      },
+      "salient_in_stator": {
+        "n": 6,
+        "mean_resid_logCp": 0.40717947198559984,
+        "std_resid_logCp": 0.1067805890429549
+      }
+    },
+    "interpretation": "Fraction of residual log(Cp) variance (after removing the single shared Re_Omega trend) explained purely by which geometry_type the point belongs to, measured WITHIN ONE facility so it cannot be a facility artifact. A large value supports the literature-based diagnosis that distinct geometric topologies need distinct correlation terms (as found for smooth vs. bolted/protrusion disks in the windage literature), not just more facilities/rows."
+  },
+  "discrete_geometry_feature_columns_present": [],
+  "note_on_missing_features": "The corpus has continuous length-scale ratios (Pi_confinement, Pi_gap, Pi_aspect_axial) but no discrete feature descriptor (number of arms/salient poles, protrusion frontal-area fraction, or a bolt/arm 'shape factor' as used e.g. in Long et al. 2014) that the literature identifies as the extra term needed when a rotor is not a plain smooth disk.",
+  "literature_sources": [
+    {
+      "citation": "Daily, J.W. & Nece, R.E. (1960). Chamber dimension effects on induced flow and frictional resistance of enclosed rotating disks. J. Basic Engineering 82(1), 217-230. doi:10.1115/1.3662532",
+      "already_cited_in_paper": true,
+      "relevance": "Classic 4-regime (I-IV) moment-coefficient map for a SMOOTH PLAIN DISK enclosed in a cylindrical cavity, parameterized by (Re, gap ratio G) only. Subsequent independent studies over decades, on different rigs, reproduced the regime boundaries and turbulent-regime exponents within engineering tolerance -- i.e. genuine cross-facility/cross-decade agreement -- but ONLY for this one fixed geometric topology (plain disk, no blades/arms/bolts)."
+    },
+    {
+      "citation": "Coren, D., Childs, P.R.N. & Long, C.A. (2009). Windage sources in smooth-walled rotating disc systems. Proc. IMechE Part C 223(4), 873-888. doi:10.1243/09544062JMES1260",
+      "already_cited_in_paper": false,
+      "relevance": "New rig extends the smooth-disc windage correlation to Re_psi up to 1e7, and reports agreement with prior literature data (different rigs/labs) 'within 10 per cent' -- again for the smooth, unbladed, unbolted disk family."
+    },
+    {
+      "citation": "Long, C.A. et al. (2014). Windage Measurements in a Rotor-Stator System With Superimposed Cooling and Rotor-Mounted Protrusions. J. Eng. Gas Turbines Power 136(4), 042505.",
+      "already_cited_in_paper": false,
+      "relevance": "KEY NEGATIVE-CONTROL RESULT FROM THE LITERATURE ITSELF: same research group, same rig, tested a plain disk AND a disk with 18 bolt-like protrusions. The plain-disk (smooth) correlation does NOT carry over to the protrusion geometry -- the added windage is attributed to a separate form-drag term, and a NEW empirical correlation with an explicit bolt/protrusion shape factor is required. This is the closest literature analogue to our corpus: changing geometric topology (smooth vs. featured rotor) breaks a previously-generalizing correlation even on the SAME rig."
+    },
+    {
+      "citation": "Da Soghe, R., Facchini, B., Innocenti, L. & Micio, M. (2011). Analysis of Gas Turbine Rotating Cavities by a One-Dimensional Model: Definition of New Disk Friction Coefficient Correlations Set. J. Turbomachinery 133(2), 021020. doi:10.1115/1.4000633",
+      "already_cited_in_paper": false,
+      "relevance": "Achieves cross-case generality not via a single flat pooled regression across raw geometries, but by decomposing the cavity into physically distinct flow zones (Ekman layers, core, shroud/rim-seal) with separate CFD-calibrated friction correlations per zone/topology, combined in a 1D network model. Generalization is bought by more physics structure per geometric family, not by pooling raw heterogeneous points into one generic regressor."
+    },
+    {
+      "citation": "Harmand, S., Pelle, J., Poncet, S. & Shevchuk, I.V. (2013). Review of fluid flow and convective heat transfer within rotating disk cavities with impinging jet. Int. J. Thermal Sciences 67, 1-30. arXiv:1305.2882 (already cited in this paper as poncet2013)",
+      "already_cited_in_paper": true,
+      "relevance": "Review confirms Daily-Nece regime correlations have been reproduced across many independent experimental and numerical studies -- but again strictly within the plain-disk-in-cylindrical-cavity topology; the review treats different cavity types (with through-flow, with protrusions, with impinging jets) as requiring separate correlation sets, not one universal law."
+    }
+  ],
+  "verdict": {
+    "does_literature_show_genuine_cross_facility_generalization": true,
+    "condition_it_requires": "Every literature success case we found holds geometric TOPOLOGY fixed (plain smooth disk in a cylindrical cavity) and only lets continuous parameters (Re, gap ratio G, throughflow coefficient Cw) vary across facilities/decades/labs. The moment a topology changes (bolts, protrusions, blades/arms/salient poles), even literature groups using the SAME rig had to introduce a NEW geometry-specific term (a shape factor or a separate 1D-model zone) -- generalization was not achieved 'for free' by a generic small Pi-group set; it required either (a) restricting scope to one topology, or (b) adding explicit discrete-feature descriptors as new dimensionless groups.",
+    "is_this_achievable_with_the_current_114_row_4_facility_corpus": false,
+    "why_not": "This corpus deliberately spans 4 DIFFERENT geometric topologies (plain disk, disk-with-salient-poles, enclosed-arm-in-chamber, arm-in-cylinder) using only 3 generic continuous Pi-groups (confinement, gap, axial aspect) and NO discrete feature descriptor for the arms/salient poles themselves (no count, no frontal-area fraction, no shape factor column exists in the data, confirmed by direct inspection). Per this session's own confirmatory check, within Vrancik1968 ALONE (i.e. holding facility/rig fixed, so this cannot be a facility artifact), geometry_type explains 39.5% of the residual log(Cp) variance left after removing the shared Re_Omega trend -- i.e. geometric topology is a first-order effect even before facility-to-facility differences are considered. The literature's own success recipe (fix topology, or add explicit shape-factor terms) is therefore NOT met by this corpus as it stands, and cannot be retrofitted by re-splitting or re-weighting the existing 114 rows -- it requires NEW data: either (i) restricting the cross-facility claim to the plain-disk subset only (which collapses to 1-2 facilities and a handful of points, too small to test generalization at all), or (ii) collecting/extracting new discrete geometry descriptors (arm/pole count, frontal solidity, shape factor) per facility from the original sources (where available) and testing whether adding them as explicit predictors restores generalization -- a well-defined, honest, and NOT-YET-DONE follow-up, not something we can claim from the current corpus."
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "protocol": "LOFO estricto (4 folds, 1 instalacion excluida por fold). Detector OOD entrenado SOLO con X (log Re, log Pi_confinement, log Pi_gap, log Pi_aspect_axial) de las 3 instalaciones de entrenamiento, sin ver Cp ni la etiqueta de instalacion. Baseline de referencia = M1 solo-Reynolds OLS (identico a robust_regression_lofo.py).",
+  "n_points": 114,
+  "facilities": [
+    "Guo2024",
+    "Liu2024",
+    "Vrancik1968",
+    "Zheng2024"
+  ],
+  "feature_names_ood_detector": [
+    "log_Re",
+    "log_Pi_confinement",
+    "log_Pi_gap",
+    "log_Pi_aspect_axial"
+  ],
+  "per_facility_M1_pooled_r2_log_this_run": {
+    "Guo2024": -2.360583794947484,
+    "Liu2024": -61.710872369920054,
+    "Vrancik1968": 0.467597109295917,
+    "Zheng2024": -9.59452703803485
+  },
+  "pooled_spearman_score_vs_abs_resid": {
+    "maha": {
+      "rho": -0.2986635167719169,
+      "p_value": 0.0012478502417595176
+    },
+    "isoforest": {
+      "rho": -0.37288438235016325,
+      "p_value": 4.3923951803058284e-05
+    },
+    "knn_dist": {
+      "rho": -0.21531650089892368,
+      "p_value": 0.02141026535566361
+    },
+    "re_extrap_1nn": {
+      "rho": 0.5516268391952043,
+      "p_value": 2.0058752324829398e-10
+    }
+  },
+  "per_facility_spearman_score_vs_abs_resid": {
+    "Guo2024": {
+      "n": 45,
+      "maha": {
+        "rho": 0.3426489503964138,
+        "p_value": 0.02121611680656172
+      },
+      "isoforest": {
+        "rho": -0.05127497930722998,
+        "p_value": 0.7379992773112559
+      },
+      "knn_dist": {
+        "rho": 0.2704844018034409,
+        "p_value": 0.07232471775413502
+      },
+      "re_extrap_1nn": {
+        "rho": 0.0005323128386763979,
+        "p_value": 0.9972310465876677
+      }
+    },
+    "Liu2024": {
+      "n": 20,
+      "maha": {
+        "rho": -0.882706766917293,
+        "p_value": 2.5881473879186093e-07
+      },
+      "isoforest": {
+        "rho": -0.14736842105263157,
+        "p_value": 0.5352473458918693
+      },
+      "knn_dist": {
+        "rho": -0.882706766917293,
+        "p_value": 2.5881473879186093e-07
+      },
+      "re_extrap_1nn": {
+        "rho": 0.06616541353383458,
+        "p_value": 0.7816639121085741
+      }
+    },
+    "Vrancik1968": {
+      "n": 41,
+      "maha": {
+        "rho": -0.318100639216715,
+        "p_value": 0.04267943610271108
+      },
+      "isoforest": {
+        "rho": 0.09338927154755154,
+        "p_value": 0.5614009475921777
+      },
+      "knn_dist": {
+        "rho": -0.318100639216715,
+        "p_value": 0.04267943610271108
+      },
+      "re_extrap_1nn": {
+        "rho": 0.1670224391614469,
+        "p_value": 0.2966029844460508
+      }
+    },
+    "Zheng2024": {
+      "n": 8,
+      "maha": {
+        "rho": -0.4285714285714286,
+        "p_value": 0.2894032248467901
+      },
+      "isoforest": {
+        "rho": 0.880952380952381,
+        "p_value": 0.0038503204637324014
+      },
+      "knn_dist": {
+        "rho": 0.8333333333333335,
+        "p_value": 0.01017554012345675
+      },
+      "re_extrap_1nn": {
+        "rho": 0.14285714285714288,
+        "p_value": 0.735764859879812
+      }
+    }
+  },
+  "facility_demeaned_pooled_spearman": {
+    "maha": {
+      "rho": -0.15846821160335417,
+      "p_value": 0.09218374006936457
+    },
+    "isoforest": {
+      "rho": 0.058174867201899384,
+      "p_value": 0.5386780199723261
+    },
+    "knn_dist": {
+      "rho": -0.17508125892171442,
+      "p_value": 0.062437879289190486
+    },
+    "re_extrap_1nn": {
+      "rho": 0.059294260600453896,
+      "p_value": 0.5308794134171068
+    }
+  },
+  "auc_score_predicts_bad_point": {
+    "global_median_split": {
+      "maha": 0.3179439827639273,
+      "isoforest": 0.31348107109879964,
+      "knn_dist": 0.36411203447214524,
+      "re_extrap_1nn": 0.8054786088027085
+    },
+    "within_facility_median_split": {
+      "maha": 0.48198891625615764,
+      "isoforest": 0.5120073891625615,
+      "knn_dist": 0.47306034482758613,
+      "re_extrap_1nn": 0.520935960591133
+    }
+  },
+  "facility_level_mean_correlation_diagnostic_n4_weak": {
+    "maha": {
+      "rho": -0.6000000000000001,
+      "p_value": 0.3999999999999999,
+      "n_facilities": 4
+    },
+    "isoforest": {
+      "rho": 0.19999999999999998,
+      "p_value": 0.8,
+      "n_facilities": 4
+    },
+    "knn_dist": {
+      "rho": 0.0,
+      "p_value": 1.0,
+      "n_facilities": 4
+    },
+    "re_extrap_1nn": {
+      "rho": 0.7999999999999999,
+      "p_value": 0.20000000000000007,
+      "n_facilities": 4
+    }
+  },
+  "facility_mean_table": {
+    "Guo2024": {
+      "abs_resid_M1": 1.3101787449088937,
+      "maha": 5.9423395134679495,
+      "isoforest": 0.5831337543615707,
+      "knn_dist": 2.1492938851643673,
+      "re_extrap_1nn": 1.5805371364333383
+    },
+    "Liu2024": {
+      "abs_resid_M1": 0.6016022301130242,
+      "maha": 2.3636937106396374,
+      "isoforest": 0.6101780762055975,
+      "knn_dist": 1.111487624457326,
+      "re_extrap_1nn": 0.016269126259366305
+    },
+    "Vrancik1968": {
+      "abs_resid_M1": 0.3544962020611365,
+      "maha": 52.05796274634002,
+      "isoforest": 0.6435757491430057,
+      "knn_dist": 10.062089685652802,
+      "re_extrap_1nn": 0.07777573716579896
+    },
+    "Zheng2024": {
+      "abs_resid_M1": 0.2871118180245953,
+      "maha": 7.481247864021446,
+      "isoforest": 0.5102153072917567,
+      "knn_dist": 2.021603294447332,
+      "re_extrap_1nn": 0.01273478805449442
+    }
+  }
+}

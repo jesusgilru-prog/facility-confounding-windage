@@ -1,0 +1,478 @@
+{
+  "baseline_unweighted_ols": {
+    "pooled_r2_log": -90.60359392182502,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -515.221422692133,
+        "n": 8,
+        "bandwidth_used": "inf"
+      },
+      "Liu2024": {
+        "r2_log": -102.18468405997604,
+        "n": 20,
+        "bandwidth_used": "inf"
+      },
+      "Guo2024": {
+        "r2_log": -6.732963661929995,
+        "n": 45,
+        "bandwidth_used": "inf"
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": "inf"
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": "inf",
+      "Liu2024": "inf",
+      "Guo2024": "inf",
+      "Vrancik1968": "inf"
+    }
+  },
+  "fixed_bandwidth_0.3": {
+    "pooled_r2_log": -93.10159387132198,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -515.221422692133,
+        "n": 8,
+        "bandwidth_used": 0.3
+      },
+      "Liu2024": {
+        "r2_log": -3410.4675647955114,
+        "n": 20,
+        "bandwidth_used": 0.3
+      },
+      "Guo2024": {
+        "r2_log": -7.8254020493610135,
+        "n": 45,
+        "bandwidth_used": 0.3
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": 0.3
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 0.3,
+      "Liu2024": 0.3,
+      "Guo2024": 0.3,
+      "Vrancik1968": 0.3
+    }
+  },
+  "fixed_bandwidth_0.5": {
+    "pooled_r2_log": -91.5523341449163,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -609.4833180987861,
+        "n": 8,
+        "bandwidth_used": 0.5
+      },
+      "Liu2024": {
+        "r2_log": -104.62457733146343,
+        "n": 20,
+        "bandwidth_used": 0.5
+      },
+      "Guo2024": {
+        "r2_log": -13.260503042201929,
+        "n": 45,
+        "bandwidth_used": 0.5
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": 0.5
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 0.5,
+      "Liu2024": 0.5,
+      "Guo2024": 0.5,
+      "Vrancik1968": 0.5
+    }
+  },
+  "fixed_bandwidth_0.75": {
+    "pooled_r2_log": -91.46646322067984,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -482.2289089356252,
+        "n": 8,
+        "bandwidth_used": 0.75
+      },
+      "Liu2024": {
+        "r2_log": -49.151638957024815,
+        "n": 20,
+        "bandwidth_used": 0.75
+      },
+      "Guo2024": {
+        "r2_log": -13.326567587468242,
+        "n": 45,
+        "bandwidth_used": 0.75
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": 0.75
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 0.75,
+      "Liu2024": 0.75,
+      "Guo2024": 0.75,
+      "Vrancik1968": 0.75
+    }
+  },
+  "fixed_bandwidth_1.0": {
+    "pooled_r2_log": -91.3496670857534,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -367.7032567978636,
+        "n": 8,
+        "bandwidth_used": 1.0
+      },
+      "Liu2024": {
+        "r2_log": -70.8320312663035,
+        "n": 20,
+        "bandwidth_used": 1.0
+      },
+      "Guo2024": {
+        "r2_log": -12.735252870738423,
+        "n": 45,
+        "bandwidth_used": 1.0
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": 1.0
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 1.0,
+      "Liu2024": 1.0,
+      "Guo2024": 1.0,
+      "Vrancik1968": 1.0
+    }
+  },
+  "fixed_bandwidth_1.5": {
+    "pooled_r2_log": -91.67496002483333,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -1937.4599513523672,
+        "n": 8,
+        "bandwidth_used": 1.5
+      },
+      "Liu2024": {
+        "r2_log": -95.93544899140066,
+        "n": 20,
+        "bandwidth_used": 1.5
+      },
+      "Guo2024": {
+        "r2_log": -10.000124388978602,
+        "n": 45,
+        "bandwidth_used": 1.5
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": 1.5
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 1.5,
+      "Liu2024": 1.5,
+      "Guo2024": 1.5,
+      "Vrancik1968": 1.5
+    }
+  },
+  "fixed_bandwidth_2.0": {
+    "pooled_r2_log": -91.51377083963301,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -2045.4312962571332,
+        "n": 8,
+        "bandwidth_used": 2.0
+      },
+      "Liu2024": {
+        "r2_log": -98.58367851647915,
+        "n": 20,
+        "bandwidth_used": 2.0
+      },
+      "Guo2024": {
+        "r2_log": -8.484391932060014,
+        "n": 45,
+        "bandwidth_used": 2.0
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": 2.0
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 2.0,
+      "Liu2024": 2.0,
+      "Guo2024": 2.0,
+      "Vrancik1968": 2.0
+    }
+  },
+  "fixed_bandwidth_3.0": {
+    "pooled_r2_log": -113.78222967913133,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -1258.027336488208,
+        "n": 8,
+        "bandwidth_used": 3.0
+      },
+      "Liu2024": {
+        "r2_log": -100.1207275301348,
+        "n": 20,
+        "bandwidth_used": 3.0
+      },
+      "Guo2024": {
+        "r2_log": -7.451915184103347,
+        "n": 45,
+        "bandwidth_used": 3.0
+      },
+      "Vrancik1968": {
+        "r2_log": -1880.2070775746645,
+        "n": 41,
+        "bandwidth_used": 3.0
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 3.0,
+      "Liu2024": 3.0,
+      "Guo2024": 3.0,
+      "Vrancik1968": 3.0
+    }
+  },
+  "fixed_bandwidth_5.0": {
+    "pooled_r2_log": -131.27463589838788,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -735.9713002258242,
+        "n": 8,
+        "bandwidth_used": 5.0
+      },
+      "Liu2024": {
+        "r2_log": -101.28862750550918,
+        "n": 20,
+        "bandwidth_used": 5.0
+      },
+      "Guo2024": {
+        "r2_log": -6.978628543748431,
+        "n": 45,
+        "bandwidth_used": 5.0
+      },
+      "Vrancik1968": {
+        "r2_log": -2176.3360977540137,
+        "n": 41,
+        "bandwidth_used": 5.0
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 5.0,
+      "Liu2024": 5.0,
+      "Guo2024": 5.0,
+      "Vrancik1968": 5.0
+    }
+  },
+  "nested_selected_bandwidth": {
+    "pooled_r2_log": -91.60532623286548,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -735.9713002258242,
+        "n": 8,
+        "bandwidth_used": 5.0
+      },
+      "Liu2024": {
+        "r2_log": -101.28862750550918,
+        "n": 20,
+        "bandwidth_used": 5.0
+      },
+      "Guo2024": {
+        "r2_log": -13.260503042201929,
+        "n": 45,
+        "bandwidth_used": 0.5
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": "inf"
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 5.0,
+      "Liu2024": 5.0,
+      "Guo2024": 0.5,
+      "Vrancik1968": "inf"
+    }
+  },
+  "geomtype_hard_match_only": {
+    "pooled_r2_log": -90.32632898988574,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -12.478884841777715,
+        "n": 8,
+        "bandwidth_used": "inf"
+      },
+      "Liu2024": {
+        "r2_log": -21.484390012617787,
+        "n": 20,
+        "bandwidth_used": "inf"
+      },
+      "Guo2024": {
+        "r2_log": -6.732963661929995,
+        "n": 45,
+        "bandwidth_used": "inf"
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.336593768781,
+        "n": 41,
+        "bandwidth_used": "inf"
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": "inf",
+      "Liu2024": "inf",
+      "Guo2024": "inf",
+      "Vrancik1968": "inf"
+    }
+  },
+  "nested_bandwidth_plus_geomtype_soft": {
+    "pooled_r2_log": -91.84627337707144,
+    "per_facility": {
+      "Zheng2024": {
+        "r2_log": -1269.648660739098,
+        "n": 8,
+        "bandwidth_used": 5.0
+      },
+      "Liu2024": {
+        "r2_log": -111.6945752267966,
+        "n": 20,
+        "bandwidth_used": 5.0
+      },
+      "Guo2024": {
+        "r2_log": -13.260503042201341,
+        "n": 45,
+        "bandwidth_used": 0.5
+      },
+      "Vrancik1968": {
+        "r2_log": -1501.3365937687818,
+        "n": 41,
+        "bandwidth_used": "inf"
+      }
+    },
+    "chosen_bandwidths": {
+      "Zheng2024": 5.0,
+      "Liu2024": 5.0,
+      "Guo2024": 0.5,
+      "Vrancik1968": "inf"
+    }
+  },
+  "geomtype_overlap_diagnostic": {
+    "Zheng2024": {
+      "test_geometry_types": [
+        "arm_in_cylinder"
+      ],
+      "train_geometry_types_available": [
+        "arm_in_cylinder",
+        "disk_in_cylinder",
+        "enclosed_arm_in_chamber",
+        "enclosed_salient_in_stator",
+        "salient_in_stator"
+      ],
+      "has_exact_match": true,
+      "n_train_rows_with_match": 20
+    },
+    "Liu2024": {
+      "test_geometry_types": [
+        "arm_in_cylinder"
+      ],
+      "train_geometry_types_available": [
+        "arm_in_cylinder",
+        "disk_in_cylinder",
+        "enclosed_arm_in_chamber",
+        "enclosed_salient_in_stator",
+        "salient_in_stator"
+      ],
+      "has_exact_match": true,
+      "n_train_rows_with_match": 8
+    },
+    "Guo2024": {
+      "test_geometry_types": [
+        "enclosed_arm_in_chamber"
+      ],
+      "train_geometry_types_available": [
+        "arm_in_cylinder",
+        "disk_in_cylinder",
+        "enclosed_salient_in_stator",
+        "salient_in_stator"
+      ],
+      "has_exact_match": false,
+      "n_train_rows_with_match": 0
+    },
+    "Vrancik1968": {
+      "test_geometry_types": [
+        "disk_in_cylinder",
+        "enclosed_salient_in_stator",
+        "salient_in_stator"
+      ],
+      "train_geometry_types_available": [
+        "arm_in_cylinder",
+        "enclosed_arm_in_chamber"
+      ],
+      "has_exact_match": false,
+      "n_train_rows_with_match": 0
+    }
+  },
+  "nearest_neighbor_distance_diagnostic_std_units": {
+    "Zheng2024": {
+      "mean_nn_dist_std_units": 2.8417950177215245,
+      "median_nn_dist_std_units": 2.8417950177215245,
+      "min_nn_dist_std_units": 2.8417950177215245,
+      "max_nn_dist_std_units": 2.8417950177215245
+    },
+    "Liu2024": {
+      "mean_nn_dist_std_units": 0.4769324447500516,
+      "median_nn_dist_std_units": 0.4769324447500516,
+      "min_nn_dist_std_units": 0.4769324447500516,
+      "max_nn_dist_std_units": 0.4769324447500516
+    },
+    "Guo2024": {
+      "mean_nn_dist_std_units": 0.6091967594377289,
+      "median_nn_dist_std_units": 0.5989285843944658,
+      "min_nn_dist_std_units": 0.4001429416184042,
+      "max_nn_dist_std_units": 0.9368526522533007
+    },
+    "Vrancik1968": {
+      "mean_nn_dist_std_units": 23.187153281341022,
+      "median_nn_dist_std_units": 24.26047912767593,
+      "min_nn_dist_std_units": 20.552214088992443,
+      "max_nn_dist_std_units": 24.342615921754398
+    }
+  },
+  "oracle_leakage_ceiling_DO_NOT_USE_AS_RESULT": {
+    "Zheng2024": {
+      "oracle_best_r2_log_LEAKAGE_NOT_VALID": -367.7032567978636,
+      "oracle_bandwidth_LEAKAGE_NOT_VALID": 1.0,
+      "caveat": "bandwidth chosen using this facility's own true Cp values - illustrates ceiling only, not a defensible LOFO result"
+    },
+    "Liu2024": {
+      "oracle_best_r2_log_LEAKAGE_NOT_VALID": -49.151638957024815,
+      "oracle_bandwidth_LEAKAGE_NOT_VALID": 0.75,
+      "caveat": "bandwidth chosen using this facility's own true Cp values - illustrates ceiling only, not a defensible LOFO result"
+    },
+    "Guo2024": {
+      "oracle_best_r2_log_LEAKAGE_NOT_VALID": -6.732963661929995,
+      "oracle_bandwidth_LEAKAGE_NOT_VALID": "inf",
+      "caveat": "bandwidth chosen using this facility's own true Cp values - illustrates ceiling only, not a defensible LOFO result"
+    },
+    "Vrancik1968": {
+      "oracle_best_r2_log_LEAKAGE_NOT_VALID": -1501.336593768781,
+      "oracle_bandwidth_LEAKAGE_NOT_VALID": 0.1,
+      "caveat": "bandwidth chosen using this facility's own true Cp values - illustrates ceiling only, not a defensible LOFO result"
+    }
+  }
+}

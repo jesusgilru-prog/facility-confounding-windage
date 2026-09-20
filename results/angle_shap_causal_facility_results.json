@@ -1,0 +1,824 @@
+{
+  "n_total": 114,
+  "facilities": [
+    "Guo2024",
+    "Liu2024",
+    "Vrancik1968",
+    "Zheng2024"
+  ],
+  "features": [
+    "Re_Omega",
+    "Pi_confinement",
+    "Pi_gap",
+    "Pi_aspect_axial"
+  ],
+  "within_facility_variance_check": {
+    "Guo2024": {
+      "Re_Omega": {
+        "std": 0.7570230073436743,
+        "n_unique": 19
+      },
+      "Pi_confinement": {
+        "std": 0.008867028251443355,
+        "n_unique": 7
+      },
+      "Pi_gap": {
+        "std": 0.008867028251443393,
+        "n_unique": 7
+      },
+      "Pi_aspect_axial": {
+        "std": 0.5116035318691597,
+        "n_unique": 8
+      }
+    },
+    "Liu2024": {
+      "Re_Omega": {
+        "std": 0.9128591378772918,
+        "n_unique": 20
+      },
+      "Pi_confinement": {
+        "std": 5.695323946259567e-17,
+        "n_unique": 1
+      },
+      "Pi_gap": {
+        "std": 4.556259157007654e-16,
+        "n_unique": 1
+      },
+      "Pi_aspect_axial": {
+        "std": 0.0,
+        "n_unique": 1
+      }
+    },
+    "Vrancik1968": {
+      "Re_Omega": {
+        "std": 1.089479998264184,
+        "n_unique": 36
+      },
+      "Pi_confinement": {
+        "std": 0.004980439152186955,
+        "n_unique": 3
+      },
+      "Pi_gap": {
+        "std": 0.6100193572703354,
+        "n_unique": 3
+      },
+      "Pi_aspect_axial": {
+        "std": 0.0689151613278633,
+        "n_unique": 3
+      }
+    },
+    "Zheng2024": {
+      "Re_Omega": {
+        "std": 0.7212103380601566,
+        "n_unique": 8
+      },
+      "Pi_confinement": {
+        "std": 0.0,
+        "n_unique": 1
+      },
+      "Pi_gap": {
+        "std": 0.0,
+        "n_unique": 1
+      },
+      "Pi_aspect_axial": {
+        "std": 0.0,
+        "n_unique": 1
+      }
+    }
+  },
+  "variables_with_nonzero_within_facility_variance_by_source": {
+    "Re_Omega": [
+      "Guo2024",
+      "Liu2024",
+      "Vrancik1968",
+      "Zheng2024"
+    ],
+    "Pi_confinement": [
+      "Guo2024",
+      "Vrancik1968"
+    ],
+    "Pi_gap": [
+      "Guo2024",
+      "Vrancik1968"
+    ],
+    "Pi_aspect_axial": [
+      "Guo2024",
+      "Vrancik1968"
+    ]
+  },
+  "within_facility_pi_collinearity": {
+    "Guo2024": {
+      "Re_Omega": {
+        "Re_Omega": 1.0,
+        "Pi_confinement": 0.0191,
+        "Pi_gap": -0.0191,
+        "Pi_aspect_axial": 0.0102
+      },
+      "Pi_confinement": {
+        "Re_Omega": 0.0191,
+        "Pi_confinement": 1.0,
+        "Pi_gap": -1.0,
+        "Pi_aspect_axial": -0.0189
+      },
+      "Pi_gap": {
+        "Re_Omega": -0.0191,
+        "Pi_confinement": -1.0,
+        "Pi_gap": 1.0,
+        "Pi_aspect_axial": 0.0189
+      },
+      "Pi_aspect_axial": {
+        "Re_Omega": 0.0102,
+        "Pi_confinement": -0.0189,
+        "Pi_gap": 0.0189,
+        "Pi_aspect_axial": 1.0
+      }
+    },
+    "Liu2024": "only Re_Omega/M_tip vary; Pi_* constant",
+    "Vrancik1968": {
+      "Re_Omega": {
+        "Re_Omega": 1.0,
+        "Pi_confinement": -0.4678,
+        "Pi_gap": 0.424,
+        "Pi_aspect_axial": 0.3664
+      },
+      "Pi_confinement": {
+        "Re_Omega": -0.4678,
+        "Pi_confinement": 1.0,
+        "Pi_gap": -0.9758,
+        "Pi_aspect_axial": -0.5104
+      },
+      "Pi_gap": {
+        "Re_Omega": 0.424,
+        "Pi_confinement": -0.9758,
+        "Pi_gap": 1.0,
+        "Pi_aspect_axial": 0.31
+      },
+      "Pi_aspect_axial": {
+        "Re_Omega": 0.3664,
+        "Pi_confinement": -0.5104,
+        "Pi_gap": 0.31,
+        "Pi_aspect_axial": 1.0
+      }
+    },
+    "Zheng2024": "only Re_Omega/M_tip vary; Pi_* constant"
+  },
+  "per_facility_simple_regression": {
+    "Re_Omega": {
+      "Guo2024": {
+        "n": 45,
+        "testable": true,
+        "ols_slope": -0.5747575707019683,
+        "ols_slope_se": 0.14094045371995775,
+        "ols_slope_ci95": [
+          -0.8510008599930855,
+          -0.2985142814108511
+        ],
+        "pearson_r": -0.5280995760342527,
+        "pearson_r2": 0.2788891622075575,
+        "p_value": 0.0001926639561187141,
+        "spearman_rho": -0.390142202576018,
+        "spearman_p": 0.008063276597466187
+      },
+      "Liu2024": {
+        "n": 20,
+        "testable": true,
+        "ols_slope": -0.049184301279193474,
+        "ols_slope_se": 0.020032429638267474,
+        "ols_slope_ci95": [
+          -0.08844786337019772,
+          -0.009920739188189226
+        ],
+        "pearson_r": -0.5008786248195356,
+        "pearson_r2": 0.2508793968011091,
+        "p_value": 0.024477274419141243,
+        "spearman_rho": -0.4526315789473684,
+        "spearman_p": 0.045075688783048344
+      },
+      "Vrancik1968": {
+        "n": 41,
+        "testable": true,
+        "ols_slope": -0.43876034873802683,
+        "ols_slope_se": 0.04522994289560734,
+        "ols_slope_ci95": [
+          -0.5274110368134172,
+          -0.35010966066263643
+        ],
+        "pearson_r": -0.8408290250643075,
+        "pearson_r2": 0.7069934493905938,
+        "p_value": 6.008065926598581e-12,
+        "spearman_rho": -0.8707625272331154,
+        "spearman_p": 1.3703943806621623e-13
+      },
+      "Zheng2024": {
+        "n": 8,
+        "testable": true,
+        "ols_slope": -0.12770189806373286,
+        "ols_slope_se": 0.03992879323596864,
+        "ols_slope_ci95": [
+          -0.20596233280623139,
+          -0.049441463321234336
+        ],
+        "pearson_r": -0.7939053063273815,
+        "pearson_r2": 0.6302856354147736,
+        "p_value": 0.018641385757726177,
+        "spearman_rho": -0.7380952380952381,
+        "spearman_p": 0.03655276105286081
+      }
+    },
+    "Pi_confinement": {
+      "Guo2024": {
+        "n": 45,
+        "testable": true,
+        "ols_slope": -2.1769407512982792,
+        "ols_slope_se": 14.165973189126262,
+        "ols_slope_ci95": [
+          -29.942248201985752,
+          25.588366699389194
+        ],
+        "pearson_r": -0.023428621759629346,
+        "pearson_r2": 0.0005489003175557776,
+        "p_value": 0.8785857937559602,
+        "spearman_rho": -0.14318768640788443,
+        "spearman_p": 0.3480645529106642
+      },
+      "Liu2024": {
+        "n": 20,
+        "testable": false,
+        "reason": "zero within-facility variance (single geometry)"
+      },
+      "Vrancik1968": {
+        "n": 41,
+        "testable": true,
+        "ols_slope": 81.798581810699,
+        "ols_slope_se": 12.748994526668898,
+        "ols_slope_ci95": [
+          56.81055253842796,
+          106.78661108297004
+        ],
+        "pearson_r": 0.7165961543056563,
+        "pearson_r2": 0.513510048365656,
+        "p_value": 1.3701021566306093e-07,
+        "spearman_rho": 0.716715974723727,
+        "spearman_p": 1.3604933660634587e-07
+      },
+      "Zheng2024": {
+        "n": 8,
+        "testable": false,
+        "reason": "zero within-facility variance (single geometry)"
+      }
+    },
+    "Pi_gap": {
+      "Guo2024": {
+        "n": 45,
+        "testable": true,
+        "ols_slope": 2.1769407512982943,
+        "ols_slope_se": 14.165973189126195,
+        "ols_slope_ci95": [
+          -25.58836669938905,
+          29.942248201985635
+        ],
+        "pearson_r": 0.023428621759629613,
+        "pearson_r2": 0.0005489003175557902,
+        "p_value": 0.8785857937559589,
+        "spearman_rho": 0.14318768640788443,
+        "spearman_p": 0.3480645529106642
+      },
+      "Liu2024": {
+        "n": 20,
+        "testable": false,
+        "reason": "zero within-facility variance (single geometry)"
+      },
+      "Vrancik1968": {
+        "n": 41,
+        "testable": true,
+        "ols_slope": -0.6478426556358183,
+        "ols_slope_se": 0.10727887661178731,
+        "ols_slope_ci95": [
+          -0.8581092537949214,
+          -0.43757605747671524
+        ],
+        "pearson_r": -0.6951431003644517,
+        "pearson_r2": 0.4832239299843022,
+        "p_value": 4.5734720535365725e-07,
+        "spearman_rho": -0.716715974723727,
+        "spearman_p": 1.3604933660634587e-07
+      },
+      "Zheng2024": {
+        "n": 8,
+        "testable": false,
+        "reason": "zero within-facility variance (single geometry)"
+      }
+    },
+    "Pi_aspect_axial": {
+      "Guo2024": {
+        "n": 45,
+        "testable": true,
+        "ols_slope": 0.9719482832531251,
+        "ols_slope_se": 0.19581861945818846,
+        "ols_slope_ci95": [
+          0.5881437891150758,
+          1.3557527773911744
+        ],
+        "pearson_r": 0.6035298164388804,
+        "pearson_r2": 0.3642482393307486,
+        "p_value": 1.1406473419401214e-05,
+        "spearman_rho": 0.4927966929849049,
+        "spearman_p": 0.0005837172591645905
+      },
+      "Liu2024": {
+        "n": 20,
+        "testable": false,
+        "reason": "zero within-facility variance (single geometry)"
+      },
+      "Vrancik1968": {
+        "n": 41,
+        "testable": true,
+        "ols_slope": -3.1503148765655835,
+        "ols_slope_se": 1.2208517481944845,
+        "ols_slope_ci95": [
+          -5.543184303026774,
+          -0.7574454501043939
+        ],
+        "pearson_r": -0.38188253928565236,
+        "pearson_r2": 0.14583427381125783,
+        "p_value": 0.01374733859000232,
+        "spearman_rho": -0.06797960185441727,
+        "spearman_p": 0.6727989580968138
+      },
+      "Zheng2024": {
+        "n": 8,
+        "testable": false,
+        "reason": "zero within-facility variance (single geometry)"
+      }
+    }
+  },
+  "sign_consistency_summary": {
+    "Re_Omega": {
+      "n_facilities_testable": 4,
+      "facilities_testable": [
+        "Guo2024",
+        "Liu2024",
+        "Vrancik1968",
+        "Zheng2024"
+      ],
+      "slopes": {
+        "Guo2024": -0.5747575707019683,
+        "Liu2024": -0.049184301279193474,
+        "Vrancik1968": -0.43876034873802683,
+        "Zheng2024": -0.12770189806373286
+      },
+      "all_same_sign": true,
+      "all_negative": true,
+      "all_positive": false,
+      "ci_excludes_zero_per_facility": {
+        "Guo2024": true,
+        "Liu2024": true,
+        "Vrancik1968": true,
+        "Zheng2024": true
+      },
+      "all_ci_exclude_zero": true
+    },
+    "Pi_confinement": {
+      "n_facilities_testable": 2,
+      "facilities_testable": [
+        "Guo2024",
+        "Vrancik1968"
+      ],
+      "slopes": {
+        "Guo2024": -2.1769407512982792,
+        "Vrancik1968": 81.798581810699
+      },
+      "all_same_sign": false,
+      "all_negative": false,
+      "all_positive": false,
+      "ci_excludes_zero_per_facility": {
+        "Guo2024": false,
+        "Vrancik1968": true
+      },
+      "all_ci_exclude_zero": false
+    },
+    "Pi_gap": {
+      "n_facilities_testable": 2,
+      "facilities_testable": [
+        "Guo2024",
+        "Vrancik1968"
+      ],
+      "slopes": {
+        "Guo2024": 2.1769407512982943,
+        "Vrancik1968": -0.6478426556358183
+      },
+      "all_same_sign": false,
+      "all_negative": false,
+      "all_positive": false,
+      "ci_excludes_zero_per_facility": {
+        "Guo2024": false,
+        "Vrancik1968": true
+      },
+      "all_ci_exclude_zero": false
+    },
+    "Pi_aspect_axial": {
+      "n_facilities_testable": 2,
+      "facilities_testable": [
+        "Guo2024",
+        "Vrancik1968"
+      ],
+      "slopes": {
+        "Guo2024": 0.9719482832531251,
+        "Vrancik1968": -3.1503148765655835
+      },
+      "all_same_sign": false,
+      "all_negative": false,
+      "all_positive": false,
+      "ci_excludes_zero_per_facility": {
+        "Guo2024": true,
+        "Vrancik1968": true
+      },
+      "all_ci_exclude_zero": true
+    }
+  },
+  "facility_fixed_effects_partial_correlation": {
+    "Re_Omega": {
+      "testable": true,
+      "within_facility_demeaned_pearson_r": -0.5805802365605539,
+      "p_value": 1.280456228542471e-11,
+      "within_facility_demeaned_spearman_rho": -0.6620777179688035,
+      "p_value_spearman": 1.0493391397104689e-15,
+      "within_facility_demeaned_slope": -0.39675640650329835,
+      "slope_se": 0.05257574167428361,
+      "note": "all 4 facilities contribute variance"
+    },
+    "Pi_confinement": {
+      "testable": true,
+      "within_facility_demeaned_pearson_r": 0.16820321192608342,
+      "p_value": 0.07363171484143548,
+      "within_facility_demeaned_spearman_rho": 0.33652771546548577,
+      "p_value_spearman": 0.000251318790647193,
+      "within_facility_demeaned_slope": 16.539637405855448,
+      "slope_se": 9.159051604467695,
+      "note": "dominated by Guo2024/Vrancik1968 for Pi_* (zero within-variance rows contribute nothing)"
+    },
+    "Pi_gap": {
+      "testable": true,
+      "within_facility_demeaned_pearson_r": -0.38062816152899753,
+      "p_value": 2.946292664042483e-05,
+      "within_facility_demeaned_spearman_rho": -0.37402761866198325,
+      "p_value_spearman": 4.143559003934782e-05,
+      "within_facility_demeaned_slope": -0.6471862899536693,
+      "slope_se": 0.14857080323127236,
+      "note": "dominated by Guo2024/Vrancik1968 for Pi_* (zero within-variance rows contribute nothing)"
+    },
+    "Pi_aspect_axial": {
+      "testable": true,
+      "within_facility_demeaned_pearson_r": 0.4719911468513542,
+      "p_value": 1.1497684600277252e-07,
+      "within_facility_demeaned_spearman_rho": -0.04473367961795003,
+      "p_value_spearman": 0.6365000319082253,
+      "within_facility_demeaned_slope": 0.9050523088727249,
+      "slope_se": 0.15973644612986485,
+      "note": "dominated by Guo2024/Vrancik1968 for Pi_* (zero within-variance rows contribute nothing)"
+    }
+  },
+  "shap_local_slope_within_facility": {
+    "Re_Omega": {
+      "Guo2024": {
+        "testable": true,
+        "n": 45,
+        "spearman_rho_shap_vs_feature": -0.6995178606746505,
+        "p_value": 8.982936161820451e-08,
+        "ols_slope_shap_vs_feature": -0.5959037484864891
+      },
+      "Liu2024": {
+        "testable": true,
+        "n": 20,
+        "spearman_rho_shap_vs_feature": -0.9518796992481202,
+        "p_value": 1.1028078978991608e-10,
+        "ols_slope_shap_vs_feature": -0.1040264052823898
+      },
+      "Vrancik1968": {
+        "testable": true,
+        "n": 41,
+        "spearman_rho_shap_vs_feature": -0.9755544913179152,
+        "p_value": 2.8161412875807507e-27,
+        "ols_slope_shap_vs_feature": -0.32419267171813204
+      },
+      "Zheng2024": {
+        "testable": true,
+        "n": 8,
+        "spearman_rho_shap_vs_feature": -0.7619047619047621,
+        "p_value": 0.028004939153071805,
+        "ols_slope_shap_vs_feature": -0.13070233370055578
+      }
+    },
+    "Pi_confinement": {
+      "Guo2024": {
+        "testable": true,
+        "n": 45,
+        "spearman_rho_shap_vs_feature": -0.033083866630535315,
+        "p_value": 0.8291849209522385,
+        "ols_slope_shap_vs_feature": -0.16070620154455634
+      },
+      "Liu2024": {
+        "testable": false,
+        "n": 20
+      },
+      "Vrancik1968": {
+        "testable": true,
+        "n": 41,
+        "spearman_rho_shap_vs_feature": 0.8927770540070974,
+        "p_value": 4.4083170299506295e-15,
+        "ols_slope_shap_vs_feature": 15.613189484405375
+      },
+      "Zheng2024": {
+        "testable": false,
+        "n": 8
+      }
+    },
+    "Pi_gap": {
+      "Guo2024": {
+        "testable": true,
+        "n": 45,
+        "spearman_rho_shap_vs_feature": 0.0433436539255525,
+        "p_value": 0.7773999628349625,
+        "ols_slope_shap_vs_feature": 0.6332336352896047
+      },
+      "Liu2024": {
+        "testable": false,
+        "n": 20
+      },
+      "Vrancik1968": {
+        "testable": true,
+        "n": 41,
+        "spearman_rho_shap_vs_feature": -0.8927381080758725,
+        "p_value": 4.438046764148173e-15,
+        "ols_slope_shap_vs_feature": -0.17954721264116072
+      },
+      "Zheng2024": {
+        "testable": false,
+        "n": 8
+      }
+    },
+    "Pi_aspect_axial": {
+      "Guo2024": {
+        "testable": true,
+        "n": 45,
+        "spearman_rho_shap_vs_feature": 0.6169295349553465,
+        "p_value": 6.386412827990039e-06,
+        "ols_slope_shap_vs_feature": 0.5745837605869692
+      },
+      "Liu2024": {
+        "testable": false,
+        "n": 20
+      },
+      "Vrancik1968": {
+        "testable": true,
+        "n": 41,
+        "spearman_rho_shap_vs_feature": 0.11628524088525906,
+        "p_value": 0.46905099875998907,
+        "ols_slope_shap_vs_feature": -0.008995526640515948
+      },
+      "Zheng2024": {
+        "testable": false,
+        "n": 8
+      }
+    }
+  },
+  "shap_local_slope_sign_consistency": {
+    "Re_Omega": {
+      "n_facilities_testable": 4,
+      "rhos": {
+        "Guo2024": -0.6995178606746505,
+        "Liu2024": -0.9518796992481202,
+        "Vrancik1968": -0.9755544913179152,
+        "Zheng2024": -0.7619047619047621
+      },
+      "all_same_sign": true,
+      "all_negative": true
+    },
+    "Pi_confinement": {
+      "n_facilities_testable": 2,
+      "rhos": {
+        "Guo2024": -0.033083866630535315,
+        "Vrancik1968": 0.8927770540070974
+      },
+      "all_same_sign": false,
+      "all_negative": false
+    },
+    "Pi_gap": {
+      "n_facilities_testable": 2,
+      "rhos": {
+        "Guo2024": 0.0433436539255525,
+        "Vrancik1968": -0.8927381080758725
+      },
+      "all_same_sign": false,
+      "all_negative": false
+    },
+    "Pi_aspect_axial": {
+      "n_facilities_testable": 2,
+      "rhos": {
+        "Guo2024": 0.6169295349553465,
+        "Vrancik1968": 0.11628524088525906
+      },
+      "all_same_sign": true,
+      "all_negative": false
+    }
+  },
+  "pooled_insample_mean_abs_shap_ranking": [
+    [
+      "Re_Omega",
+      1.0268095227379181
+    ],
+    [
+      "Pi_aspect_axial",
+      0.16445224929677693
+    ],
+    [
+      "Pi_gap",
+      0.05830177432004138
+    ],
+    [
+      "Pi_confinement",
+      0.03882897612254285
+    ]
+  ],
+  "lofo_permutation_importance_rank_transfer": {
+    "Guo2024": {
+      "n_test": 45,
+      "n_train": 69,
+      "base_held_out_spearman_pred_vs_actual": 0.06966662150283313,
+      "base_held_out_r2_log": -9.22599966855658,
+      "feature_permutation_importance": {
+        "Re_Omega": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_confinement": {
+          "mean_spearman_drop_when_permuted": 0.07898453212883708,
+          "mean_r2_drop_when_permuted": 1.6604787227585405e-05
+        },
+        "Pi_gap": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_aspect_axial": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        }
+      }
+    },
+    "Liu2024": {
+      "n_test": 20,
+      "n_train": 94,
+      "base_held_out_spearman_pred_vs_actual": 0.18620494518421662,
+      "base_held_out_r2_log": -21.14448628976882,
+      "feature_permutation_importance": {
+        "Re_Omega": {
+          "mean_spearman_drop_when_permuted": 0.1941959266374664,
+          "mean_r2_drop_when_permuted": 1.3688894959434414
+        },
+        "Pi_confinement": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_gap": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_aspect_axial": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        }
+      }
+    },
+    "Vrancik1968": {
+      "n_test": 41,
+      "n_train": 73,
+      "base_held_out_spearman_pred_vs_actual": 0.7660965893213751,
+      "base_held_out_r2_log": -1.018302227234844,
+      "feature_permutation_importance": {
+        "Re_Omega": {
+          "mean_spearman_drop_when_permuted": 0.7816712296723458,
+          "mean_r2_drop_when_permuted": 0.17912315939497994
+        },
+        "Pi_confinement": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_gap": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_aspect_axial": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        }
+      }
+    },
+    "Zheng2024": {
+      "n_test": 8,
+      "n_train": 106,
+      "base_held_out_spearman_pred_vs_actual": 0.45509797952703834,
+      "base_held_out_r2_log": -11.867833459258064,
+      "feature_permutation_importance": {
+        "Re_Omega": {
+          "mean_spearman_drop_when_permuted": 0.47982896183554713,
+          "mean_r2_drop_when_permuted": 0.6123431106689214
+        },
+        "Pi_confinement": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_gap": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        },
+        "Pi_aspect_axial": {
+          "mean_spearman_drop_when_permuted": 0.0,
+          "mean_r2_drop_when_permuted": 0.0
+        }
+      }
+    }
+  },
+  "lofo_permutation_consistency_summary": {
+    "Re_Omega": {
+      "drops_by_held_out_facility": {
+        "Guo2024": 0.0,
+        "Liu2024": 0.1941959266374664,
+        "Vrancik1968": 0.7816712296723458,
+        "Zheng2024": 0.47982896183554713
+      },
+      "positive_in_all_4": false,
+      "positive_in_n_of_4": 3
+    },
+    "Pi_confinement": {
+      "drops_by_held_out_facility": {
+        "Guo2024": 0.07898453212883708,
+        "Liu2024": 0.0,
+        "Vrancik1968": 0.0,
+        "Zheng2024": 0.0
+      },
+      "positive_in_all_4": false,
+      "positive_in_n_of_4": 1
+    },
+    "Pi_gap": {
+      "drops_by_held_out_facility": {
+        "Guo2024": 0.0,
+        "Liu2024": 0.0,
+        "Vrancik1968": 0.0,
+        "Zheng2024": 0.0
+      },
+      "positive_in_all_4": false,
+      "positive_in_n_of_4": 0
+    },
+    "Pi_aspect_axial": {
+      "drops_by_held_out_facility": {
+        "Guo2024": 0.0,
+        "Liu2024": 0.0,
+        "Vrancik1968": 0.0,
+        "Zheng2024": 0.0
+      },
+      "positive_in_all_4": false,
+      "positive_in_n_of_4": 0
+    }
+  },
+  "verdict": {
+    "claim_tested": "Re_Omega's sign/rank effect on log(Cp) is consistent across all 4 facilities even though the quantitative exponent/law does not transfer.",
+    "check_1_per_facility_simple_slope_all_4_negative": true,
+    "check_1_slopes": {
+      "Guo2024": -0.5747575707019683,
+      "Liu2024": -0.049184301279193474,
+      "Vrancik1968": -0.43876034873802683,
+      "Zheng2024": -0.12770189806373286
+    },
+    "check_1_all_ci_exclude_zero": true,
+    "check_3_fixed_effects_partial_corr_sign_negative": true,
+    "check_3_fixed_effects_partial_corr_r": -0.5805802365605539,
+    "check_4_shap_local_slope_all_4_negative": true,
+    "check_4_shap_rhos": {
+      "Guo2024": -0.6995178606746505,
+      "Liu2024": -0.9518796992481202,
+      "Vrancik1968": -0.9755544913179152,
+      "Zheng2024": -0.7619047619047621
+    },
+    "check_5_lofo_permutation_positive_in_all_4_held_out": false,
+    "check_5_drops": {
+      "Guo2024": 0.0,
+      "Liu2024": 0.1941959266374664,
+      "Vrancik1968": 0.7816712296723458,
+      "Zheng2024": 0.47982896183554713
+    },
+    "geometric_pi_variables_note": "Pi_confinement, Pi_gap, Pi_aspect_axial have ZERO within-facility variance in Liu2024 and Zheng2024 (single geometry each), so their per-facility sign consistency can only be checked on 2 of 4 facilities (Guo2024, Vrancik1968), and within those two facilities Pi_confinement and Pi_gap are severely collinear (r=-1.00 in Guo2024, r=-0.976 in Vrancik1968), so no confident individual attribution between confinement-effect and gap-effect is possible even there.",
+    "pi_confinement_sign_in_2_testable_facilities": {
+      "Guo2024": -2.1769407512982792,
+      "Vrancik1968": 81.798581810699
+    },
+    "pi_gap_sign_in_2_testable_facilities": {
+      "Guo2024": 2.1769407512982943,
+      "Vrancik1968": -0.6478426556358183
+    },
+    "pi_aspect_axial_sign_in_2_testable_facilities": {
+      "Guo2024": 0.9719482832531251,
+      "Vrancik1968": -3.1503148765655835
+    },
+    "ALL_FOUR_INDEPENDENT_CHECKS_AGREE_RE_OMEGA_NEGATIVE_AND_TRANSFERS": false
+  }
+}

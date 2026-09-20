@@ -1,0 +1,26 @@
+{
+  "n_total": 64,
+  "facility_counts": {
+    "Vrancik1968": 41,
+    "Liu2024": 15,
+    "Zheng2024": 8
+  },
+  "four_predictor_lofo": {
+    "rank_deficient_folds_skipped": [
+      "Vrancik1968"
+    ],
+    "per_facility_r2": {
+      "Liu2024": -36.886221356245244,
+      "Zheng2024": -72.70121027714292
+    },
+    "pooled_r2": -12.03473941466098
+  },
+  "reynolds_only_lofo": {
+    "per_facility_r2": {
+      "Liu2024": -23.96672484306781,
+      "Vrancik1968": -0.4136941413757309,
+      "Zheng2024": -12.520455572010967
+    },
+    "pooled_r2": -0.5049143474557318
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "daily_nece_regime_classification_check": {
+    "hypothesis": "Classifying by Daily-Nece regime (I/II/III/IV) instead of forcing regime IV on all 114 points drastically reduces the error.",
+    "formulas_source": "Poncet et al. arXiv:1305.2882 sec 2.4.1 eq 38-42, verified by an independent WebSearch (same coefficients/exponents). III/IV boundary: eq 42 of the same source. Laminar/turbulent boundary: Daily-Nece / Kreith, same source.",
+    "blind_spot_declared": "Could not confidently locate the closed-form I/II boundary (laminar regime). Does not materially affect the result: only 1/114 points falls on the laminar side of the critical-Re criterion.",
+    "regime_counts_all_114": {
+      "IV": 84,
+      "III": 29,
+      "I": 1
+    },
+    "per_source": {
+      "Guo2024": {
+        "n": 45,
+        "regime_counts": {
+          "IV": 45
+        },
+        "median_ratio_obs_over_pred": 5.553243991216655,
+        "n_underpredicted": 45
+      },
+      "Liu2024": {
+        "n": 20,
+        "regime_counts": {
+          "IV": 20
+        },
+        "median_ratio_obs_over_pred": 35.54267184686098,
+        "n_underpredicted": 20
+      },
+      "Vrancik1968": {
+        "n": 41,
+        "regime_counts": {
+          "III": 29,
+          "IV": 11,
+          "I": 1
+        },
+        "median_ratio_obs_over_pred": 32.398599786063286,
+        "n_underpredicted": 41
+      },
+      "Zheng2024": {
+        "n": 8,
+        "regime_counts": {
+          "IV": 8
+        },
+        "median_ratio_obs_over_pred": 22.54403403221623,
+        "n_underpredicted": 8
+      }
+    },
+    "median_ratio_regime_classified": 25.055437170062362,
+    "median_ratio_naive_regime_IV_only": 26.72703707737311,
+    "n_underpredicted_regime_classified": "114/114",
+    "n_underpredicted_naive": "114/114",
+    "r2_log_space_regime_classified": -3.696598627507618,
+    "r2_log_space_naive_regime_IV_only": -4.132773379098824,
+    "conclusion": "HYPOTHESIS NOT CONFIRMED. Classifying by the correct physical regime (mostly III vs. IV; 113/114 points are turbulent, and within those only Vrancik1968 falls partly in merged regime III) barely moves the error: median ratio 26.7x -> 25.1x, R2(log) -4.13 -> -3.70. Still 114/114 underpredicted. This quantitatively confirms that regime classification is NOT the cause: a III<->IV regime switch only shifts the exponent by O(0.1), insufficient to explain a bias of more than one order of magnitude. UPDATED causal diagnosis (verified via a real regression of log(Cp/C_M_DailyNece) ~ log(Re_Omega): slope=-0.452, R2=0.716, see robustness_summary_stats.json): the DOMINANT cause is a mismatch between the corpus's effective Reynolds exponent and regime IV's -0.2, not regime misclassification. Geometric-class mixing (Daily-Nece = smooth confined disk vs. the real corpus: centrifuge arms / alternator poles / cylinders) remains a contributing but secondary factor."
+  },
+  "lofo_validation_of_regime_as_covariate": {
+    "protocol": "4-fold leave-one-facility-out, log space, no parameter calibrated with the excluded source. Replicates exactly the protocol of scaling_law_search.py.",
+    "baseline_winner_model_no_regime": {
+      "cols": [
+        "const",
+        "log_Re",
+        "log_Pi_gap",
+        "log_Pi_confinement",
+        "log_Pi_aspect_axial"
+      ],
+      "pooled_r2_log": -0.8848004392997477,
+      "pooled_rmse_log": 1.886487007845539,
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.986612059551168,
+          "held_out_rmse_log": 2.574584388755977,
+          "coef_trained_without_this_facility": {
+            "const": -0.7459091033734563,
+            "q_Re": -0.24442508327065526,
+            "p_gap": -0.42829708013415435,
+            "r_conf": 1.0504869501708818,
+            "t_asp": -0.6892167641805961
+          }
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -118.63018606035955,
+          "held_out_rmse_log": 0.9556084177859963,
+          "coef_trained_without_this_facility": {
+            "const": 0.7443614647669788,
+            "q_Re": -0.3302171322747654,
+            "p_gap": -0.2503125785136072,
+            "r_conf": -6.746290693353938,
+            "t_asp": 0.5107399696285037
+          }
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.8542073187456043,
+          "held_out_rmse_log": 0.948680042841675,
+          "coef_trained_without_this_facility": {
+            "const": 9.52981968876629,
+            "q_Re": -0.4623406395411268,
+            "p_gap": 1.2359529360600803,
+            "r_conf": 10.108240882325413,
+            "t_asp": 1.0808262644849864
+          }
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -553.7587044467027,
+          "held_out_rmse_log": 2.555916609227836,
+          "coef_trained_without_this_facility": {
+            "const": 0.13779392495406326,
+            "q_Re": -0.37276329258422203,
+            "p_gap": -0.4386444585833532,
+            "r_conf": -22.58809629964996,
+            "t_asp": 0.7999382246865894
+          }
+        }
+      },
+      "note": "Should match lofo_cv.pooled_r2_log from scaling_law_search_results.json (cross-check)."
+    },
+    "extended_model_with_regime_dummy": {
+      "cols": [
+        "const",
+        "log_Re",
+        "log_Pi_gap",
+        "log_Pi_confinement",
+        "log_Pi_aspect_axial",
+        "regime_merged_dummy(III=1,IV/otro=0)"
+      ],
+      "pooled_r2_log": -0.900032544507317,
+      "pooled_rmse_log": 1.8940945362689348,
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -9.213722595209882,
+          "held_out_rmse_log": 2.6036947708357863,
+          "coef_trained_without_this_facility": {
+            "const": -0.8798272242683153,
+            "q_Re": -0.23488633502139394,
+            "p_gap": -0.423399139292865,
+            "r_conf": 1.0489027685464867,
+            "t_asp": -0.6928278749164714,
+            "regime_merged_dummy": 0.04300773742177735
+          }
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -110.65181233848398,
+          "held_out_rmse_log": 0.9231929219055357,
+          "coef_trained_without_this_facility": {
+            "const": 1.0910370914298024,
+            "q_Re": -0.3517307120759356,
+            "p_gap": -0.2598484182015398,
+            "r_conf": -6.439316381943276,
+            "t_asp": 0.49486710778034815,
+            "regime_merged_dummy": -0.13107600653921372
+          }
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.8542073187456043,
+          "held_out_rmse_log": 0.948680042841675,
+          "coef_trained_without_this_facility": {
+            "const": 9.52981968876629,
+            "q_Re": -0.4623406395411268,
+            "p_gap": 1.2359529360600803,
+            "r_conf": 10.108240882325413,
+            "t_asp": 1.0808262644849864,
+            "regime_merged_dummy": 0.0
+          }
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -529.4865103780538,
+          "held_out_rmse_log": 2.499377120583369,
+          "coef_trained_without_this_facility": {
+            "const": 0.3724635641425466,
+            "q_Re": -0.3876270199755299,
+            "p_gap": -0.45351926689721117,
+            "r_conf": -22.058912134924068,
+            "t_asp": 0.781441452038979,
+            "regime_merged_dummy": -0.12921627265738558
+          }
+        }
+      }
+    },
+    "conclusion": "Adding the physical regime as a regressor does NOT improve LOFO generalization (pooled R2 log-space -0.8848 -> -0.9000, slightly worse). Reason: the regime dummy is almost perfectly confounded with facility identity (only Vrancik1968 has points in merged regime III, 29/41; the other 3 sources are 100% separated regime IV), so when Vrancik1968 is held out the model cannot learn any merged-regime effect at all -- that facility's R2 is identical to the baseline model. This is another symptom of the same underlying problem: Daily-Nece regime varies case-by-case with facility, it is not an independent covariate that generalizes."
+  }
+}

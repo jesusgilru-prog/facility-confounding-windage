@@ -1,0 +1,477 @@
+{
+  "n_total": 114,
+  "facilities": {
+    "Guo2024": 45,
+    "Liu2024": 20,
+    "Vrancik1968": 41,
+    "Zheng2024": 8
+  },
+  "empirical_within_facility_monotonicity": {
+    "Guo2024": {
+      "n": 45,
+      "n_pairs_nontied": 889,
+      "kendall_tau_Re_Cp": -0.3081126761975184,
+      "kendall_tau_p": 0.004237266049326035,
+      "spearman_rho_Re_Cp": -0.390142202576018,
+      "frac_pairs_consistent_with_Cp_decreasing_in_Re": 0.6625421822272216
+    },
+    "Liu2024": {
+      "n": 20,
+      "n_pairs_nontied": 190,
+      "kendall_tau_Re_Cp": -0.30526315789473685,
+      "kendall_tau_p": 0.06380788453418215,
+      "spearman_rho_Re_Cp": -0.4526315789473684,
+      "frac_pairs_consistent_with_Cp_decreasing_in_Re": 0.6526315789473685
+    },
+    "Vrancik1968": {
+      "n": 41,
+      "n_pairs_nontied": 811,
+      "kendall_tau_Re_Cp": -0.7247089038424689,
+      "kendall_tau_p": 3.092103752742013e-11,
+      "spearman_rho_Re_Cp": -0.8707625272331154,
+      "frac_pairs_consistent_with_Cp_decreasing_in_Re": 0.8643649815043156
+    },
+    "Zheng2024": {
+      "n": 8,
+      "n_pairs_nontied": 28,
+      "kendall_tau_Re_Cp": -0.6428571428571428,
+      "kendall_tau_p": 0.03115079365079365,
+      "spearman_rho_Re_Cp": -0.7380952380952381,
+      "frac_pairs_consistent_with_Cp_decreasing_in_Re": 0.8214285714285714
+    }
+  },
+  "pairwise_rank_order_LOFO": {
+    "RE_ONLY": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "n_pairs_nontied": 889,
+          "trained_model_coef": {
+            "q_Re": -0.3235968737665474
+          },
+          "pairwise_accuracy_trained_model": 0.6625421822272216,
+          "pairwise_accuracy_untrained_physics_prior": 0.6625421822272216,
+          "beats_random_50pct": 0.1625421822272216,
+          "beats_untrained_prior": 0.0
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "n_pairs_nontied": 190,
+          "trained_model_coef": {
+            "q_Re": -0.6157973673782491
+          },
+          "pairwise_accuracy_trained_model": 0.6526315789473685,
+          "pairwise_accuracy_untrained_physics_prior": 0.6526315789473685,
+          "beats_random_50pct": 0.15263157894736845,
+          "beats_untrained_prior": 0.0
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "n_pairs_nontied": 811,
+          "trained_model_coef": {
+            "q_Re": -0.658249000069454
+          },
+          "pairwise_accuracy_trained_model": 0.8643649815043156,
+          "pairwise_accuracy_untrained_physics_prior": 0.8643649815043156,
+          "beats_random_50pct": 0.3643649815043156,
+          "beats_untrained_prior": 0.0
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "n_pairs_nontied": 28,
+          "trained_model_coef": {
+            "q_Re": -0.6197099078236262
+          },
+          "pairwise_accuracy_trained_model": 0.8214285714285714,
+          "pairwise_accuracy_untrained_physics_prior": 0.8214285714285714,
+          "beats_random_50pct": 0.3214285714285714,
+          "beats_untrained_prior": 0.0
+        }
+      },
+      "pooled_pairwise_accuracy_trained_model": 0.7492179353493222,
+      "pooled_pairwise_accuracy_untrained_physics_prior": 0.7492179353493222,
+      "pooled_n_pairs": 1918,
+      "all_facilities_beat_50pct": true,
+      "all_facilities_beat_prior": false
+    },
+    "FULL": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "n_pairs_nontied": 915,
+          "trained_model_coef": {
+            "q_Re": -0.24442508327065465,
+            "p_gap": -0.4282970801341544,
+            "r_conf": 1.0504869501709027,
+            "t_asp": -0.6892167641805974
+          },
+          "pairwise_accuracy_trained_model": 0.5169398907103825,
+          "pairwise_accuracy_untrained_physics_prior": 0.6437158469945355,
+          "beats_random_50pct": 0.016939890710382488,
+          "beats_untrained_prior": -0.12677595628415306
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "n_pairs_nontied": 190,
+          "trained_model_coef": {
+            "q_Re": -0.3302171322747638,
+            "p_gap": -0.25031257851360666,
+            "r_conf": -6.746290693353943,
+            "t_asp": 0.5107399696285038
+          },
+          "pairwise_accuracy_trained_model": 0.6526315789473685,
+          "pairwise_accuracy_untrained_physics_prior": 0.6526315789473685,
+          "beats_random_50pct": 0.15263157894736845,
+          "beats_untrained_prior": 0.0
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "n_pairs_nontied": 811,
+          "trained_model_coef": {
+            "q_Re": -0.46234063954112364,
+            "p_gap": 1.2359529360601247,
+            "r_conf": 10.108240882325596,
+            "t_asp": 1.0808262644849884
+          },
+          "pairwise_accuracy_trained_model": 0.5117139334155364,
+          "pairwise_accuracy_untrained_physics_prior": 0.8643649815043156,
+          "beats_random_50pct": 0.011713933415536393,
+          "beats_untrained_prior": -0.35265104808877923
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "n_pairs_nontied": 28,
+          "trained_model_coef": {
+            "q_Re": -0.3727632925842202,
+            "p_gap": -0.4386444585833506,
+            "r_conf": -22.58809629964995,
+            "t_asp": 0.7999382246865931
+          },
+          "pairwise_accuracy_trained_model": 0.8214285714285714,
+          "pairwise_accuracy_untrained_physics_prior": 0.8214285714285714,
+          "beats_random_50pct": 0.3214285714285714,
+          "beats_untrained_prior": 0.0
+        }
+      },
+      "pooled_pairwise_accuracy_trained_model": 0.5324074074074074,
+      "pooled_pairwise_accuracy_untrained_physics_prior": 0.7391975308641975,
+      "pooled_n_pairs": 1944,
+      "all_facilities_beat_50pct": true,
+      "all_facilities_beat_prior": false
+    }
+  },
+  "coarse_tercile_binning_LOFO": {
+    "RE_ONLY__logreg": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "accuracy": 0.3333333333333333,
+          "majority_class_baseline_this_facility": 0.3333333333333333,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 45
+            },
+            "actual_counts": {
+              "0": 15,
+              "1": 15,
+              "2": 15
+            }
+          }
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "accuracy": 0.3,
+          "majority_class_baseline_this_facility": 0.35,
+          "beats_majority_baseline": -0.04999999999999999,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 1,
+              "1": 8,
+              "2": 11
+            },
+            "actual_counts": {
+              "0": 7,
+              "1": 7,
+              "2": 6
+            }
+          }
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "accuracy": 0.3170731707317073,
+          "majority_class_baseline_this_facility": 0.34146341463414637,
+          "beats_majority_baseline": -0.024390243902439046,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "1": 10,
+              "2": 31
+            },
+            "actual_counts": {
+              "0": 14,
+              "1": 14,
+              "2": 13
+            }
+          }
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "accuracy": 0.375,
+          "majority_class_baseline_this_facility": 0.375,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "1": 5,
+              "2": 3
+            },
+            "actual_counts": {
+              "0": 3,
+              "1": 3,
+              "2": 2
+            }
+          }
+        }
+      },
+      "pooled_accuracy": 0.32456140350877194,
+      "pooled_n": 114,
+      "random_baseline_3class": 0.3333333333333333,
+      "all_facilities_beat_own_majority_baseline": false
+    },
+    "RE_ONLY__rf": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "accuracy": 0.3333333333333333,
+          "majority_class_baseline_this_facility": 0.3333333333333333,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "2": 45
+            },
+            "actual_counts": {
+              "0": 15,
+              "1": 15,
+              "2": 15
+            }
+          }
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "accuracy": 0.55,
+          "majority_class_baseline_this_facility": 0.35,
+          "beats_majority_baseline": 0.20000000000000007,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 13,
+              "1": 4,
+              "2": 3
+            },
+            "actual_counts": {
+              "0": 7,
+              "1": 7,
+              "2": 6
+            }
+          }
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "accuracy": 0.5853658536585366,
+          "majority_class_baseline_this_facility": 0.34146341463414637,
+          "beats_majority_baseline": 0.24390243902439018,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 10,
+              "1": 29,
+              "2": 2
+            },
+            "actual_counts": {
+              "0": 14,
+              "1": 14,
+              "2": 13
+            }
+          }
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "accuracy": 0.375,
+          "majority_class_baseline_this_facility": 0.375,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 5,
+              "1": 2,
+              "2": 1
+            },
+            "actual_counts": {
+              "0": 3,
+              "1": 3,
+              "2": 2
+            }
+          }
+        }
+      },
+      "pooled_accuracy": 0.4649122807017544,
+      "pooled_n": 114,
+      "random_baseline_3class": 0.3333333333333333,
+      "all_facilities_beat_own_majority_baseline": false
+    },
+    "FULL__logreg": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "accuracy": 0.3333333333333333,
+          "majority_class_baseline_this_facility": 0.3333333333333333,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 45
+            },
+            "actual_counts": {
+              "0": 15,
+              "1": 15,
+              "2": 15
+            }
+          }
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "accuracy": 0.3,
+          "majority_class_baseline_this_facility": 0.35,
+          "beats_majority_baseline": -0.04999999999999999,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "1": 11,
+              "2": 9
+            },
+            "actual_counts": {
+              "0": 7,
+              "1": 7,
+              "2": 6
+            }
+          }
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "accuracy": 0.3170731707317073,
+          "majority_class_baseline_this_facility": 0.34146341463414637,
+          "beats_majority_baseline": -0.024390243902439046,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "2": 41
+            },
+            "actual_counts": {
+              "0": 14,
+              "1": 14,
+              "2": 13
+            }
+          }
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "accuracy": 0.25,
+          "majority_class_baseline_this_facility": 0.375,
+          "beats_majority_baseline": -0.125,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "2": 8
+            },
+            "actual_counts": {
+              "0": 3,
+              "1": 3,
+              "2": 2
+            }
+          }
+        }
+      },
+      "pooled_accuracy": 0.3157894736842105,
+      "pooled_n": 114,
+      "random_baseline_3class": 0.3333333333333333,
+      "all_facilities_beat_own_majority_baseline": false
+    },
+    "FULL__rf": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "accuracy": 0.3333333333333333,
+          "majority_class_baseline_this_facility": 0.3333333333333333,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 45
+            },
+            "actual_counts": {
+              "0": 15,
+              "1": 15,
+              "2": 15
+            }
+          }
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "accuracy": 0.6,
+          "majority_class_baseline_this_facility": 0.35,
+          "beats_majority_baseline": 0.25,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 6,
+              "1": 3,
+              "2": 11
+            },
+            "actual_counts": {
+              "0": 7,
+              "1": 7,
+              "2": 6
+            }
+          }
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "accuracy": 0.34146341463414637,
+          "majority_class_baseline_this_facility": 0.34146341463414637,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "1": 41
+            },
+            "actual_counts": {
+              "0": 14,
+              "1": 14,
+              "2": 13
+            }
+          }
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "accuracy": 0.375,
+          "majority_class_baseline_this_facility": 0.375,
+          "beats_majority_baseline": 0.0,
+          "confusion_pred_vs_actual": {
+            "pred_counts": {
+              "0": 4,
+              "1": 2,
+              "2": 2
+            },
+            "actual_counts": {
+              "0": 3,
+              "1": 3,
+              "2": 2
+            }
+          }
+        }
+      },
+      "pooled_accuracy": 0.38596491228070173,
+      "pooled_n": 114,
+      "random_baseline_3class": 0.3333333333333333,
+      "all_facilities_beat_own_majority_baseline": false
+    }
+  },
+  "verdict": {
+    "best_rank_order_variant": "RE_ONLY",
+    "best_rank_order_pooled_acc": 0.7492179353493222,
+    "best_rank_order_all_facilities_beat_50pct": true,
+    "best_rank_order_all_facilities_beat_untrained_prior": false,
+    "best_binning_variant": "RE_ONLY__rf",
+    "best_binning_pooled_acc": 0.4649122807017544,
+    "best_binning_all_facilities_beat_majority": false
+  }
+}

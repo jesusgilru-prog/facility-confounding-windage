@@ -1,0 +1,71 @@
+{
+  "method": "Independent synthetic positive control: Cp_true = Re_Omega^(-0.2) (Harmand et al. 2013 regime-IV exponent, not fit to this corpus), no per-facility offset, noise at this corpus's own estimated within-facility scale (sigma2_hat=0.198). Real predictor covariate structure (114 rows, 4 facilities) from cross_rotor_dataset_v3.csv.",
+  "n_replicates": 500,
+  "beta_re_true": -0.2,
+  "sigma2_hat": 0.198,
+  "decision_rule": "pooled R2_log >= 0.3 AND every held-out facility R2 >= 0",
+  "summary": {
+    "reynolds_only": {
+      "median_pooled_r2": 0.41222502515450815,
+      "p05_pooled_r2": 0.2228819370905514,
+      "p95_pooled_r2": 0.5399504227758486,
+      "decision_rule_pass_rate": 0.14,
+      "median_per_facility_r2": {
+        "Guo2024": -0.016812339246893848,
+        "Liu2024": 0.09969153900800826,
+        "Vrancik1968": 0.13500219903393196,
+        "Zheng2024": -0.012042262862179465
+      },
+      "fraction_per_facility_nonneg": {
+        "Guo2024": 0.462,
+        "Liu2024": 0.718,
+        "Vrancik1968": 0.804,
+        "Zheng2024": 0.478
+      },
+      "min_per_facility_r2_across_all_replicates": {
+        "Guo2024": -2.219631995740192,
+        "Liu2024": -1.687662129534465,
+        "Vrancik1968": -0.6438302714316426,
+        "Zheng2024": -4.552761119557517
+      },
+      "max_abs_per_facility_r2_across_all_replicates": {
+        "Guo2024": 2.219631995740192,
+        "Liu2024": 1.687662129534465,
+        "Vrancik1968": 0.6438302714316426,
+        "Zheng2024": 4.552761119557517
+      },
+      "worst_single_per_facility_r2_overall": -4.552761119557517
+    },
+    "m6_four_predictor": {
+      "median_pooled_r2": -3.791455987462772,
+      "p05_pooled_r2": -28.60690247446636,
+      "p95_pooled_r2": 0.3188203223524638,
+      "decision_rule_pass_rate": 0.004,
+      "median_per_facility_r2": {
+        "Guo2024": -0.17936126119508666,
+        "Liu2024": 0.06518108403221556,
+        "Vrancik1968": -17.100097907854447,
+        "Zheng2024": -0.30810018885270574
+      },
+      "fraction_per_facility_nonneg": {
+        "Guo2024": 0.252,
+        "Liu2024": 0.6,
+        "Vrancik1968": 0.044,
+        "Zheng2024": 0.27
+      },
+      "min_per_facility_r2_across_all_replicates": {
+        "Guo2024": -5.807817204755332,
+        "Liu2024": -3.8146169402522965,
+        "Vrancik1968": -620.9540361070351,
+        "Zheng2024": -29.775642470761532
+      },
+      "max_abs_per_facility_r2_across_all_replicates": {
+        "Guo2024": 5.807817204755332,
+        "Liu2024": 3.8146169402522965,
+        "Vrancik1968": 620.9540361070351,
+        "Zheng2024": 29.775642470761532
+      },
+      "worst_single_per_facility_r2_overall": -620.9540361070351
+    }
+  }
+}

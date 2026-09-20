@@ -1,0 +1,20 @@
+{
+  "with_T2_n": 114,
+  "with_T2_per_facility_r2": {
+    "Guo2024": -8.986612097814858,
+    "Liu2024": -118.63018851238135,
+    "Vrancik1968": -1.8542072280392068,
+    "Zheng2024": -553.7587142297133
+  },
+  "with_T2_pooled_r2": -0.8848004451819813,
+  "excluding_T2_n": 106,
+  "excluding_T2_guo2024_n": 37,
+  "excluding_T2_per_facility_r2": {
+    "Guo2024": -40.14138370904578,
+    "Liu2024": -215.05550611475232,
+    "Vrancik1968": -99.26451241754856,
+    "Zheng2024": -639.7660199508291
+  },
+  "excluding_T2_pooled_r2": -6.810594798634717,
+  "note": "excluding_T2 makes the pooled R2 more negative, not less -- the opposite of what a favourable-artifact explanation would need."
+}

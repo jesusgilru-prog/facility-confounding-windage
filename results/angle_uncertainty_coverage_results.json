@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "n_repeats": 40,
+    "calib_fraction": 0.3,
+    "alphas_nominal_miscoverage": [
+      0.1,
+      0.2
+    ],
+    "nominal_coverage_pct": [
+      90,
+      80
+    ],
+    "feature_sets": {
+      "RE_ONLY": [
+        "logRe"
+      ],
+      "FULL": [
+        "logRe",
+        "Pi_confinement",
+        "Pi_gap",
+        "Pi_aspect_axial"
+      ]
+    },
+    "facility_sizes": {
+      "Guo2024": 45,
+      "Liu2024": 20,
+      "Vrancik1968": 41,
+      "Zheng2024": 8
+    },
+    "decision_rule": "pooled coverage within ~10pp of nominal AND no held-out facility more than ~20-25pp below nominal counts as genuinely positive; otherwise negative/partial."
+  },
+  "methods": {
+    "split_conformal_OLS": {
+      "RE_ONLY": {
+        "nominal_90pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.17777777777777778,
+              "mean_interval_width_logspace": 1.3234926477293016
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.9487500000000001,
+              "mean_interval_width_logspace": 2.9510809443702493
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 1.0,
+              "mean_interval_width_logspace": 3.219668542053921
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 1.0,
+              "mean_interval_width_logspace": 2.467550276982535
+            }
+          },
+          "pooled_coverage": 0.6664473684210526,
+          "pooled_mean_interval_width_logspace": 2.371277197151707,
+          "pooled_coverage_gap_pp": -23.36
+        },
+        "nominal_80pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.17777777777777778,
+              "mean_interval_width_logspace": 1.0772308412733265
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.71125,
+              "mean_interval_width_logspace": 1.6035316542897362
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.9987804878048782,
+              "mean_interval_width_logspace": 2.130230934794266
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.971875,
+              "mean_interval_width_logspace": 1.6453877578867204
+            }
+          },
+          "pooled_coverage": 0.6223684210526315,
+          "pooled_mean_interval_width_logspace": 1.5881455380066056,
+          "pooled_coverage_gap_pp": -17.76
+        }
+      },
+      "FULL": {
+        "nominal_90pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.015000000000000001,
+              "mean_interval_width_logspace": 1.0554877298223473
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.89375,
+              "mean_interval_width_logspace": 2.820369545774505
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.0,
+              "mean_interval_width_logspace": 2.1345112032676057
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.009375000000000001,
+              "mean_interval_width_logspace": 2.2993439573924874
+            }
+          },
+          "pooled_coverage": 0.16337719298245615,
+          "pooled_mean_interval_width_logspace": 1.8404741206193642,
+          "pooled_coverage_gap_pp": -73.66
+        },
+        "nominal_80pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.013333333333333332,
+              "mean_interval_width_logspace": 0.8869074683483928
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.54375,
+              "mean_interval_width_logspace": 1.7786794933187948
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.0,
+              "mean_interval_width_logspace": 1.5459948954656955
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.0,
+              "mean_interval_width_logspace": 1.6699151090463296
+            }
+          },
+          "pooled_coverage": 0.10065789473684211,
+          "pooled_mean_interval_width_logspace": 1.3353468204255945,
+          "pooled_coverage_gap_pp": -69.93
+        }
+      }
+    },
+    "CQR_gbm_quantile": {
+      "RE_ONLY": {
+        "nominal_90pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.06888888888888889,
+              "mean_interval_width_logspace": 1.2706258212718613
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.7450000000000001,
+              "mean_interval_width_logspace": 1.8987367771257297
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.7682926829268293,
+              "mean_interval_width_logspace": 2.153539367034942
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.990625,
+              "mean_interval_width_logspace": 1.3941133356731543
+            }
+          },
+          "pooled_coverage": 0.5037280701754385,
+          "pooled_mean_interval_width_logspace": 1.7070255985400542,
+          "pooled_coverage_gap_pp": -39.63
+        },
+        "nominal_80pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.021111111111111112,
+              "mean_interval_width_logspace": 0.8444627347464995
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.3025,
+              "mean_interval_width_logspace": 0.6279849869170493
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.5341463414634146,
+              "mean_interval_width_logspace": 1.072483053849956
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.9125,
+              "mean_interval_width_logspace": 0.9125361118914532
+            }
+          },
+          "pooled_coverage": 0.31754385964912285,
+          "pooled_mean_interval_width_logspace": 0.8932685693413446,
+          "pooled_coverage_gap_pp": -48.25
+        }
+      },
+      "FULL": {
+        "nominal_90pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.06222222222222222,
+              "mean_interval_width_logspace": 1.244122318227138
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.6587500000000001,
+              "mean_interval_width_logspace": 1.5100199392866611
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.38658536585365855,
+              "mean_interval_width_logspace": 1.5766402527922243
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.99375,
+              "mean_interval_width_logspace": 1.0613902382433547
+            }
+          },
+          "pooled_coverage": 0.3489035087719298,
+          "pooled_mean_interval_width_logspace": 1.3975375033016006,
+          "pooled_coverage_gap_pp": -55.11
+        },
+        "nominal_80pct": {
+          "per_facility": {
+            "Guo2024": {
+              "n_test": 45,
+              "n_valid_reps": 40,
+              "coverage": 0.002777777777777778,
+              "mean_interval_width_logspace": 0.6166847809189513
+            },
+            "Liu2024": {
+              "n_test": 20,
+              "n_valid_reps": 40,
+              "coverage": 0.15125,
+              "mean_interval_width_logspace": 0.4144380743760392
+            },
+            "Vrancik1968": {
+              "n_test": 41,
+              "n_valid_reps": 40,
+              "coverage": 0.2926829268292683,
+              "mean_interval_width_logspace": 0.6574717626257951
+            },
+            "Zheng2024": {
+              "n_test": 8,
+              "n_valid_reps": 40,
+              "coverage": 0.8718750000000001,
+              "mean_interval_width_logspace": 0.7227800006531766
+            }
+          },
+          "pooled_coverage": 0.19407894736842102,
+          "pooled_mean_interval_width_logspace": 0.6033171833487421,
+          "pooled_coverage_gap_pp": -60.59
+        }
+      }
+    }
+  }
+}

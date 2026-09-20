@@ -1,0 +1,22 @@
+{
+  "shared_geometry_types": [
+    "arm_in_cylinder"
+  ],
+  "results_by_class": {
+    "arm_in_cylinder": {
+      "sources": [
+        "Liu2024",
+        "Zheng2024"
+      ],
+      "n_total": 28,
+      "model": "log(Cp) ~ log(Re_Omega) only -- full model with Pi terms is RANK DEFICIENT with 2 single-geometry sources per fold, not identifiable",
+      "pooled_r2_log_space": -3.3545290227718674,
+      "per_source_r2": {
+        "Liu2024": -21.484390012617876,
+        "Zheng2024": -12.478884841777788
+      },
+      "fair_comparison_note": "Compare ONLY against the global M1_Re_only (pooled R2=+0.4526, 4 facilities, same Re-only model), NOT against M6 (-0.885), which uses 4 geometric predictors and 4 facilities -- that would be an apples-to-oranges comparison. Homogeneous comparison: within-class Re-only (-3.3545) vs. global Re-only (+0.4526)."
+    }
+  },
+  "testable": true
+}

@@ -1,0 +1,116 @@
+{
+  "angle": "literature search for additional free public rotor-stator windage datasets",
+  "headline_finding": "Found ONE genuinely new, freely downloadable, per-point-tabulated dataset that is geometrically and physically compatible with the existing 4-predictor Pi-group framework (no superimposed through-flow, no missing dimensionless group): NASA TM X-52851 (Gorland, Kempke & Lumannick, 1970), a smooth concentric-cylinder windage rig at NASA Lewis. 139 individual test points were hand-transcribed from the source's own clean typewritten data tables (not digitized from plots) across 3 fixed radial gaps. This would be a legitimate 5th facility candidate for the corpus, subject to the caveats below.",
+  "n_candidate_rows_transcribed": 139,
+  "n_runs_gaps_transcribed": 3,
+  "source_citation": "Gorland, S.H.; Kempke, E.E., Jr.; Lumannick, S. (1970). Experimental Windage Losses for Close Clearance Rotating Cylinders in the Turbulent Flow Regime. NASA TM X-52851.",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19700023755/downloads/19700023755.pdf",
+  "source_license": "Work of the US Government, public use permitted (public domain), confirmed on NTRS citation page.",
+  "transcription_crosscheck_P_w_pct_diff_summary": {
+    "mean_abs_pct": 0.07804390553542069,
+    "median_abs_pct": 0.005248803645184323,
+    "max_abs_pct": 4.653935690690868,
+    "note": "This compares OUR recomputed P=torque*omega (using OUR assumed air density from barometric pressure + reported temperature via ideal gas law, and Sutherland's law for viscosity) against the source's OWN reported windage-watts column. Differences of a few percent are expected because the source's own property assumptions (e.g., exact humidity, exact Sutherland constants used in 1970) are not fully documented in the report; this is not a red flag but it does mean any final Re_Omega/Cp values used in a real merge should be re-derived carefully, ideally matching the source's own stated property model if recoverable, rather than trusted blindly from this proof-of-concept script."
+  },
+  "existing_corpus_ranges": {
+    "Re_Omega": [
+      90553.10947324836,
+      81541469.93742733
+    ],
+    "Pi_gap": [
+      0.0028653295128939,
+      0.2765957446808511
+    ],
+    "Pi_confinement": [
+      0.7833333333333333,
+      0.9971428571428572
+    ],
+    "Pi_aspect_axial": [
+      0.0222222222222222,
+      1.5042979942693409
+    ],
+    "geometry_types_present": [
+      "arm_in_cylinder",
+      "disk_in_cylinder",
+      "enclosed_arm_in_chamber",
+      "enclosed_salient_in_stator",
+      "salient_in_stator"
+    ]
+  },
+  "candidate_facility_ranges": {
+    "Re_Omega": [
+      37200.92171490925,
+      2323342.3648248003
+    ],
+    "Pi_gap": [
+      0.009416666666666667,
+      0.03933333333333334
+    ],
+    "Pi_confinement": [
+      0.9621552277100704,
+      0.9906711797242632
+    ],
+    "Pi_aspect_axial": [
+      0.9833333333333334,
+      0.9833333333333334
+    ],
+    "geometry_type_proposed_label": "smooth_cylinder_in_cylinder_no_end_effects"
+  },
+  "compatibility_with_existing_4_predictor_framework": "GOOD, unlike every other candidate found in this search. This rig has (a) no superimposed through-flow (unlike the Sussex/TFMRC bolt-windage rig data described below, which is real and free but requires an additional Cw/lambda_T predictor not in the current framework), and (b) a well-defined axial rotor length (the 5.9-in cylinder length) that maps directly onto the same h_rotor_m concept used for Vrancik1968, so Pi_aspect_axial is physically meaningful here in the same sense as in the existing corpus (unlike a plain flat disc, which has no natural 'h_rotor'). Its Pi_gap (0.0094-0.039) and Pi_confinement (0.96-0.99) ranges sit inside or close to the existing corpus's spread, while its Re_Omega range (order 1e5-1e6, computed here) is lower than the existing corpus's high-g facilities and closer to Vrancik1968's own range -- i.e. it would mostly reinforce/densify the Vrancik1968-like region of parameter space rather than open a wholly new region, which limits (but does not eliminate) its value for testing CROSS-facility generalization specifically.",
+  "important_caveat_geometric_novelty_is_limited": "This facility's geometry_type would be closest to Vrancik1968's existing 'disk_in_cylinder'/cylindrical-rotor sub-cases (no salient poles, smooth cylinder), NOT a new geometry family. It is a genuine new independent measurement facility/apparatus (different institution-report, different year, different specific rig) so it IS a legitimate additional facility for a leave-one-facility-out test in principle, but reviewers could reasonably ask whether it is geometrically diverse enough to matter, since it does not cover a salient-pole / arm-in-chamber geometry the way Guo2024/Liu2024/Zheng2024 do. It is real, free, extractable evidence -- but it is an incremental enlargement of an already-represented geometry family, not a new geometry family.",
+  "other_candidates_investigated_and_rejected": [
+    {
+      "source": "Kempke & Gorland (1972), NASA TN D-6650, 'Correlation of Windage-Loss Data for a Lundell Alternator'",
+      "url": "https://ntrs.nasa.gov/api/citations/19720008343/downloads/19720008343.pdf",
+      "free": true,
+      "has_per_point_table": false,
+      "reason_rejected": "Free NTRS PDF, real Lundell-shaped (claw-pole) rotor geometry (20.3 cm dia, 3 radial clearances, up to 36000 rpm, Re up to 70000), but the full torque-vs-speed sweeps are presented ONLY as Figures 4,5,7,8,9,11 (plots), not tables. Only ~6 numeric anchor values exist in the text (Tables II-IV, all at a single fixed speed of 24000 rpm across 3 gaps) -- not a usable per-point sweep dataset without plot digitization."
+    },
+    {
+      "source": "Bruckner (2009), NASA/TM-2009-215826, 'Windage Power Loss in Gas Foil Bearings and the Rotor-Stator Clearance of High Speed Generators Operating in High Pressure Environments'",
+      "url": "https://ntrs.nasa.gov/api/citations/20090042819/downloads/20090042819.pdf",
+      "free": true,
+      "has_per_point_table": false,
+      "reason_rejected": "Free NTRS PDF, direct torque measurements up to 42000 rpm and 45 atm with N2/He/CO2, which would have been a very valuable multi-gas Re/Pi range extension if tabulated -- but results are presented as plots/correlation curves only; no per-point data table found in the report body."
+    },
+    {
+      "source": "Randriamampianina & Poncet (2006), arXiv:physics/0607097, 'Turbulence characteristics of the Bodewadt layer in a large enclosed rotor-stator system'",
+      "url": "https://arxiv.org/pdf/physics/0607097",
+      "free": true,
+      "has_per_point_table": false,
+      "reason_rejected": "Free arXiv preprint, DNS + experiment of an enclosed rotor-stator cavity, but it studies turbulence structure (velocity/Reynolds-stress fields) at a SINGLE fixed Reynolds number (Re=9.5e4); no Cp/Cm-vs-Re sweep at all, so there is nothing analogous to extract for this corpus."
+    },
+    {
+      "source": "Hu, Brillert, Dohmen & Benra (2017), IJTPP (MDPI, open access), 'Investigation on the Flow in a Rotor-Stator Cavity with Centripetal Through-Flow'",
+      "url": "https://www.mdpi.com/2504-186X/2/4/18",
+      "free": true,
+      "has_per_point_table": false,
+      "reason_rejected": "Genuinely open-access (confirmed via reader fetch after MDPI blocked direct WebFetch), real test rig with reported geometry, but moment-coefficient/thrust-coefficient results vs Re are presented only in Figures 10, 12-14; only Table 1 (rig parameters) and Table 2 (uncertainty budget) are numeric tables, neither of which is a per-point Cm/Re sweep. Also, like the Sussex rig below, this facility has mandatory superimposed centripetal through-flow (Cqr), so even if digitized it would need an added through-flow predictor, not a drop-in addition."
+    },
+    {
+      "source": "Bo Hu et al. (2019), IJTPP (MDPI, open access), 'Investigation on Thrust and Moment Coefficients of a Centrifugal Turbomachine'",
+      "url": "https://www.mdpi.com/2504-186X/3/2/9",
+      "free": true,
+      "has_per_point_table": "unresolved",
+      "reason_rejected": "Direct fetch was blocked by MDPI's Akamai bot protection (403) even via a reader proxy, so this one was NOT fully verified either way within this investigation's time budget. Flagged as unresolved rather than rejected; a human with normal browser access could check it in a few minutes. Given the same journal/author-group pattern as the companion paper above (results-as-figures convention in this venue), a similar outcome is likely but NOT confirmed."
+    },
+    {
+      "source": "NASA TM X-52851 landing page fetch (first attempt)",
+      "url": "https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19700023755.pdf",
+      "free": true,
+      "has_per_point_table": "N/A",
+      "reason_rejected": "Not a rejection -- a tooling note. This URL pattern returned the NTRS citation HTML landing page instead of the actual PDF; the working direct-download URL (https://ntrs.nasa.gov/api/citations/19700023755/downloads/19700023755.pdf) is the one actually used for the Gorland1970 candidate above. Listed here so the URL pattern mistake is not repeated by whoever integrates this."
+    }
+  ],
+  "promising_but_not_digitized_here_sussex_thesis": {
+    "source": "Miles, A.L. (2011). 'An experimental study of windage due to rotating and static bolts in an enclosed rotor-stator system.' D.Phil thesis, University of Sussex (TFMRC).",
+    "url": "https://api.figshare.com/v2/articles/23383880 (PDF direct: https://ndownloader.figshare.com/files/41116571)",
+    "free": true,
+    "login_required": false,
+    "has_per_point_table": true,
+    "n_pages_of_data_tables_estimated": "~23 pages in Appendix C (pp. 299-322 of the thesis), covering plain disc, stator bolts (multiple bolt counts), hexagonal rotor bolts (3 diameters), extra hexagonal rotor bolts, bi-hexagonal rotor bolts, extra bi-hex/hex rotor bolts, and surface cavities. Roughly 13 rows were directly read off the 'Plain disc' page alone (Table, p.299) as a spot-check; the full appendix plausibly contains several hundred individual test points in total.",
+    "geometry": "smooth disc, radius b=0.225 m, gap ratio G=s/b=0.1 on both sides (axial gap s=0.0225 m each side), casing radius ~0.232 m (radial clearance ~7mm, i.e. essentially a shrouded disc -- structurally similar to Vrancik1968's disk_in_cylinder category), PLUS bolt/protrusion variants (a genuinely new geometric feature -- rotor-mounted and stator-mounted hexagonal/bi-hexagonal bolts -- not present in any of the 4 existing facilities).",
+    "why_not_digitized_in_this_script": "Two separate reasons, both honestly disclosed: (1) The Appendix C tables are scanned table IMAGES with essentially no OCR text layer (verified: each of the 23 pages has ~1 embedded image and <60 characters of extractable text), so digitizing the FULL appendix (unlike the Gorland1970 report above, which is clean typewritten text) would require manually reading and transcribing on the order of 20+ more table images -- feasible but a multi-hour task, out of scope for this exploratory pass, which instead prioritized fully digitizing one smaller, cleaner, and more directly compatible source (Gorland1970). (2) More fundamentally, EVERY test point in this rig has a mandatory, non-negligible superimposed through-flow (Cw ranges 0.28e5-1.6e5, turbulent flow parameter lambda_T ranges 0.06-0.6, read directly off the plain-disc table), which is real physics absent from the current corpus's 4-predictor Pi-group framework. Naively appending these rows using only the current 4 predictors would be scientifically invalid (an omitted-variable problem, not a true test of cross-facility transfer) -- any LOFO result obtained that way, positive OR negative, would be an artifact of the missing through-flow term, not a genuine finding. A valid use of this dataset would require adding a through-flow dimensionless group (e.g. Cw or lambda_T) to the Pi-group family and treating it as an explicit modeling extension, which is a substantial new sub-study, not a drop-in corpus enlargement."
+  },
+  "honest_overall_verdict": "This search DID find genuinely new, free, per-point-extractable data (unlike the vast majority of candidates in this literature, which report only correlation plots) -- so the angle is a partial positive. But the ONE facility that is both free AND fully digitized here AND physically drop-in-compatible with the existing 4-predictor framework (Gorland1970) is only an incremental densification of a geometry family (smooth cylinder-in-cylinder, no salient features) that is already close to Vrancik1968's regime, not a new geometry family -- so it would likely NOT by itself flip the paper's negative cross-facility-generalization result, though actually running it through the LOFO pipeline as a 5th facility (left outside this script's scope) would be needed to confirm that rather than assume it. The genuinely geometrically novel free find (Sussex/Miles 2011, with real rotor/stator bolt protrusions -- a feature none of the 4 existing facilities have) is NOT physically compatible with the current 4-predictor framework without first adding a through-flow predictor, and its full extraction requires substantial further manual transcription work not completed here. Neither candidate is a quick, free lunch: one is compatible but geometrically redundant; the other is geometrically novel but requires real additional modeling and data-entry work before it could be used honestly."
+}

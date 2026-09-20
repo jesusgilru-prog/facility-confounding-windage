@@ -1,0 +1,245 @@
+{
+  "per_facility": {
+    "Guo2024": {
+      "n_total_facility": 45,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -5.76413972747892,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot MLP pre-entrenado, sin fine-tuning, evaluado sobre TODA f (analogo a lambda=0 en el script James-Stein)."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -0.46722039568912804,
+          "std_r2": 0.9580450694361695,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -0.47126150559059665,
+          "std_r2": 0.5623627814007826,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -0.13250609441962297,
+          "std_r2": 0.308398178766731,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -0.09872434017179402,
+          "std_r2": 0.15732962052682362,
+          "n_reps_used": 20
+        }
+      }
+    },
+    "Liu2024": {
+      "n_total_facility": 20,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -190.51436794808174,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot MLP pre-entrenado, sin fine-tuning, evaluado sobre TODA f (analogo a lambda=0 en el script James-Stein)."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -68.86160566340484,
+          "std_r2": 54.81976519241544,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -42.868296599627364,
+          "std_r2": 35.04583912548183,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -27.700625972112384,
+          "std_r2": 17.66724616666385,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -44.287934928610085,
+          "std_r2": 42.15030264768435,
+          "n_reps_used": 20
+        }
+      }
+    },
+    "Vrancik1968": {
+      "n_total_facility": 41,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -3.7665000492887843,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot MLP pre-entrenado, sin fine-tuning, evaluado sobre TODA f (analogo a lambda=0 en el script James-Stein)."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -2.485331517100865,
+          "std_r2": 1.1403955828376533,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -0.6772348828560737,
+          "std_r2": 1.1216420765940487,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": 0.13927821530691661,
+          "std_r2": 0.45927041492045245,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": 0.18781305416507316,
+          "std_r2": 0.5111828110730144,
+          "n_reps_used": 20
+        }
+      }
+    },
+    "Zheng2024": {
+      "n_total_facility": 8,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -3.302119853225639,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "zero-shot MLP pre-entrenado, sin fine-tuning, evaluado sobre TODA f (analogo a lambda=0 en el script James-Stein)."
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": 0.050849897450789064,
+          "std_r2": 0.21861516530621056,
+          "n_reps_used": 20
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -3.5758215191333242,
+          "std_r2": 6.841622574543794,
+          "n_reps_used": 20
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -4.151169350634271,
+          "std_r2": 10.31820455053108,
+          "n_reps_used": 20
+        },
+        "10": {
+          "feasible": false,
+          "reason": "facility Zheng2024 has only 8 points; holding out 10 for calibration leaves -2 < 2 for testing",
+          "mean_r2": null,
+          "std_r2": null,
+          "n_reps_used": 0
+        }
+      }
+    }
+  },
+  "pooled_by_n_cal": {
+    "0": {
+      "mean_r2_pooled": -0.3625807837505488,
+      "std_r2_pooled": 0.0,
+      "n_reps_used": 1,
+      "note": "zero-shot MLP, todas las instalaciones, sin fine-tuning."
+    },
+    "1": {
+      "mean_r2_pooled": 0.5354339975774052,
+      "std_r2_pooled": 0.12069724524746216,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute"
+    },
+    "3": {
+      "mean_r2_pooled": 0.6721237365298316,
+      "std_r2_pooled": 0.07613550711266678,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute"
+    },
+    "5": {
+      "mean_r2_pooled": 0.7715423545997362,
+      "std_r2_pooled": 0.04759834589698973,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute"
+    },
+    "10": {
+      "mean_r2_pooled": 0.774489704030193,
+      "std_r2_pooled": 0.03897746767446656,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": true,
+      "note": "Zheng2024 (n=8) cannot supply test points for this pooled round when n_f - n_cal < 2; excluded ONLY from this pooled round."
+    }
+  },
+  "pretrain_diagnostics": {
+    "Guo2024": {
+      "r2_train_insample_pooled_other3": 0.938744950221316,
+      "note": "R2 in-sample del MLP sobre las 3 instalaciones de entreno (pooled), NO es LOFO -- solo verifica que el pre-entreno convergio."
+    },
+    "Liu2024": {
+      "r2_train_insample_pooled_other3": 0.9483087470841757,
+      "note": "R2 in-sample del MLP sobre las 3 instalaciones de entreno (pooled), NO es LOFO -- solo verifica que el pre-entreno convergio."
+    },
+    "Vrancik1968": {
+      "r2_train_insample_pooled_other3": 0.9268670078998251,
+      "note": "R2 in-sample del MLP sobre las 3 instalaciones de entreno (pooled), NO es LOFO -- solo verifica que el pre-entreno convergio."
+    },
+    "Zheng2024": {
+      "r2_train_insample_pooled_other3": 0.9522329491082192,
+      "note": "R2 in-sample del MLP sobre las 3 instalaciones de entreno (pooled), NO es LOFO -- solo verifica que el pre-entreno convergio."
+    }
+  },
+  "hyperparameters": {
+    "H": 8,
+    "pretrain_epochs": 3000,
+    "pretrain_lr": 0.01,
+    "weight_decay": 0.0001,
+    "ft_steps": 10,
+    "ft_lr": 0.02,
+    "n_repeats": 20,
+    "n_cal_grid": [
+      1,
+      3,
+      5,
+      10
+    ]
+  },
+  "comparison_vs_james_stein": {
+    "0": {
+      "james_stein_pooled_r2": -0.8848004392997484,
+      "mlp_finetune_pooled_r2": -0.3625807837505488,
+      "mlp_minus_js": 0.5222196555491996
+    },
+    "1": {
+      "james_stein_pooled_r2": -0.8594553795566364,
+      "mlp_finetune_pooled_r2": 0.5354339975774052,
+      "mlp_minus_js": 1.3948893771340416
+    },
+    "3": {
+      "james_stein_pooled_r2": -0.8179778180758814,
+      "mlp_finetune_pooled_r2": 0.6721237365298316,
+      "mlp_minus_js": 1.490101554605713
+    },
+    "5": {
+      "james_stein_pooled_r2": -0.7428989686137879,
+      "mlp_finetune_pooled_r2": 0.7715423545997362,
+      "mlp_minus_js": 1.514441323213524
+    },
+    "10": {
+      "james_stein_pooled_r2": -0.683270527499946,
+      "mlp_finetune_pooled_r2": 0.774489704030193,
+      "mlp_minus_js": 1.457760231530139
+    }
+  }
+}

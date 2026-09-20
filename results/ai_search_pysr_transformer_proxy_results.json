@@ -1,0 +1,98 @@
+{
+  "method": "PySR (SymbolicRegression.jl), gramatica restringida {+,*,/,square} con maximo 1 division anidada, como proxy de busqueda simbolica guiada tras NO encontrar transformer preentrenado utilizable en HF Hub",
+  "pretrained_transformer_search": {
+    "attempted": true,
+    "found_usable_model": false,
+    "queries_tried": [
+      "symbolic regression",
+      "equation discovery transformer",
+      "symbolicregression",
+      "end-to-end symbolic regression",
+      "NSRTS neural symbolic regression that scales"
+    ],
+    "conclusion": "Ningun modelo con pesos HF-compatibles (AutoModel) encontrado; unico hit relevante (0 descargas) sin checkpoint utilizable. Sustituido por proxy PySR."
+  },
+  "grammar": {
+    "binary_operators": [
+      "+",
+      "*",
+      "/"
+    ],
+    "unary_operators": [
+      "square"
+    ],
+    "nested_constraints": {
+      "/": {
+        "/": 0
+      }
+    },
+    "maxsize": 20,
+    "difference_from_prior_gplearn_attempt": "gplearn previo: {+,-,*,/,log,sqrt} sin restriccion de anidamiento, arboles libres profundidad 2-6. Este PySR: sin log/sqrt/resta, maximo 1 division anidada en todo el arbol -> fuerza polinomios de bajo orden + correccion racional simple en log-espacio, forma tipica Daily-Nece con correccion de holgura."
+  },
+  "n_points_total": 114,
+  "n_per_facility": {
+    "Guo2024": 45,
+    "Liu2024": 20,
+    "Vrancik1968": 41,
+    "Zheng2024": 8
+  },
+  "fold_results": {
+    "Guo2024": {
+      "n_train": 69,
+      "n_test": 45,
+      "best_formula_sympy": "log_Piasp*(-0.36960873) - 5.315265 + 26.871408/(log_Pigap + log_Re)",
+      "r2_train_in_sample_log": 0.8393821851731914,
+      "r2_test_held_out_log": -7.776956882928069,
+      "rmse_test_held_out_log": 2.4136262706464544,
+      "median_abs_resid_log": 2.260057609921992
+    },
+    "Liu2024": {
+      "n_train": 94,
+      "n_test": 20,
+      "best_formula_sympy": "log_Re**2/(log_Piasp**2 - 59.777985) + 0.7359494",
+      "r2_train_in_sample_log": 0.9164832643457359,
+      "r2_test_held_out_log": -40.772614551462695,
+      "rmse_test_held_out_log": 0.5646839018585923,
+      "median_abs_resid_log": 0.42492848764186886
+    },
+    "Vrancik1968": {
+      "n_train": 73,
+      "n_test": 41,
+      "best_formula_sympy": "log_Re*(-0.49963468 - 0.5039115/log_Piasp)",
+      "r2_train_in_sample_log": 0.8752386738759022,
+      "r2_test_held_out_log": -1813.1897198991207,
+      "rmse_test_held_out_log": 23.91764181234875,
+      "median_abs_resid_log": 22.480464350825386
+    },
+    "Zheng2024": {
+      "n_train": 106,
+      "n_test": 8,
+      "best_formula_sympy": "log_Re*(log_Piasp**2 + log_Re)*(-0.011887123)",
+      "r2_train_in_sample_log": 0.894510069337652,
+      "r2_test_held_out_log": -1.757008210723051,
+      "rmse_test_held_out_log": 0.18018293103145872,
+      "median_abs_resid_log": 0.1251863364790573
+    }
+  },
+  "lofo_pooled": {
+    "r2_log": -109.21031319050427,
+    "rmse_log": 14.425545658307959,
+    "n_pooled": 114
+  },
+  "decision_rule": {
+    "pooled_r2_substantially_positive": false,
+    "all_facilities_r2_nonneg": false,
+    "clears_decision_rule": false
+  },
+  "known_baselines_for_reference": {
+    "best_linear_4_predictor_pooled_r2_log": -0.885,
+    "reynolds_only_linear_pooled_r2_log": 0.4526,
+    "reynolds_only_per_facility_r2_log": {
+      "note": "orden no confirmado aqui, tomado del encargo: -2.36, -61.7, -9.59, +0.468 (Vrancik1968)"
+    },
+    "already_failed_methods_pooled_r2_range": [
+      -2.67,
+      -0.55
+    ]
+  }
+}

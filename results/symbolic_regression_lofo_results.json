@@ -1,0 +1,114 @@
+{
+  "method": "gplearn SymbolicRegressor, LOFO por instalacion (4 folds)",
+  "gp_params": {
+    "population_size": 50,
+    "generations": 3,
+    "tournament_size": 20,
+    "stopping_criteria": 0.0,
+    "p_crossover": 0.7,
+    "p_subtree_mutation": 0.1,
+    "p_hoist_mutation": 0.05,
+    "p_point_mutation": 0.1,
+    "max_samples": 1.0,
+    "verbose": 0,
+    "parsimony_coefficient": 0.001,
+    "function_set": [
+      "add",
+      "sub",
+      "mul",
+      "div",
+      "log",
+      "sqrt"
+    ],
+    "feature_names": [
+      "log_Re",
+      "log_Pigap",
+      "log_Piconf",
+      "log_Piasp"
+    ],
+    "const_range": [
+      -2.0,
+      2.0
+    ],
+    "init_depth": [
+      2,
+      6
+    ],
+    "metric": "mean absolute error",
+    "n_jobs": 1
+  },
+  "n_points_total": 114,
+  "n_per_facility": {
+    "Guo2024": 45,
+    "Liu2024": 20,
+    "Vrancik1968": 41,
+    "Zheng2024": 8
+  },
+  "fold_results": {
+    "Guo2024": {
+      "n_train": 69,
+      "n_test": 45,
+      "best_formula": "add(sqrt(log(add(sub(log_Pigap, log_Pigap), sqrt(log_Piasp)))), add(-1.992, sub(log_Piconf, log(add(-1.992, sub(log_Piconf, sqrt(sqrt(log_Piconf))))))))",
+      "best_formula_raw_fitness": 0.3541270633975443,
+      "r2_train_in_sample_log": 0.1453755426127451,
+      "r2_test_held_out_log": -9.33525394976334,
+      "rmse_test_held_out_log": 2.619139424821312,
+      "median_abs_resid_log": 2.616119382100148
+    },
+    "Liu2024": {
+      "n_train": 94,
+      "n_test": 20,
+      "best_formula": "div(sub(add(log_Pigap, mul(mul(sqrt(log_Re), mul(log_Pigap, log_Piasp)), -0.274)), div(log_Piconf, add(log_Piasp, log_Piconf))), sqrt(log_Pigap))",
+      "best_formula_raw_fitness": 0.7581053294355105,
+      "r2_train_in_sample_log": 0.49534856592742105,
+      "r2_test_held_out_log": -209.35863134503614,
+      "rmse_test_held_out_log": 1.2671841901798404,
+      "median_abs_resid_log": 1.2387565650690497
+    },
+    "Vrancik1968": {
+      "n_train": 73,
+      "n_test": 41,
+      "best_formula": "mul(log(add(add(add(log_Pigap, -1.935), div(0.233, log_Pigap)), add(add(log_Pigap, -1.935), div(0.233, log_Pigap)))), log_Piasp)",
+      "best_formula_raw_fitness": 0.6828840455536791,
+      "r2_train_in_sample_log": 0.5896059919576238,
+      "r2_test_held_out_log": -33.32868085611927,
+      "rmse_test_held_out_log": 3.290073229049938,
+      "median_abs_resid_log": 3.0302517556155584
+    },
+    "Zheng2024": {
+      "n_train": 106,
+      "n_test": 8,
+      "best_formula": "add(log(div(mul(log_Pigap, log_Piconf), add(log_Piconf, log_Piconf))), sub(sqrt(log_Piconf), sqrt(add(log_Re, add(log_Piconf, log_Piconf)))))",
+      "best_formula_raw_fitness": 0.8862274054810039,
+      "r2_train_in_sample_log": 0.43155073987175274,
+      "r2_test_held_out_log": -52.98558971880308,
+      "rmse_test_held_out_log": 0.7973216236134589,
+      "median_abs_resid_log": 0.8099284586903743
+    }
+  },
+  "lofo_pooled": {
+    "r2_log": -2.6687417673553693,
+    "rmse_log": 2.631962537829034,
+    "n_pooled": 114
+  },
+  "baseline_comparison_same_pipeline": {
+    "linear_loglog_Re_gap_conf_asp": {
+      "per_facility_r2": {
+        "Guo2024": -8.986612059551204,
+        "Liu2024": -118.63018606035868,
+        "Vrancik1968": -1.8542073187456607,
+        "Zheng2024": -553.7587044467095
+      },
+      "pooled_r2": -0.8848004392997593
+    },
+    "linear_loglog_Re_only": {
+      "per_facility_r2": {
+        "Guo2024": -2.3605837949474844,
+        "Liu2024": -61.71087236991985,
+        "Vrancik1968": 0.4675971092959156,
+        "Zheng2024": -9.594527038034848
+      },
+      "pooled_r2": 0.4525971784455689
+    }
+  }
+}

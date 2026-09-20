@@ -1,0 +1,53 @@
+{
+  "predictor_block": [
+    "log_Re_Omega",
+    "log_Pi_gap",
+    "log_Pi_confinement",
+    "log_Pi_aspect_axial"
+  ],
+  "canonical_correlations_with_facility_identity": [
+    0.9961167916749828,
+    0.9573488324449867,
+    0.5940333822810989,
+    0.004730143197767877
+  ],
+  "canonical_loadings_smallest_correlation_direction": {
+    "log_Re_Omega": -0.2759692799112403,
+    "log_Pi_gap": -0.18844056000281317,
+    "log_Pi_confinement": 0.02820891228612955,
+    "log_Pi_aspect_axial": -0.15625993082267545
+  },
+  "canonical_loadings_all_directions": {
+    "log_Re_Omega": [
+      0.3795872726975283,
+      0.828550119664455,
+      0.305383624569724,
+      -0.2759692799112403
+    ],
+    "log_Pi_gap": [
+      0.9173514265065893,
+      0.2917397312063406,
+      -0.1945364872403313,
+      -0.18844056000281317
+    ],
+    "log_Pi_confinement": [
+      -0.9984298379489506,
+      0.047997741712018836,
+      0.006191344879163661,
+      0.02820891228612955
+    ],
+    "log_Pi_aspect_axial": [
+      -0.7392858021663689,
+      -0.6535479240045068,
+      0.04375440279469717,
+      -0.15625993082267545
+    ]
+  },
+  "within_facility_centered_singular_values": [
+    9.684989930053737,
+    3.6537163789555858,
+    3.4081486005386843,
+    0.05871374094989396
+  ],
+  "interpretation": "The largest canonical correlation (0.996) shows one direction in the 4-predictor block is almost entirely aliased with facility identity. The smallest (0.005) is a residual direction on which log_Re_Omega carries the largest single canonical loading, though not an exclusive one (see canonical_loadings_smallest_correlation_direction). This is a distinct, multivariate quantity from Re_Omega's own univariate eta^2 with facility identity (0.805, robustness_summary_stats.json), and is consistent with, and gives a precise number for, this paper's separate finding that the Reynolds sign/rank result transfers while the geometric Pi-ratios do not."
+}

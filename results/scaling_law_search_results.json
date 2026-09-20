@@ -1,0 +1,340 @@
+{
+  "n_points": 114,
+  "sources": {
+    "Guo2024": 45,
+    "Vrancik1968": 41,
+    "Liu2024": 20,
+    "Zheng2024": 8
+  },
+  "n_non_null_structures": 10,
+  "structures": {
+    "M0_null": {
+      "coef": {
+        "const": -3.3939929232677692
+      },
+      "rss": 215.25195975575662,
+      "k": 1,
+      "bic": 77.19582958321602,
+      "aic": 74.45963113482154,
+      "r2": -2.220446049250313e-16
+    },
+    "M1_Re": {
+      "coef": {
+        "const": 5.93766286087999,
+        "q_Re": -0.6141598567671879
+      },
+      "rss": 36.93051410306193,
+      "k": 2,
+      "bic": -119.02387714503787,
+      "aic": -124.49627404182687,
+      "r2": 0.8284312294068473
+    },
+    "M2_Re_g": {
+      "coef": {
+        "const": 6.284551095687102,
+        "q_Re": -0.6427161296577737,
+        "b_g": 0.02557316570018106
+      },
+      "rss": 36.59380445960846,
+      "k": 3,
+      "bic": -115.33182758368415,
+      "aic": -123.54042292886763,
+      "r2": 0.8299954876084243
+    },
+    "M3_Re_gap": {
+      "coef": {
+        "const": 5.935514312531897,
+        "q_Re": -0.6140662947263121,
+        "p_gap": -0.0002455821330166752
+      },
+      "rss": 36.93050604598657,
+      "k": 3,
+      "bic": -114.28770356785662,
+      "aic": -122.4962989130401,
+      "r2": 0.8284312668377509
+    },
+    "M4_Re_conf": {
+      "coef": {
+        "const": 5.973979280670706,
+        "q_Re": -0.6190069951313315,
+        "r_conf": -0.4278893667868114
+      },
+      "rss": 36.848364919298035,
+      "k": 3,
+      "bic": -114.54154568251641,
+      "aic": -122.7501410276999,
+      "r2": 0.8288128713851927
+    },
+    "M5_Re_gap_conf": {
+      "coef": {
+        "const": 4.748584426658895,
+        "q_Re": -0.5858919583852211,
+        "p_gap": -0.16580013040084046,
+        "r_conf": -3.0807457951523514
+      },
+      "rss": 36.33361146521446,
+      "k": 4,
+      "bic": -111.40909899010387,
+      "aic": -122.35389278368186,
+      "r2": 0.8312042710020309
+    },
+    "M6_Re_gap_conf_asp": {
+      "coef": {
+        "const": 4.002988470335041,
+        "q_Re": -0.44736997872939666,
+        "p_gap": 0.09984181557863991,
+        "r_conf": -3.7212797482143043,
+        "t_asp": 0.5248519739590018
+      },
+      "rss": 28.030546722274472,
+      "k": 5,
+      "bic": -136.2500157082364,
+      "aic": -149.93100795020888,
+      "r2": 0.8697779720376049
+    },
+    "M7_Re_gap_conf_Mtip": {
+      "coef": {
+        "const": 4.412491498653013,
+        "q_Re": -0.5728745513252035,
+        "p_gap": -0.1824497839963553,
+        "r_conf": -3.3322329553866434,
+        "u_Mtip": -0.049895000521796344
+      },
+      "rss": 36.27659262263481,
+      "k": 5,
+      "bic": -106.8519428532371,
+      "aic": -120.53293509520958,
+      "r2": 0.8314691644907792
+    },
+    "M8_Re_gap_conf_cross": {
+      "coef": {
+        "const": 6.548998287958699,
+        "q_Re": -0.729826199908931,
+        "p_gap": 0.6056574853679534,
+        "r_conf": -3.8042391195871668,
+        "v_cross_RexGap": -0.0600745574947994
+      },
+      "rss": 35.62048456625847,
+      "k": 5,
+      "bic": -108.93265037964828,
+      "aic": -122.61364262162076,
+      "r2": 0.8345172577909323
+    },
+    "M9full_Re_gap_conf_Mtip_cross": {
+      "coef": {
+        "const": 6.2789933461596,
+        "q_Re": -0.7181378919020113,
+        "p_gap": 0.580966697094983,
+        "r_conf": -3.9719336041332483,
+        "u_Mtip": -0.03565110473869898,
+        "v_cross_RexGap": -0.05907825131358169
+      },
+      "rss": 35.59157016476541,
+      "k": 6,
+      "bic": -104.2890273235466,
+      "aic": -120.70621801391357,
+      "r2": 0.8346515859593071
+    },
+    "M10_Re_logcorrection": {
+      "coef": {
+        "logC": 3.669410896627938,
+        "q_Re": -0.36097437626651535,
+        "a_logcorr": -0.050475174309788394
+      },
+      "rss": 35.090922119414294,
+      "k": 3,
+      "bic": -120.11258642605478,
+      "aic": -128.32118177123826,
+      "r2": 0.8369774558186068,
+      "converged": true,
+      "lm_status": 2,
+      "multi_start_a0_tried": [
+        -0.05,
+        -0.02,
+        -0.01,
+        -0.005,
+        -0.001,
+        0.0,
+        0.001,
+        0.01
+      ],
+      "note": "Multi-arranque real sobre a0 (method='lm'): a0=0.0 es un punto estacionario exacto del objetivo (LM no se mueve desde ahi), asi que arrancar solo en a0=0 producia el artefacto de 'converge a a=0, colapsa a M1'. Con multi-arranque, el mejor ajuste real converge a a=-0.0505, RSS=35.0909 (vs RSS=36.9305 de M1) -- el termino de correccion logaritmica SI mejora el ajuste in-sample. Esto no cambia la conclusion LOFO (M6 sigue ganando el BIC global; el hallazgo de no-generalizacion es independiente de este ranking in-sample)."
+    }
+  },
+  "ranking_by_bic_all": [
+    "M6_Re_gap_conf_asp",
+    "M10_Re_logcorrection",
+    "M1_Re",
+    "M2_Re_g",
+    "M4_Re_conf",
+    "M3_Re_gap",
+    "M5_Re_gap_conf",
+    "M8_Re_gap_conf_cross",
+    "M7_Re_gap_conf_Mtip",
+    "M9full_Re_gap_conf_Mtip_cross",
+    "M0_null"
+  ],
+  "ranking_by_bic_converged_only": [
+    "M6_Re_gap_conf_asp",
+    "M10_Re_logcorrection",
+    "M1_Re",
+    "M2_Re_g",
+    "M4_Re_conf",
+    "M3_Re_gap",
+    "M5_Re_gap_conf",
+    "M8_Re_gap_conf_cross",
+    "M7_Re_gap_conf_Mtip",
+    "M9full_Re_gap_conf_Mtip_cross",
+    "M0_null"
+  ],
+  "best_structure": "M6_Re_gap_conf_asp",
+  "best_structure_result": {
+    "coef": {
+      "const": 4.002988470335041,
+      "q_Re": -0.44736997872939666,
+      "p_gap": 0.09984181557863991,
+      "r_conf": -3.7212797482143043,
+      "t_asp": 0.5248519739590018
+    },
+    "rss": 28.030546722274472,
+    "k": 5,
+    "bic": -136.2500157082364,
+    "aic": -149.93100795020888,
+    "r2": 0.8697779720376049
+  },
+  "lofo_cv": {
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "coef_trained_without_this_facility": {
+          "const": -0.7459091033734563,
+          "q_Re": -0.24442508327065526,
+          "p_gap": -0.42829708013415435,
+          "r_conf": 1.0504869501708818,
+          "t_asp": -0.6892167641805961
+        },
+        "held_out_rmse_log": 2.574584388755977,
+        "held_out_r2_log": -8.986612059551168,
+        "held_out_median_abs_resid_log": 2.2996033159749456
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "coef_trained_without_this_facility": {
+          "const": 0.7443614647669788,
+          "q_Re": -0.3302171322747654,
+          "p_gap": -0.2503125785136072,
+          "r_conf": -6.746290693353938,
+          "t_asp": 0.5107399696285037
+        },
+        "held_out_rmse_log": 0.9556084177859963,
+        "held_out_r2_log": -118.63018606035955,
+        "held_out_median_abs_resid_log": 0.9817815389495395
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "coef_trained_without_this_facility": {
+          "const": 9.52981968876629,
+          "q_Re": -0.4623406395411268,
+          "p_gap": 1.2359529360600803,
+          "r_conf": 10.108240882325413,
+          "t_asp": 1.0808262644849864
+        },
+        "held_out_rmse_log": 0.948680042841675,
+        "held_out_r2_log": -1.8542073187456043,
+        "held_out_median_abs_resid_log": 0.7611146081154638
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "coef_trained_without_this_facility": {
+          "const": 0.13779392495406326,
+          "q_Re": -0.37276329258422203,
+          "p_gap": -0.4386444585833532,
+          "r_conf": -22.58809629964996,
+          "t_asp": 0.7999382246865894
+        },
+        "held_out_rmse_log": 2.555916609227836,
+        "held_out_r2_log": -553.7587044467027,
+        "held_out_median_abs_resid_log": 2.4948212059976025
+      }
+    },
+    "pooled_rmse_log": 1.886487007845539,
+    "pooled_r2_log": -0.8848004392997477
+  },
+  "bootstrap_by_facility": {
+    "n_boot": 2000,
+    "n_rank_deficient_skipped": 126,
+    "n_usable": 1874,
+    "coef_se": {
+      "const": {
+        "point_estimate": 4.002988470335041,
+        "bootstrap_mean": 2.611852128663869,
+        "bootstrap_se": 3.923110304792839,
+        "ci95_pct": [
+          -1.463552346693526,
+          12.119826559056992
+        ]
+      },
+      "q_Re": {
+        "point_estimate": -0.44736997872939666,
+        "bootstrap_mean": -0.36387478022177894,
+        "bootstrap_se": 0.09039362232065476,
+        "ci95_pct": [
+          -0.5242250507192437,
+          -0.20264791988719488
+        ]
+      },
+      "p_gap": {
+        "point_estimate": 0.09984181557863991,
+        "bootstrap_mean": 0.0512340357165786,
+        "bootstrap_se": 0.9105803964120747,
+        "ci95_pct": [
+          -0.6410166904747597,
+          2.480371035889033
+        ]
+      },
+      "r_conf": {
+        "point_estimate": -3.7212797482143043,
+        "bootstrap_mean": -4.747038400203732,
+        "bootstrap_se": 10.807439369468531,
+        "ci95_pct": [
+          -24.38300984694536,
+          16.963692641907915
+        ]
+      },
+      "t_asp": {
+        "point_estimate": 0.5248519739590018,
+        "bootstrap_mean": 0.42058267669489585,
+        "bootstrap_se": 0.6386935727327752,
+        "ci95_pct": [
+          -0.7034221358500378,
+          1.1429923373368185
+        ]
+      }
+    }
+  },
+  "daily_nece_comparison": {
+    "formula": "C_M,IV = 0.051 * Pi_gap^(1/10) * Re_Omega^(-0.2)",
+    "n": 114,
+    "n_underpredicted_of_n": "114/114",
+    "median_ratio_obs_over_pred": 26.72703707737311,
+    "min_ratio_obs_over_pred": 1.1710808925719607,
+    "max_ratio_obs_over_pred": 102.6413135937859,
+    "median_relative_error_pct": 96.25306131524856,
+    "mean_relative_error_pct": 89.55323335571691,
+    "max_relative_error_pct": 99.02573343521537,
+    "r2_log_space_vs_Daily_Nece": -4.132773379098824,
+    "note": "Turbulent regime-IV formula applied to ALL points (114, includes g_level=1 and regimes not necessarily IV). UPDATED causal diagnosis (verified via a real regression of log(Cp/C_M_DailyNece) ~ log(Re_Omega): slope=-0.452, R2=0.716, see robustness_summary_stats.json): the DOMINANT cause is that the corpus's effective Reynolds exponent differs substantially from regime IV's -0.2, not a simple geometric-class offset -- a III<->IV regime switch would only shift the exponent by O(0.1), insufficient for the observed bias. Geometric-class mixing (Daily-Nece = smooth confined disk; the corpus is centrifuge arms / alternator poles / cylinders) remains a contributing but secondary factor, not the main explanation."
+  },
+  "pi_blockage_identity_check": {
+    "n": 114,
+    "log_Pi_blk_equals": "const + 1.0*log(Pi_aspect_axial) + 2.0*log(Pi_confinement)",
+    "coef_const_asp_conf": [
+      -0.4515827052894559,
+      1.0000000000000002,
+      2.00000000000002
+    ],
+    "rss": 1.0423087599670027e-27,
+    "r2": 1.0,
+    "conclusion": "Exact algebraic identity (R2=1.0 to machine precision). Pi_blockage removed from the set of Pi groups used in the structure search."
+  }
+}

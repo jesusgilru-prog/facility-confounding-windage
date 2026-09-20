@@ -1,0 +1,127 @@
+{
+  "approach": "Hierarchical Bayesian model (NUTS/PyMC) with physics-informed prior on the Reynolds-exponent-like weight (Daily-Nece regime-IV exponent = -0.2 as prior mean, with per-facility shrinkage). Shared population-level coefficients for the geometry Pi groups (Pi_confinement, Pi_gap, Pi_aspect_axial) since those are facility-constant and would be unidentifiable as facility-specific effects under LOFO.",
+  "inference": "Full MCMC via PyMC 6.3.1 (NUTS, 4 chains x 2000 draws, 2000 tune, target_accept=0.95) -- real Bayesian inference, not an approximation.",
+  "substituted_proxy": false,
+  "daily_nece_prior_mean": -0.2,
+  "pooled_r2_log": -1.237214133632127,
+  "per_facility_r2_log": {
+    "Guo2024": -2.1073773483603073,
+    "Vrancik1968": -28.287449325845945,
+    "Liu2024": -61.281525528123176,
+    "Zheng2024": -5.483647459954921
+  },
+  "clears_decision_rule": false,
+  "fold_posterior_summaries": {
+    "Guo2024": {
+      "mu_alpha": -0.7434698591758168,
+      "sigma_alpha": 1.485752840808715,
+      "mu_beta": -0.19792708755496036,
+      "sigma_beta": 0.14089081813841323,
+      "g1": 0.11285626791210915,
+      "g2": -0.4049800152542407,
+      "g3": 0.1432117933332978,
+      "sigma_y": 0.1921574246316057,
+      "facilities_trained_on": [
+        "Liu2024",
+        "Vrancik1968",
+        "Zheng2024"
+      ],
+      "per_facility_alpha": {
+        "Liu2024": -1.6576740907198975,
+        "Vrancik1968": 0.18933442246848808,
+        "Zheng2024": -0.863644521650647
+      },
+      "per_facility_beta": {
+        "Liu2024": -0.09294891181009021,
+        "Vrancik1968": -0.32972707171376875,
+        "Zheng2024": -0.1593235283740947
+      },
+      "max_rhat": 1.0014520592650518
+    },
+    "Vrancik1968": {
+      "mu_alpha": 2.0216564252288447,
+      "sigma_alpha": 1.9080890398132446,
+      "mu_beta": -0.25263662387437136,
+      "sigma_beta": 0.14421424325372734,
+      "g1": 0.0014633590802485372,
+      "g2": -0.37633718828311125,
+      "g3": 0.9552166542992176,
+      "sigma_y": 0.42403467297606207,
+      "facilities_trained_on": [
+        "Guo2024",
+        "Liu2024",
+        "Zheng2024"
+      ],
+      "per_facility_alpha": {
+        "Guo2024": 3.8765505154568825,
+        "Liu2024": 0.9604572949747227,
+        "Zheng2024": 1.6084567120482642
+      },
+      "per_facility_beta": {
+        "Guo2024": -0.4215367227286245,
+        "Liu2024": -0.18184465907132605,
+        "Zheng2024": -0.24458816684911813
+      },
+      "max_rhat": 1.0029244835553457
+    },
+    "Liu2024": {
+      "mu_alpha": 2.2177359797508878,
+      "sigma_alpha": 2.1180788429264683,
+      "mu_beta": -0.31848949088660783,
+      "sigma_beta": 0.12360434306138011,
+      "g1": -0.06130769977754121,
+      "g2": -0.3759703979117285,
+      "g3": 0.9259537021515423,
+      "sigma_y": 0.3954852762395533,
+      "facilities_trained_on": [
+        "Guo2024",
+        "Vrancik1968",
+        "Zheng2024"
+      ],
+      "per_facility_alpha": {
+        "Guo2024": 4.2197024181782465,
+        "Vrancik1968": 0.7215864259874278,
+        "Zheng2024": 2.2349859995602195
+      },
+      "per_facility_beta": {
+        "Guo2024": -0.44558902223535857,
+        "Vrancik1968": -0.38073873634133526,
+        "Zheng2024": -0.293095171123055
+      },
+      "max_rhat": 1.0012289164149262
+    },
+    "Zheng2024": {
+      "mu_alpha": 1.640618542405771,
+      "sigma_alpha": 2.485594149789228,
+      "mu_beta": -0.26787999654191297,
+      "sigma_beta": 0.17350911591409,
+      "g1": 0.0029492019032815488,
+      "g2": -0.3937477821333788,
+      "g3": 0.9388637673787852,
+      "sigma_y": 0.3711362411863079,
+      "facilities_trained_on": [
+        "Guo2024",
+        "Liu2024",
+        "Vrancik1968"
+      ],
+      "per_facility_alpha": {
+        "Guo2024": 4.663389431541256,
+        "Liu2024": 0.3321732687460539,
+        "Vrancik1968": 0.4473829387398301
+      },
+      "per_facility_beta": {
+        "Guo2024": -0.4710944649898288,
+        "Liu2024": -0.1419897147818731,
+        "Vrancik1968": -0.36669967248180685
+      },
+      "max_rhat": 1.0012985588028223
+    }
+  },
+  "n_rows_total": 114,
+  "facility_counts": {
+    "Guo2024": 45,
+    "Vrancik1968": 41,
+    "Liu2024": 20,
+    "Zheng2024": 8
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "meta": {
+    "n_total": 114,
+    "features": [
+      "log_Re_Omega",
+      "log_Pi_gap",
+      "log_Pi_confinement",
+      "log_Pi_aspect_axial"
+    ],
+    "kernel_bounds": {
+      "constant": [
+        0.001,
+        1000.0
+      ],
+      "length_scale": [
+        0.01,
+        100.0
+      ],
+      "noise": [
+        1e-10,
+        10.0
+      ]
+    },
+    "n_restarts_optimizer": 10,
+    "reference_grid_M": 4000,
+    "reference_grid_padding_frac": 0.0,
+    "n_geometry_grid_points": 216,
+    "re_sweep_points_per_candidate": 6
+  },
+  "fitted_kernel_full_ard": "1.09**2 * RBF(length_scale=[1.21, 3.59, 10.4, 1.25]) + WhiteKernel(noise_level=0.056)",
+  "fitted_length_scales_ard": {
+    "log_Re_Omega": 1.2062129870440697,
+    "log_Pi_gap": 3.589552364430313,
+    "log_Pi_confinement": 10.439702624014238,
+    "log_Pi_aspect_axial": 1.2459278521758794
+  },
+  "fitted_amplitude": 1.0919300610334721,
+  "fitted_noise_level": 0.05598148343385752,
+  "saturated_dimensions_ge_95pct_of_upper_bound": [],
+  "fitted_kernel_isotropic": "0.943**2 * RBF(length_scale=1.41) + WhiteKernel(noise_level=0.0574)",
+  "baseline_mean_latent_variance_ARD": 0.24724141858298546,
+  "baseline_mean_latent_variance_isotropic": 0.5235581789319558,
+  "controls_repeat_existing_facility": {
+    "CONTROL_repeat_Guo2024": {
+      "delta_var_ard": 0.0067597277053748905,
+      "delta_var_iso": 0.0032709856810130278,
+      "pct_reduction_ard": 2.734059586017955,
+      "Pi_gap": 0.11111538068054179,
+      "Pi_confinement": 0.8999654178164709,
+      "Pi_aspect_axial": 0.09292035164854617,
+      "Re_Omega_sweep_lo": 6255341.8571078805,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    "CONTROL_repeat_Liu2024": {
+      "delta_var_ard": 0.003109870385919311,
+      "delta_var_iso": 0.0011355108531344582,
+      "pct_reduction_ard": 1.2578274318853648,
+      "Pi_gap": 0.14999999999999997,
+      "Pi_confinement": 0.8695652173913044,
+      "Pi_aspect_axial": 0.2,
+      "Re_Omega_sweep_lo": 291885.9083852005,
+      "Re_Omega_sweep_hi": 6592005.831450037
+    },
+    "CONTROL_repeat_Vrancik1968": {
+      "delta_var_ard": 0.002624805634411226,
+      "delta_var_iso": 0.002666291605678217,
+      "pct_reduction_ard": 1.0616366988406603,
+      "Pi_gap": 0.009630640825401654,
+      "Pi_confinement": 0.988979682658219,
+      "Pi_aspect_axial": 1.4395077363811788,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 5245856.608735792
+    },
+    "CONTROL_repeat_Zheng2024": {
+      "delta_var_ard": 0.001549067357640238,
+      "delta_var_iso": 0.0006097911337471507,
+      "pct_reduction_ard": 0.6265403938055389,
+      "Pi_gap": 0.27659574468085113,
+      "Pi_confinement": 0.7833333333333333,
+      "Pi_aspect_axial": 0.21276595744680848,
+      "Re_Omega_sweep_lo": 372066.7869816698,
+      "Re_Omega_sweep_hi": 3204212.737160503
+    }
+  },
+  "extend_re_only_existing_geometry": {
+    "EXTEND_RE_Guo2024": {
+      "delta_var_ard": 0.05561411608007971,
+      "delta_var_iso": 0.019565175569064452,
+      "pct_reduction_ard": 22.493850908484852,
+      "Pi_gap": 0.11111538068054179,
+      "Pi_confinement": 0.8999654178164709,
+      "Pi_aspect_axial": 0.09292035164854617,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    "EXTEND_RE_Liu2024": {
+      "delta_var_ard": 0.014317474300385769,
+      "delta_var_iso": 0.005448185137417738,
+      "pct_reduction_ard": 5.790888267201951,
+      "Pi_gap": 0.14999999999999997,
+      "Pi_confinement": 0.8695652173913044,
+      "Pi_aspect_axial": 0.2,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    "EXTEND_RE_Vrancik1968": {
+      "delta_var_ard": 0.01651282108409699,
+      "delta_var_iso": 0.005440985951657651,
+      "pct_reduction_ard": 6.678824761133029,
+      "Pi_gap": 0.009630640825401654,
+      "Pi_confinement": 0.988979682658219,
+      "Pi_aspect_axial": 1.4395077363811788,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    "EXTEND_RE_Zheng2024": {
+      "delta_var_ard": 0.010412697084187239,
+      "delta_var_iso": 0.0033438391248916677,
+      "pct_reduction_ard": 4.211550452940094,
+      "Pi_gap": 0.27659574468085113,
+      "Pi_confinement": 0.7833333333333333,
+      "Pi_aspect_axial": 0.21276595744680848,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    }
+  },
+  "top10_new_geometry_candidates": [
+    {
+      "name": "GRID_049",
+      "delta_var_ard": 0.1143365987698498,
+      "delta_var_iso": 0.12447460175296676,
+      "pct_reduction_ard": 46.24492102704598,
+      "Pi_gap": 0.007146752747612858,
+      "Pi_confinement": 0.8627220885774798,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_055",
+      "delta_var_ard": 0.11402475376496132,
+      "delta_var_iso": 0.11897973654194749,
+      "pct_reduction_ard": 46.11879126825566,
+      "Pi_gap": 0.007146752747612858,
+      "Pi_confinement": 0.9053845362684129,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_085",
+      "delta_var_ard": 0.11313083027988297,
+      "delta_var_iso": 0.11703000689793824,
+      "pct_reduction_ard": 45.757232314985735,
+      "Pi_gap": 0.017825550117594183,
+      "Pi_confinement": 0.8627220885774798,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_091",
+      "delta_var_ard": 0.11282103911716798,
+      "delta_var_iso": 0.1118265714436597,
+      "pct_reduction_ard": 45.631933259313556,
+      "Pi_gap": 0.017825550117594183,
+      "Pi_confinement": 0.9053845362684129,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_043",
+      "delta_var_ard": 0.11258427696848017,
+      "delta_var_iso": 0.10940951551452299,
+      "pct_reduction_ard": 45.53617173600376,
+      "Pi_gap": 0.007146752747612858,
+      "Pi_confinement": 0.8220699297418027,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_061",
+      "delta_var_ard": 0.11154246578168878,
+      "delta_var_iso": 0.09707627208583758,
+      "pct_reduction_ard": 45.114797682755594,
+      "Pi_gap": 0.007146752747612858,
+      "Pi_confinement": 0.9501566835567943,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_079",
+      "delta_var_ard": 0.11075909387103619,
+      "delta_var_iso": 0.10362249526489004,
+      "pct_reduction_ard": 44.79795274830152,
+      "Pi_gap": 0.017825550117594183,
+      "Pi_confinement": 0.8220699297418027,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_097",
+      "delta_var_ard": 0.10958926505608454,
+      "delta_var_iso": 0.09095325054773251,
+      "pct_reduction_ard": 44.324800304161585,
+      "Pi_gap": 0.017825550117594183,
+      "Pi_confinement": 0.9501566835567943,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_037",
+      "delta_var_ard": 0.10904665973808511,
+      "delta_var_iso": 0.07475728508975427,
+      "pct_reduction_ard": 44.10533654234155,
+      "Pi_gap": 0.007146752747612858,
+      "Pi_confinement": 0.7833333333333333,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_013",
+      "delta_var_ard": 0.10737619224112227,
+      "delta_var_iso": 0.09635985720804785,
+      "pct_reduction_ard": 43.429694286874486,
+      "Pi_gap": 0.0028653295128938995,
+      "Pi_confinement": 0.8627220885774798,
+      "Pi_aspect_axial": 0.051629362701395426,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    }
+  ],
+  "bottom5_new_geometry_candidates": [
+    {
+      "name": "GRID_029",
+      "delta_var_ard": 0.016873612531796145,
+      "delta_var_iso": 0.024589518279846734,
+      "pct_reduction_ard": 6.824751543856958,
+      "Pi_gap": 0.0028653295128938995,
+      "Pi_confinement": 0.9501566835567943,
+      "Pi_aspect_axial": 1.5042979942693409,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_101",
+      "delta_var_ard": 0.016783021088071975,
+      "delta_var_iso": 0.033368279198888184,
+      "pct_reduction_ard": 6.788110658910021,
+      "Pi_gap": 0.017825550117594183,
+      "Pi_confinement": 0.9501566835567943,
+      "Pi_aspect_axial": 1.5042979942693409,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_071",
+      "delta_var_ard": 0.01577951330728411,
+      "delta_var_iso": 0.008310349000644646,
+      "pct_reduction_ard": 6.3822289152526395,
+      "Pi_gap": 0.007146752747612858,
+      "Pi_confinement": 0.9971428571428572,
+      "Pi_aspect_axial": 1.5042979942693409,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_035",
+      "delta_var_ard": 0.01573531229751754,
+      "delta_var_iso": 0.00420230355059803,
+      "pct_reduction_ard": 6.364351243291404,
+      "Pi_gap": 0.0028653295128938995,
+      "Pi_confinement": 0.9971428571428572,
+      "Pi_aspect_axial": 1.5042979942693409,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    },
+    {
+      "name": "GRID_107",
+      "delta_var_ard": 0.015226693425661686,
+      "delta_var_iso": 0.009137689312012642,
+      "pct_reduction_ard": 6.1586337406290665,
+      "Pi_gap": 0.017825550117594183,
+      "Pi_confinement": 0.9971428571428572,
+      "Pi_aspect_axial": 1.5042979942693409,
+      "Re_Omega_sweep_lo": 90553.10947324833,
+      "Re_Omega_sweep_hi": 81541469.93742743
+    }
+  ],
+  "spearman_rank_correlation_ARD_vs_isotropic_kernel": {
+    "rho": 0.5988985341573488,
+    "p": 2.053003953860253e-22
+  },
+  "spearman_rank_correlation_ARD_vs_nearest_neighbor_distance": {
+    "rho": 0.4439228854832755,
+    "p": 7.616100784914058e-12
+  },
+  "top_candidate_distance_to_nearest_real_point_per_facility_std_space": {
+    "Guo2024": 2.277633218617884,
+    "Liu2024": 2.5317170550917014,
+    "Vrancik1968": 3.3929324651237045,
+    "Zheng2024": 3.301723184892914
+  },
+  "pointwise_diagnostic": {
+    "latent_var_at_facility_centers": {
+      "Guo2024": 0.005779688434255137,
+      "Liu2024": 0.004210550211360298,
+      "Vrancik1968": 0.00318840654194652,
+      "Zheng2024": 0.007067642447695643
+    },
+    "latent_var_at_top_candidate": 0.4056397934609324,
+    "prior_var_no_data_amplitude_squared": 1.1923112581885622
+  },
+  "sensitivity_check_PAD_0.30_reference_grid": {
+    "baseline_mean_var": 0.4955162442924302,
+    "top5_candidates": [
+      {
+        "delta_var": 0.13354801559471963,
+        "pct": 26.95128911170588,
+        "Pi_gap": 0.013550729822089009,
+        "Pi_confinement": 0.9185900123102009,
+        "Pi_aspect_axial": 0.024176777519543606
+      },
+      {
+        "delta_var": 0.13334563187982273,
+        "pct": 26.910446108630186,
+        "Pi_gap": 0.013550729822089009,
+        "Pi_confinement": 0.8503197592262393,
+        "Pi_aspect_axial": 0.024176777519543606
+      },
+      {
+        "delta_var": 0.1282177036050583,
+        "pct": 25.87558028256896,
+        "Pi_gap": 0.0031395542471568173,
+        "Pi_confinement": 0.9185900123102009,
+        "Pi_aspect_axial": 0.024176777519543606
+      },
+      {
+        "delta_var": 0.12821472212059198,
+        "pct": 25.874978589990633,
+        "Pi_gap": 0.0031395542471568173,
+        "Pi_confinement": 0.8503197592262393,
+        "Pi_aspect_axial": 0.024176777519543606
+      },
+      {
+        "delta_var": 0.12798800781450087,
+        "pct": 25.829225436849335,
+        "Pi_gap": 0.013550729822089009,
+        "Pi_confinement": 0.9923415298309544,
+        "Pi_aspect_axial": 0.024176777519543606
+      }
+    ],
+    "note": "recomputado con la malla de referencia y de candidatos extendida 30% mas alla del casco convexo observado (permite extrapolacion). Comparar con el analisis principal (PAD=0, estrictamente interior) para ver si la recomendacion es un hueco real de interpolacion o un artefacto de recompensar la extrapolacion."
+  },
+  "context_from_prior_script_gp_lofo_test": {
+    "pooled_corr_abs_resid_vs_pred_std_LOFO": -0.0179044343357672,
+    "interpretation": "la std predictiva del GP en LOFO real NO correlaciona de forma fiable con el error verdadero cross-facility (signo positivo en 2 instalaciones, negativo en las otras 2). Por tanto esta recomendacion es una afirmacion sobre cobertura/informacion del dataset actual (donde el GP AUN NO ha visto datos), no una garantia de que medir ahi arreglaria la generalizacion."
+  }
+}

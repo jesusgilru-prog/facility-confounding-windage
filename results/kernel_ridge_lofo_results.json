@@ -1,0 +1,173 @@
+{
+  "n_points": 114,
+  "sources": {
+    "Guo2024": 45,
+    "Vrancik1968": 41,
+    "Liu2024": 20,
+    "Zheng2024": 8
+  },
+  "features": [
+    "log_Re",
+    "log_Pi_gap",
+    "log_Pi_confinement",
+    "log_Pi_aspect_axial"
+  ],
+  "method": "KernelRidge(kernel='rbf') sobre features log-transformadas; alpha,gamma elegidos por GridSearchCV con GroupKFold (leave-one-facility-out ANIDADO, solo dentro de las 3 instalaciones de entrenamiento del fold externo). Estandar LOFO real: la instalacion held-out del fold externo nunca se usa para elegir hiperparametros ni para entrenar.",
+  "param_grid": {
+    "alpha": [
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0,
+      10000.0
+    ],
+    "gamma": [
+      1e-07,
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ]
+  },
+  "variant_A_pure_krr_no_facility_dummy": {
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "n_train": 69,
+        "best_params": {
+          "krr__alpha": 0.1,
+          "krr__gamma": 1e-05
+        },
+        "inner_cv_neg_mse": -0.2081166441046353,
+        "held_out_rmse_log": 2.6090800086517936,
+        "held_out_r2_log": -9.256016498193867,
+        "held_out_median_abs_resid_log": 2.6307957442769556
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "n_train": 94,
+        "best_params": {
+          "krr__alpha": 1e-06,
+          "krr__gamma": 1e-07
+        },
+        "inner_cv_neg_mse": -1.3732921298579195,
+        "held_out_rmse_log": 0.9595641740132976,
+        "held_out_r2_log": -119.62265810594707,
+        "held_out_median_abs_resid_log": 0.9818969489073865
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "n_train": 73,
+        "best_params": {
+          "krr__alpha": 0.0001,
+          "krr__gamma": 1e-07
+        },
+        "inner_cv_neg_mse": -3.691681413460963,
+        "held_out_rmse_log": 2.027174254102581,
+        "held_out_r2_log": -12.032512498592117,
+        "held_out_median_abs_resid_log": 1.9703370667120383
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "n_train": 106,
+        "best_params": {
+          "krr__alpha": 0.001,
+          "krr__gamma": 0.001
+        },
+        "inner_cv_neg_mse": -2.3158606736505525,
+        "held_out_rmse_log": 2.283752205167896,
+        "held_out_r2_log": -441.90310436171313,
+        "held_out_median_abs_resid_log": 2.2216816080118984
+      }
+    },
+    "pooled_rmse_log": 2.166237636997776,
+    "pooled_r2_log": -1.4852491359466202
+  },
+  "variant_B_krr_plus_onehot_facility_unknown_at_test": {
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "n_train": 69,
+        "n_test_rows_with_unknown_onehot": 45,
+        "best_params": {
+          "krr__alpha": 1e-05,
+          "krr__gamma": 0.001
+        },
+        "inner_cv_neg_mse": -0.14453029721224717,
+        "held_out_rmse_log": 3.396025895964289,
+        "held_out_r2_log": -16.37584376590149,
+        "held_out_median_abs_resid_log": 3.485916961655215
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "n_train": 94,
+        "n_test_rows_with_unknown_onehot": 20,
+        "best_params": {
+          "krr__alpha": 0.01,
+          "krr__gamma": 0.001
+        },
+        "inner_cv_neg_mse": -1.0230231419536087,
+        "held_out_rmse_log": 0.9902773259728467,
+        "held_out_r2_log": -127.46786755697676,
+        "held_out_median_abs_resid_log": 1.0140124461688294
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "n_train": 73,
+        "n_test_rows_with_unknown_onehot": 41,
+        "best_params": {
+          "krr__alpha": 1e-06,
+          "krr__gamma": 0.0001
+        },
+        "inner_cv_neg_mse": -2.1995453937904332,
+        "held_out_rmse_log": 2.101878462434388,
+        "held_out_r2_log": -13.010743634437508,
+        "held_out_median_abs_resid_log": 2.0312465070623613
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "n_train": 106,
+        "n_test_rows_with_unknown_onehot": 8,
+        "best_params": {
+          "krr__alpha": 1e-06,
+          "krr__gamma": 1e-07
+        },
+        "inner_cv_neg_mse": -1.8301820700718057,
+        "held_out_rmse_log": 0.6024537140482131,
+        "held_out_r2_log": -29.821809869273853,
+        "held_out_median_abs_resid_log": 0.5291867971560076
+      }
+    },
+    "pooled_rmse_log": 2.517717635054688,
+    "pooled_r2_log": -2.3571579978394435,
+    "note": "El one-hot de instalacion se ajusta SOLO sobre las 3 instalaciones de entrenamiento (OneHotEncoder(handle_unknown='ignore')). La instalacion excluida del fold LOFO externo llega como fila de ceros (categoria nueva/desconocida) -- el modelo NO ha visto nunca esa columna activada durante el entrenamiento de ese fold."
+  },
+  "reference_in_sample_groupkfold4_no_lofo_holdout": {
+    "note": "SOLO para contraste (no es una metrica LOFO valida): ajuste sobre TODO el dataset con hiperparametros elegidos por GroupKFold(4) pero evaluado sobre los mismos puntos de entrenamiento (in-sample). Muestra cuanto se infla el R2 cuando no hay holdout real de instalacion.",
+    "best_params": {
+      "krr__alpha": 0.1,
+      "krr__gamma": 0.001
+    },
+    "r2_log_in_sample": 0.805549255292527
+  },
+  "comparison_to_prior_best_result": {
+    "solo_reynolds_lofo_pooled_r2": 0.4526,
+    "solo_reynolds_per_facility": {
+      "Vrancik1968": 0.468,
+      "Guo2024_ex_Xia2024": -2.36,
+      "Liu2024": -61.7,
+      "Zheng2024": -9.59
+    },
+    "pooled_loglinear_4pi_lofo_pooled_r2": -0.885
+  }
+}

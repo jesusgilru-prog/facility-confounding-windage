@@ -1,0 +1,513 @@
+{
+  "n_points": 114,
+  "features_used": [
+    "Re_Omega",
+    "Pi_gap",
+    "Pi_confinement",
+    "Pi_aspect_axial",
+    "Pi_blockage",
+    "M_tip",
+    "g_level"
+  ],
+  "geometric_pi_features": [
+    "Pi_gap",
+    "Pi_confinement",
+    "Pi_aspect_axial",
+    "Pi_blockage"
+  ],
+  "libraries": {
+    "sklearn_available": true,
+    "shap_available": true,
+    "note": "instaladas en venv nuevo del proyecto (paper_windage_power/.venv), el Python de sistema no las tenia (entorno externally-managed)."
+  },
+  "lofo_cv_results": {
+    "RandomForest": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "n_train": 69,
+          "held_out_r2_log": -8.103443317740147,
+          "held_out_rmse_log": 2.458107590973942
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "n_train": 94,
+          "held_out_r2_log": -114.58523645522186,
+          "held_out_rmse_log": 0.9393139247111563
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "n_train": 73,
+          "held_out_r2_log": -2.323941054850856,
+          "held_out_rmse_log": 1.0237729809539504
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "n_train": 106,
+          "held_out_r2_log": -3.8759154020019304,
+          "held_out_rmse_log": 0.2396197984387093
+        }
+      },
+      "pooled_r2_log": -0.5469373292458621,
+      "pooled_rmse_log": 1.7090607139685738
+    },
+    "GradientBoosting": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "n_train": 69,
+          "held_out_r2_log": -7.958829058802852,
+          "held_out_rmse_log": 2.4385050916832185
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "n_train": 94,
+          "held_out_r2_log": -104.94554844468186,
+          "held_out_rmse_log": 0.8992924232114
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "n_train": 73,
+          "held_out_r2_log": -1.0472183498148975,
+          "held_out_rmse_log": 0.8034504338826185
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "n_train": 106,
+          "held_out_r2_log": -5.398169592129125,
+          "held_out_rmse_log": 0.2744874491615076
+        }
+      },
+      "pooled_r2_log": -0.4440190916958684,
+      "pooled_rmse_log": 1.6512301087484436
+    }
+  },
+  "baseline_reference_log_log_pooled_M6": -0.8848004392997473,
+  "baseline_reference_re_only_pooled": 0.4526,
+  "any_tree_model_beats_re_only_baseline_pooled": {
+    "RandomForest": false,
+    "GradientBoosting": false
+  },
+  "shap_diagnostic_full_data_NOT_predictive": {
+    "RandomForest": {
+      "mean_abs_shap_ranking": [
+        [
+          "Re_Omega",
+          0.47633525387266945
+        ],
+        [
+          "Pi_blockage",
+          0.2705088596063265
+        ],
+        [
+          "Pi_aspect_axial",
+          0.22296958745830828
+        ],
+        [
+          "M_tip",
+          0.12642001672457684
+        ],
+        [
+          "g_level",
+          0.09236011154712265
+        ],
+        [
+          "Pi_gap",
+          0.0595216166470742
+        ],
+        [
+          "Pi_confinement",
+          0.056719350034008395
+        ]
+      ],
+      "dominant_feature": "Re_Omega",
+      "proxy_diagnostic_by_feature": {
+        "Re_Omega": {
+          "eta2_shap_explained_by_source": 0.8467523733227771,
+          "shap_mean_by_source": {
+            "Guo2024": -0.5543581492525371,
+            "Liu2024": 0.38358320723922745,
+            "Vrancik1968": 0.41279708831478534,
+            "Zheng2024": 0.31491882553160927
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.27954759746132757,
+            "Liu2024": 0.05076057796692397,
+            "Vrancik1968": 0.14390412124867624,
+            "Zheng2024": 0.04843689380720595
+          },
+          "is_geometric_pi": false
+        },
+        "Pi_gap": {
+          "eta2_shap_explained_by_source": 0.48787213120703926,
+          "shap_mean_by_source": {
+            "Guo2024": -0.06901594569390626,
+            "Liu2024": 0.015340604499315841,
+            "Vrancik1968": 0.041661047872397605,
+            "Zheng2024": -0.023784420111007006
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.006894960281387304,
+            "Liu2024": 0.00545790085456742,
+            "Vrancik1968": 0.08402750372701286,
+            "Zheng2024": 0.01604214260158455
+          },
+          "is_geometric_pi": true
+        },
+        "Pi_confinement": {
+          "eta2_shap_explained_by_source": 0.31152758180915147,
+          "shap_mean_by_source": {
+            "Guo2024": -0.052504520233571876,
+            "Liu2024": -0.008579933749520128,
+            "Vrancik1968": 0.03659091554746904,
+            "Zheng2024": -0.029489040279959258
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.010266466425865223,
+            "Liu2024": 0.004622199155349782,
+            "Vrancik1968": 0.09576159719045785,
+            "Zheng2024": 0.014495944246374706
+          },
+          "is_geometric_pi": true
+        },
+        "Pi_aspect_axial": {
+          "eta2_shap_explained_by_source": 0.9299119434817269,
+          "shap_mean_by_source": {
+            "Guo2024": -0.28906441894694873,
+            "Liu2024": 0.2084371153419306,
+            "Vrancik1968": 0.17326680468953992,
+            "Zheng2024": 0.14224410231558893
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.09483310621024438,
+            "Liu2024": 0.009919060490147565,
+            "Vrancik1968": 0.03365411648763087,
+            "Zheng2024": 0.008110943352590563
+          },
+          "is_geometric_pi": true
+        },
+        "Pi_blockage": {
+          "eta2_shap_explained_by_source": 0.9415963980485039,
+          "shap_mean_by_source": {
+            "Guo2024": -0.36341611507810984,
+            "Liu2024": 0.22529456593192485,
+            "Vrancik1968": 0.2135801173386556,
+            "Zheng2024": 0.1527010858853612
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.10529115201246421,
+            "Liu2024": 0.0030296170545936005,
+            "Vrancik1968": 0.03749306626804598,
+            "Zheng2024": 0.008489004755093876
+          },
+          "is_geometric_pi": true
+        },
+        "M_tip": {
+          "eta2_shap_explained_by_source": 0.3313336182379371,
+          "shap_mean_by_source": {
+            "Guo2024": -0.07139074594415185,
+            "Liu2024": 0.08053124572331824,
+            "Vrancik1968": 0.10668787092454594,
+            "Zheng2024": -0.03147563819708635
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.15966964616190643,
+            "Liu2024": 0.04855612813308902,
+            "Vrancik1968": 0.06762814319191456,
+            "Zheng2024": 0.1533080528390409
+          },
+          "is_geometric_pi": false
+        },
+        "g_level": {
+          "eta2_shap_explained_by_source": 0.7803426333346871,
+          "shap_mean_by_source": {
+            "Guo2024": -0.08861203904848505,
+            "Liu2024": -0.01592812814505456,
+            "Vrancik1968": 0.11732045101464468,
+            "Zheng2024": 0.06303764133237927
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.07475894141375945,
+            "Liu2024": 0.005922107159873558,
+            "Vrancik1968": 0.018253771614011188,
+            "Zheng2024": 0.006295869908848876
+          },
+          "is_geometric_pi": false
+        }
+      },
+      "sklearn_feature_importances_ranking": [
+        [
+          "Re_Omega",
+          0.3727230045918699
+        ],
+        [
+          "Pi_blockage",
+          0.21078547666970263
+        ],
+        [
+          "Pi_aspect_axial",
+          0.1758399062670861
+        ],
+        [
+          "M_tip",
+          0.09969288027474126
+        ],
+        [
+          "g_level",
+          0.06888617243915135
+        ],
+        [
+          "Pi_gap",
+          0.041850805140645785
+        ],
+        [
+          "Pi_confinement",
+          0.030221754616802977
+        ]
+      ]
+    },
+    "GradientBoosting": {
+      "mean_abs_shap_ranking": [
+        [
+          "Re_Omega",
+          0.9326043892307426
+        ],
+        [
+          "Pi_blockage",
+          0.14614415172739562
+        ],
+        [
+          "M_tip",
+          0.0858945225071796
+        ],
+        [
+          "Pi_aspect_axial",
+          0.06805166772847046
+        ],
+        [
+          "Pi_confinement",
+          0.04779686637913695
+        ],
+        [
+          "g_level",
+          0.03857343384522439
+        ],
+        [
+          "Pi_gap",
+          0.037445708075170336
+        ]
+      ],
+      "dominant_feature": "Re_Omega",
+      "proxy_diagnostic_by_feature": {
+        "Re_Omega": {
+          "eta2_shap_explained_by_source": 0.853870619250698,
+          "shap_mean_by_source": {
+            "Guo2024": -1.1523192560058177,
+            "Liu2024": 0.6302305742909657,
+            "Vrancik1968": 0.840377425354057,
+            "Zheng2024": 0.6146524114488403
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.5342383677119028,
+            "Liu2024": 0.11823284442509183,
+            "Vrancik1968": 0.30758312844636515,
+            "Zheng2024": 0.08373017573060494
+          },
+          "is_geometric_pi": false
+        },
+        "Pi_gap": {
+          "eta2_shap_explained_by_source": 0.16958272840946112,
+          "shap_mean_by_source": {
+            "Guo2024": -0.024360324602032746,
+            "Liu2024": -0.015038207911673202,
+            "Vrancik1968": 0.02258524537159287,
+            "Zheng2024": -0.010489966374794355
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.004432775138292567,
+            "Liu2024": 0.005127061321713243,
+            "Vrancik1968": 0.07724934284891097,
+            "Zheng2024": 0.0064563164089816395
+          },
+          "is_geometric_pi": true
+        },
+        "Pi_confinement": {
+          "eta2_shap_explained_by_source": 0.20475414971833472,
+          "shap_mean_by_source": {
+            "Guo2024": -0.028017492365796245,
+            "Liu2024": -0.018042853954171035,
+            "Vrancik1968": 0.03716041823723121,
+            "Zheng2024": -0.013550599941887221
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.008243268753911398,
+            "Liu2024": 0.00521700707036908,
+            "Vrancik1968": 0.09661058526538784,
+            "Zheng2024": 0.006616517926783576
+          },
+          "is_geometric_pi": true
+        },
+        "Pi_aspect_axial": {
+          "eta2_shap_explained_by_source": 0.35940401872786026,
+          "shap_mean_by_source": {
+            "Guo2024": -0.07275246243123869,
+            "Liu2024": 0.060805076746213146,
+            "Vrancik1968": 0.06787258354554074,
+            "Zheng2024": 0.06064398141855787
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.1428004980277633,
+            "Liu2024": 0.001600915998831295,
+            "Vrancik1968": 0.010837637203156423,
+            "Zheng2024": 0.0012583263865472822
+          },
+          "is_geometric_pi": true
+        },
+        "Pi_blockage": {
+          "eta2_shap_explained_by_source": 0.7061590069101966,
+          "shap_mean_by_source": {
+            "Guo2024": -0.16225401150973595,
+            "Liu2024": 0.13579646952590527,
+            "Vrancik1968": 0.15170040937126075,
+            "Zheng2024": -0.05291957553064837
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.14341447861790063,
+            "Liu2024": 0.0124799098993879,
+            "Vrancik1968": 0.05253623218257042,
+            "Zheng2024": 0.01220278583452494
+          },
+          "is_geometric_pi": true
+        },
+        "M_tip": {
+          "eta2_shap_explained_by_source": 0.26125676607860826,
+          "shap_mean_by_source": {
+            "Guo2024": -0.08239858959027554,
+            "Liu2024": 0.035273465898526125,
+            "Vrancik1968": 0.01924371962645365,
+            "Zheng2024": -0.007177794367620453
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.11279491313757424,
+            "Liu2024": 0.05077724747624175,
+            "Vrancik1968": 0.07193263846746452,
+            "Zheng2024": 0.04219562778512976
+          },
+          "is_geometric_pi": false
+        },
+        "g_level": {
+          "eta2_shap_explained_by_source": 0.43729049536551456,
+          "shap_mean_by_source": {
+            "Guo2024": 0.02112303639095658,
+            "Liu2024": 0.0605840397851915,
+            "Vrancik1968": -0.030197633549854625,
+            "Zheng2024": -0.020204745779914626
+          },
+          "shap_std_within_source": {
+            "Guo2024": 0.06055141492678758,
+            "Liu2024": 0.004968897478117661,
+            "Vrancik1968": 0.00355227126458758,
+            "Zheng2024": 0.002454756913500539
+          },
+          "is_geometric_pi": false
+        }
+      },
+      "sklearn_feature_importances_ranking": [
+        [
+          "Re_Omega",
+          0.8440003810204717
+        ],
+        [
+          "Pi_blockage",
+          0.057260807140608126
+        ],
+        [
+          "Pi_aspect_axial",
+          0.047088868250166546
+        ],
+        [
+          "M_tip",
+          0.015857416135027072
+        ],
+        [
+          "Pi_confinement",
+          0.014440384427053265
+        ],
+        [
+          "g_level",
+          0.013286707678309471
+        ],
+        [
+          "Pi_gap",
+          0.008065435348363919
+        ]
+      ]
+    }
+  },
+  "geometric_pi_proxy_eta2_summary_sorted_desc": {
+    "RandomForest": [
+      [
+        "Pi_blockage",
+        0.9415963980485039
+      ],
+      [
+        "Pi_aspect_axial",
+        0.9299119434817269
+      ],
+      [
+        "Pi_gap",
+        0.48787213120703926
+      ],
+      [
+        "Pi_confinement",
+        0.31152758180915147
+      ]
+    ],
+    "RandomForest_non_geom_contrast": [
+      [
+        "Re_Omega",
+        0.8467523733227771
+      ],
+      [
+        "g_level",
+        0.7803426333346871
+      ],
+      [
+        "M_tip",
+        0.3313336182379371
+      ]
+    ],
+    "GradientBoosting": [
+      [
+        "Pi_blockage",
+        0.7061590069101966
+      ],
+      [
+        "Pi_aspect_axial",
+        0.35940401872786026
+      ],
+      [
+        "Pi_confinement",
+        0.20475414971833472
+      ],
+      [
+        "Pi_gap",
+        0.16958272840946112
+      ]
+    ],
+    "GradientBoosting_non_geom_contrast": [
+      [
+        "Re_Omega",
+        0.853870619250698
+      ],
+      [
+        "g_level",
+        0.43729049536551456
+      ],
+      [
+        "M_tip",
+        0.26125676607860826
+      ]
+    ]
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "slug": "set_attention",
+  "approach": "Set-Transformer-style attention pooling: shared MLP encoder + single-head self-attention (SAB) refines a facility-mixed context embedding; a query point's prediction is a softmax-attention-weighted convex combination of the context points' OBSERVED log(Cp) values (in-context / metric-learning regression), trained via leave-one-out-within-the-training-set.",
+  "n_points": 114,
+  "sources": {
+    "Guo2024": 45,
+    "Vrancik1968": 41,
+    "Liu2024": 20,
+    "Zheng2024": 8
+  },
+  "features": [
+    "log_Re_Omega",
+    "log_Pi_confinement",
+    "log_Pi_gap",
+    "log_Pi_aspect_axial"
+  ],
+  "target": "log(Cp)",
+  "library_used": "torch",
+  "torch_version": "2.13.0+cpu",
+  "substituted_proxy": false,
+  "n_seeds_outer": 8,
+  "n_seeds_inner": 2,
+  "rng_seed_base": 20260818,
+  "hyperparam_search_grid": {
+    "embed_dim": [
+      8,
+      12
+    ],
+    "weight_decay": [
+      0.0,
+      0.001
+    ],
+    "epochs": [
+      150,
+      300
+    ],
+    "hidden": 24
+  },
+  "validation_protocol": "True LOFO across all 4 facilities. StandardScaler fit on training fold only. Hyperparameters selected per outer fold via NESTED inner-LOFO over the 3 training facilities only (2 seeds averaged per inner fold), never touching the outer held-out facility. Final outer-fold evaluation repeated over 8 seeds (stochastic init), mean residual per point used to build the pooled residual vector.",
+  "per_facility": {
+    "Guo2024": {
+      "n_test": 45,
+      "n_train": 69,
+      "selected_embed_dim": 12,
+      "selected_weight_decay": 0.0,
+      "selected_epochs": 150,
+      "held_out_r2_log_per_seed": [
+        -8.134095186812736,
+        -8.721047829826738,
+        -8.37619254717698,
+        -8.325239770885922,
+        -8.667281889862485,
+        -8.534035791233919,
+        -8.563505736615129,
+        -8.969294404290622
+      ],
+      "held_out_r2_log_mean": -8.536336644588065,
+      "held_out_r2_log_std": 0.24276196334122588,
+      "held_out_rmse_log_mean_of_seed_means": 2.5153312966180965
+    },
+    "Liu2024": {
+      "n_test": 20,
+      "n_train": 94,
+      "selected_embed_dim": 12,
+      "selected_weight_decay": 0.0,
+      "selected_epochs": 150,
+      "held_out_r2_log_per_seed": [
+        -3.6149069207445237,
+        -20.581464956574028,
+        -38.633637651773185,
+        -5.4877461575614195,
+        -35.41844777698627,
+        -11.303254791928268,
+        -12.689760529835441,
+        -32.25167142956295
+      ],
+      "held_out_r2_log_mean": -19.99761127687076,
+      "held_out_r2_log_std": 12.959225757078665,
+      "held_out_rmse_log_mean_of_seed_means": 0.3204608578687033
+    },
+    "Vrancik1968": {
+      "n_test": 41,
+      "n_train": 73,
+      "selected_embed_dim": 8,
+      "selected_weight_decay": 0.001,
+      "selected_epochs": 150,
+      "held_out_r2_log_per_seed": [
+        -0.15500613693141974,
+        -5.989948115193128,
+        -0.10668786863057167,
+        -2.785314409105843,
+        -1.7038928798422086,
+        -0.11908424083035163,
+        -0.0953529380597371,
+        -0.5263803747742006
+      ],
+      "held_out_r2_log_mean": -1.4352083704209324,
+      "held_out_r2_log_std": 1.9492908946589518,
+      "held_out_rmse_log_mean_of_seed_means": 0.7962216502908406
+    },
+    "Zheng2024": {
+      "n_test": 8,
+      "n_train": 106,
+      "selected_embed_dim": 12,
+      "selected_weight_decay": 0.0,
+      "selected_epochs": 150,
+      "held_out_r2_log_per_seed": [
+        -60.16574232469692,
+        -26.115426747000654,
+        -34.46320310278898,
+        -17.150281382407986,
+        -37.00501137535662,
+        -25.896872580481386,
+        -16.036295994977486,
+        -41.522562509777174
+      ],
+      "held_out_r2_log_mean": -32.2944245021859,
+      "held_out_r2_log_std": 13.51685343745634,
+      "held_out_rmse_log_mean_of_seed_means": 0.6129842808347578
+    }
+  },
+  "hyperparam_selection_per_outer_fold": {
+    "Guo2024": {
+      "selected_embed_dim": 12,
+      "selected_weight_decay": 0.0,
+      "selected_epochs": 150,
+      "inner_lofo_pooled_r2_at_selection": -1.0804678377013506,
+      "search_log": [
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.140231623335037
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.2000665280961278
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.2359930961322787
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.3300674244192647
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.0804678377013506
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.1278164479050026
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.1106425252682413
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.1430766767509684
+        }
+      ]
+    },
+    "Liu2024": {
+      "selected_embed_dim": 12,
+      "selected_weight_decay": 0.0,
+      "selected_epochs": 150,
+      "inner_lofo_pooled_r2_at_selection": -0.34339699478963737,
+      "search_log": [
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -0.40952918563928487
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -0.4748806412951274
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -0.5149110155877628
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -0.42001650975254856
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -0.34339699478963737
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -0.3504670497728244
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -0.6000845156446781
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -0.6347708754246106
+        }
+      ]
+    },
+    "Vrancik1968": {
+      "selected_embed_dim": 8,
+      "selected_weight_decay": 0.001,
+      "selected_epochs": 150,
+      "inner_lofo_pooled_r2_at_selection": -1.4890026537202634,
+      "search_log": [
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.492193532438252
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.4918204541893099
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.4890026537202634
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.5120154874275418
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.498823733175187
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.4955192467667255
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.4962682947687544
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.5054868357189117
+        }
+      ]
+    },
+    "Zheng2024": {
+      "selected_embed_dim": 12,
+      "selected_weight_decay": 0.0,
+      "selected_epochs": 150,
+      "inner_lofo_pooled_r2_at_selection": -1.353792277978282,
+      "search_log": [
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.6003080353563672
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.6165813317256594
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.7421936741455926
+        },
+        {
+          "embed_dim": 8,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.9073242069761265
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.353792277978282
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.0,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -1.4807944578796204
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 150,
+          "inner_lofo_pooled_r2": -1.6848804834728535
+        },
+        {
+          "embed_dim": 12,
+          "weight_decay": 0.001,
+          "epochs": 300,
+          "inner_lofo_pooled_r2": -2.011386286030205
+        }
+      ]
+    }
+  },
+  "pooled_r2_log": -0.4669448116331789,
+  "pooled_rmse_log": 1.6642862269579528,
+  "worst_facility_r2_log": -32.2944245021859,
+  "clears_decision_rule": false,
+  "decision_rule": "pooled R2_log substantially positive AND every per-facility held-out R2_log >= 0.",
+  "linear_baseline_reference_from_prior_work": {
+    "note": "Reproduced from prior work / task context, NOT recomputed in this script. Shown only as a comparison anchor.",
+    "linear_full_4pred_pooled_r2_log": -0.885,
+    "linear_re_only_pooled_r2_log": 0.4526,
+    "linear_re_only_per_facility_r2_log": {
+      "Liu2024": -61.7,
+      "Guo2024": -2.36,
+      "Zheng2024": -9.59,
+      "Vrancik1968": 0.468
+    },
+    "already_failed_decision_rule": {
+      "approaches": [
+        "plain MLP",
+        "Random Forest",
+        "Gradient Boosting",
+        "kernel ridge regression (2 variants)",
+        "plain (non-hierarchical) GP",
+        "symbolic regression (genetic search)",
+        "Huber/robust regression"
+      ],
+      "pooled_r2_log_range": [
+        -2.67,
+        -0.55
+      ]
+    }
+  }
+}

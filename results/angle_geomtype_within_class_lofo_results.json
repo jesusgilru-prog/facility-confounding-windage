@@ -1,0 +1,252 @@
+{
+  "section_a_crosstab": {
+    "arm_in_cylinder": {
+      "Guo2024": 0,
+      "Liu2024": 20,
+      "Vrancik1968": 0,
+      "Zheng2024": 8
+    },
+    "disk_in_cylinder": {
+      "Guo2024": 0,
+      "Liu2024": 0,
+      "Vrancik1968": 12,
+      "Zheng2024": 0
+    },
+    "enclosed_arm_in_chamber": {
+      "Guo2024": 45,
+      "Liu2024": 0,
+      "Vrancik1968": 0,
+      "Zheng2024": 0
+    },
+    "enclosed_salient_in_stator": {
+      "Guo2024": 0,
+      "Liu2024": 0,
+      "Vrancik1968": 23,
+      "Zheng2024": 0
+    },
+    "salient_in_stator": {
+      "Guo2024": 0,
+      "Liu2024": 0,
+      "Vrancik1968": 6,
+      "Zheng2024": 0
+    }
+  },
+  "section_b_testability": {
+    "arm_in_cylinder": {
+      "n_sources": 2,
+      "sources": [
+        "Liu2024",
+        "Zheng2024"
+      ],
+      "n_points": 28,
+      "within_class_lofo_possible": true
+    },
+    "disk_in_cylinder": {
+      "n_sources": 1,
+      "sources": [
+        "Vrancik1968"
+      ],
+      "n_points": 12,
+      "within_class_lofo_possible": false
+    },
+    "enclosed_arm_in_chamber": {
+      "n_sources": 1,
+      "sources": [
+        "Guo2024"
+      ],
+      "n_points": 45,
+      "within_class_lofo_possible": false
+    },
+    "enclosed_salient_in_stator": {
+      "n_sources": 1,
+      "sources": [
+        "Vrancik1968"
+      ],
+      "n_points": 23,
+      "within_class_lofo_possible": false
+    },
+    "salient_in_stator": {
+      "n_sources": 1,
+      "sources": [
+        "Vrancik1968"
+      ],
+      "n_points": 6,
+      "within_class_lofo_possible": false
+    }
+  },
+  "section_c_within_class_lofo": {
+    "arm_in_cylinder": {
+      "OLS": {
+        "per_facility": {
+          "Liu2024": {
+            "n_train": 8,
+            "n_test": 20,
+            "held_out_r2_log": -21.48439001261781
+          },
+          "Zheng2024": {
+            "n_train": 20,
+            "n_test": 8,
+            "held_out_r2_log": -12.478884841777784
+          }
+        },
+        "pooled_r2_log": -3.3545290227718576,
+        "passes_honest_bar": false
+      },
+      "Huber": {
+        "per_facility": {
+          "Liu2024": {
+            "n_train": 8,
+            "n_test": 20,
+            "held_out_r2_log": -20.279888134923127
+          },
+          "Zheng2024": {
+            "n_train": 20,
+            "n_test": 8,
+            "held_out_r2_log": -12.192790766537893
+          }
+        },
+        "pooled_r2_log": -3.159287356198166,
+        "passes_honest_bar": false
+      },
+      "RANSAC": {
+        "per_facility": {
+          "Liu2024": {
+            "n_train": 8,
+            "n_test": 20,
+            "held_out_r2_log": -19.29742029684226
+          },
+          "Zheng2024": {
+            "n_train": 20,
+            "n_test": 8,
+            "held_out_r2_log": -9.917559583291533
+          }
+        },
+        "pooled_r2_log": -2.821910714812829,
+        "passes_honest_bar": false
+      },
+      "KernelRidge_rbf": {
+        "per_facility": {
+          "Liu2024": {
+            "n_train": 8,
+            "n_test": 20,
+            "held_out_r2_log": -17.41151184300576
+          },
+          "Zheng2024": {
+            "n_train": 20,
+            "n_test": 8,
+            "held_out_r2_log": -13.973915126102396
+          }
+        },
+        "pooled_r2_log": -2.9091550076863397,
+        "passes_honest_bar": false
+      },
+      "RandomForest": {
+        "per_facility": {
+          "Liu2024": {
+            "n_train": 8,
+            "n_test": 20,
+            "held_out_r2_log": -20.395609717424957
+          },
+          "Zheng2024": {
+            "n_train": 20,
+            "n_test": 8,
+            "held_out_r2_log": -13.051461017690988
+          }
+        },
+        "pooled_r2_log": -3.2505543007498163,
+        "passes_honest_bar": false
+      },
+      "GaussianProcess": {
+        "per_facility": {
+          "Liu2024": {
+            "n_train": 8,
+            "n_test": 20,
+            "held_out_r2_log": -18.664546403635914
+          },
+          "Zheng2024": {
+            "n_train": 20,
+            "n_test": 8,
+            "held_out_r2_log": -12.79860154670903
+          }
+        },
+        "pooled_r2_log": -2.983770369795338,
+        "passes_honest_bar": false
+      }
+    }
+  },
+  "section_d_offset_diagnosis": {
+    "arm_in_cylinder": {
+      "per_source_fit": {
+        "Liu2024": {
+          "n": 20,
+          "slope": -0.04918430127919304,
+          "intercept": -1.7645222684828559,
+          "logRe_min": 12.584118280189413,
+          "logRe_max": 15.70136823519636,
+          "Cp_min": 0.0689001685632345,
+          "Cp_max": 0.0951647018044491
+        },
+        "Zheng2024": {
+          "n": 8,
+          "slope": -0.12770189806373286,
+          "intercept": -1.0415953735854382,
+          "logRe_min": 12.826828652037785,
+          "logRe_max": 14.979976982332127,
+          "Cp_min": 0.0534356148834725,
+          "Cp_max": 0.0762108288667678
+        }
+      },
+      "logRe_overlap_range": [
+        12.826828652037785,
+        14.979976982332127
+      ],
+      "overlap_exists": true,
+      "reference_logRe": 13.903402817184956,
+      "predicted_Cp_at_reference_logRe": {
+        "Liu2024": 0.08643596558444588,
+        "Zheng2024": 0.059779869634413216
+      },
+      "systematic_offset_ratio_at_reference": 1.4459042168049103,
+      "interpretation": "Both sources have similarly-signed, similarly-small Re exponents (weak Re dependence in this narrow class), so the LOFO failure is NOT primarily a slope-mismatch/extrapolation problem -- Re ranges overlap substantially. It is dominated by a systematic multiplicative offset in Cp between the two facilities at matched Re, which log(Re)-only regression (or any other model using only Re) has no way to absorb, because that offset is fixed per-source with zero within-source information to estimate it from in a LOFO fold."
+    }
+  },
+  "section_e_rank_check": {
+    "arm_in_cylinder": {
+      "Liu2024": {
+        "train_sources": [
+          "Zheng2024"
+        ],
+        "design_rank": 2,
+        "design_ncols": 5,
+        "rank_deficient": true,
+        "pi_terms_nunique_in_train": {
+          "Pi_gap": 1,
+          "Pi_confinement": 1,
+          "Pi_aspect_axial": 1
+        }
+      },
+      "Zheng2024": {
+        "train_sources": [
+          "Liu2024"
+        ],
+        "design_rank": 2,
+        "design_ncols": 5,
+        "rank_deficient": true,
+        "pi_terms_nunique_in_train": {
+          "Pi_gap": 1,
+          "Pi_confinement": 1,
+          "Pi_aspect_axial": 1
+        }
+      }
+    }
+  },
+  "verdict": {
+    "n_testable_classes": 1,
+    "any_model_passes_honest_bar": false,
+    "conclusion": "NEGATIVE. Only one geometry_type ('arm_in_cylinder') is shared by 2+ facilities (Liu2024, Zheng2024), so this is the only class where within-class cross-facility LOFO can be tested at all -- every other geometry_type maps 1:1 to a single source and the hypothesis is simply not testable there (honestly reported as untestable, not folded into a false pooled number). Within the one testable class, restricting the comparison to geometrically near-identical facilities does NOT rescue generalization: every model in the battery (OLS, Huber, RANSAC, kernel ridge, random forest, Gaussian process), fit with the one identifiable predictor (log Re; the three geometric Pi terms are provably rank-deficient / non-identifiable within a 2-source LOFO fold, confirmed by explicit rank check), fails the honest bar. Pooled R2(log) is negative for every model, and per-facility R2 is catastrophically negative for both held-out folds -- i.e. within-class transfer is WORSE, not better, than the naive global 4-facility Re-only baseline (pooled R2=+0.45, itself already known to hide a catastrophic per-facility failure and not meeting the honest bar either). Root cause, diagnosed directly from the data rather than assumed: a systematic facility-to-facility offset in Cp at matched Reynolds number that has nothing to do with the (shared) categorical geometry label -- i.e. whatever varies between these two 'same class' rigs (measurement technique, working fluid, absolute scale, unmodeled geometric details our coarse geometry_type label does not capture) dominates over geometric similarity. This angle does not produce a new positive result; it strengthens the paper's existing negative headline finding by rigorously closing off the 'maybe the facilities are just too different in geometry TYPE' counter-hypothesis with real numbers, and by showing the confound is deeper than geom_confidence alone."
+  },
+  "testable_classes": [
+    "arm_in_cylinder"
+  ],
+  "untestable_classes_reason": "disk_in_cylinder, enclosed_arm_in_chamber, enclosed_salient_in_stator and salient_in_stator each map 1:1 onto a single source (three of them are actually three different geometry_type labels WITHIN Vrancik1968 alone). With only one facility per class, there is no second facility to hold out -> within-class LOFO is mathematically impossible for these classes, not merely untried. Reported as such, no substitute metric is used to paper over this."
+}

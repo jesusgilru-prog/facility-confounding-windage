@@ -1,0 +1,312 @@
+{
+  "n": 114,
+  "pi_definition_verification": {
+    "Pi_confinement_matches_R_over_Rchamber": true,
+    "Pi_gap_matches_gapradial_over_R": true,
+    "Pi_aspect_axial_matches_hrotor_over_R": true
+  },
+  "raw_baseline": {
+    "label": "RAW (no geometric correction)",
+    "r2_pooled_single_curve": 0.8284312294068473,
+    "r2_fixed_effects_common_slope": 0.8674367158254961,
+    "partial_r2_of_facility_dummies": 0.22734607401916926,
+    "common_slope_in_fixed_effects_model": -0.39675640650329846,
+    "per_facility_intercept": {
+      "Guo2024": 2.003988611035965,
+      "Liu2024": 3.212025205550003,
+      "Vrancik1968": 3.018135651312164,
+      "Zheng2024": 2.769692756877899
+    },
+    "intercept_spread_std": 0.4588793753626366,
+    "intercept_spread_range": 1.2080365945140379,
+    "per_facility_pooled_residual_std": {
+      "Guo2024": 0.6924579185813037,
+      "Liu2024": 0.5083401898581221,
+      "Vrancik1968": 0.3577956290242474,
+      "Zheng2024": 0.3347467287455807
+    }
+  },
+  "theory_candidates_correct_sign": {
+    "RAW": {
+      "label": "RAW (no geometric correction)",
+      "r2_pooled_single_curve": 0.8284312294068473,
+      "r2_fixed_effects_common_slope": 0.8674367158254961,
+      "partial_r2_of_facility_dummies": 0.22734607401916926,
+      "common_slope_in_fixed_effects_model": -0.39675640650329846,
+      "per_facility_intercept": {
+        "Guo2024": 2.003988611035965,
+        "Liu2024": 3.212025205550003,
+        "Vrancik1968": 3.018135651312164,
+        "Zheng2024": 2.769692756877899
+      },
+      "intercept_spread_std": 0.4588793753626366,
+      "intercept_spread_range": 1.2080365945140379,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.6924579185813037,
+        "Liu2024": 0.5083401898581221,
+        "Vrancik1968": 0.3577956290242474,
+        "Zheng2024": 0.3347467287455807
+      }
+    },
+    "A_DN_IV_gap_pow_+0.1": {
+      "label": "A_DN_IV_gap_pow_+0.1",
+      "r2_pooled_single_curve": 0.8401322741775402,
+      "r2_fixed_effects_common_slope": 0.8759304532730221,
+      "partial_r2_of_facility_dummies": 0.22392374015026245,
+      "common_slope_in_fixed_effects_model": -0.4089795810113066,
+      "per_facility_intercept": {
+        "Guo2024": 2.4365941689496897,
+        "Liu2024": 3.57674897082945,
+        "Vrancik1968": 3.6459986972113656,
+        "Zheng2024": 3.071359800389087
+      },
+      "intercept_spread_std": 0.4845076942132519,
+      "intercept_spread_range": 1.2094045282616759,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.6942458525988104,
+        "Liu2024": 0.5418840582436949,
+        "Vrancik1968": 0.3999774523117629,
+        "Zheng2024": 0.3599802498723699
+      },
+      "reduction_vs_raw_partial_r2_facility": 0.015053410900855213,
+      "reduction_vs_raw_intercept_spread_std": -0.0558497945791574
+    },
+    "B_DN_I_gap_pow_-1.0": {
+      "label": "B_DN_I_gap_pow_-1.0",
+      "r2_pooled_single_curve": 0.1310397342728995,
+      "r2_fixed_effects_common_slope": 0.8383266525082096,
+      "partial_r2_of_facility_dummies": 0.8139462138047122,
+      "common_slope_in_fixed_effects_model": -0.27452466142321985,
+      "per_facility_intercept": {
+        "Guo2024": -2.322066968101325,
+        "Liu2024": -0.4352124472444822,
+        "Vrancik1968": -3.260494807679866,
+        "Zheng2024": -0.24697767823400685
+      },
+      "intercept_spread_std": 1.2709691328817592,
+      "intercept_spread_range": 3.013517129445859,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.7378076738986199,
+        "Liu2024": 0.18032981458177416,
+        "Vrancik1968": 0.40273405152675473,
+        "Zheng2024": 0.0970420588331541
+      },
+      "reduction_vs_raw_partial_r2_facility": -2.580207915691046,
+      "reduction_vs_raw_intercept_spread_std": -1.7697238122270278
+    },
+    "C_area_cyl_asp_pow_+1.0": {
+      "label": "C_area_cyl_asp_pow_+1.0",
+      "r2_pooled_single_curve": 0.796601104705372,
+      "r2_fixed_effects_common_slope": 0.9106055766578349,
+      "partial_r2_of_facility_dummies": 0.5604970065708803,
+      "common_slope_in_fixed_effects_model": -0.38292402725622354,
+      "per_facility_intercept": {
+        "Guo2024": -0.6129378991356513,
+        "Liu2024": 1.4045348862419207,
+        "Vrancik1968": 3.197318407729673,
+        "Zheng2024": 1.0261878603305234
+      },
+      "intercept_spread_std": 1.354298939947239,
+      "intercept_spread_range": 3.810256306865324,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 1.1773619968825617,
+        "Liu2024": 0.9244742191516068,
+        "Vrancik1968": 0.7805636687774833,
+        "Zheng2024": 0.649006671885357
+      },
+      "reduction_vs_raw_partial_r2_facility": -1.4653911838548863,
+      "reduction_vs_raw_intercept_spread_std": -1.9513179555672622
+    },
+    "D_blockage_identity_form": {
+      "label": "D_blockage_identity_form",
+      "r2_pooled_single_curve": 0.06532812507711971,
+      "r2_fixed_effects_common_slope": 0.8312436592864012,
+      "partial_r2_of_facility_dummies": 0.8194485730861187,
+      "common_slope_in_fixed_effects_model": -0.40850823403481584,
+      "per_facility_intercept": {
+        "Guo2024": 4.795476729846948,
+        "Liu2024": 5.269250009857884,
+        "Vrancik1968": 2.8332718955499594,
+        "Zheng2024": 4.972119546255861
+      },
+      "intercept_spread_std": 0.9586076092403947,
+      "intercept_spread_range": 2.4359781143079244,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.5933949953237975,
+        "Liu2024": 0.0989602652941529,
+        "Vrancik1968": 0.4789568548819192,
+        "Zheng2024": 0.06614039163609844
+      },
+      "reduction_vs_raw_partial_r2_facility": -2.6044104857382533,
+      "reduction_vs_raw_intercept_spread_std": -1.0890187284683255
+    },
+    "E_lubrication_1_minus_conf": {
+      "label": "E_lubrication_1_minus_conf",
+      "r2_pooled_single_curve": 0.15397645406128713,
+      "r2_fixed_effects_common_slope": 0.8274173292899109,
+      "partial_r2_of_facility_dummies": 0.7960072488070075,
+      "common_slope_in_fixed_effects_model": -0.2774122164847424,
+      "per_facility_intercept": {
+        "Guo2024": -2.380400617406173,
+        "Liu2024": -0.5336302925774296,
+        "Vrancik1968": -3.232932208147275,
+        "Zheng2024": -0.4502710151797037
+      },
+      "intercept_spread_std": 1.1963265112064292,
+      "intercept_spread_range": 2.7826611929675713,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.7402974402155093,
+        "Liu2024": 0.19037801406657825,
+        "Vrancik1968": 0.400332494805813,
+        "Zheng2024": 0.1033176260284826
+      },
+      "reduction_vs_raw_partial_r2_facility": -2.5013019346878633,
+      "reduction_vs_raw_intercept_spread_std": -1.607060973836563
+    }
+  },
+  "negative_control_wrong_sign": {
+    "A_flip_gap_pow_-0.1": {
+      "label": "A_flip_gap_pow_-0.1",
+      "r2_pooled_single_curve": 0.8039402133183742,
+      "r2_fixed_effects_common_slope": 0.8583790704767483,
+      "partial_r2_of_facility_dummies": 0.27766457405554246,
+      "common_slope_in_fixed_effects_model": -0.3845332319952899,
+      "per_facility_intercept": {
+        "Guo2024": 1.5713830531222235,
+        "Liu2024": 2.8473014402705465,
+        "Vrancik1968": 2.390272605412953,
+        "Zheng2024": 2.468025713366694
+      },
+      "intercept_spread_std": 0.46511335099565865,
+      "intercept_spread_range": 1.275918387148323,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.6918444441816207,
+        "Liu2024": 0.4748465587546381,
+        "Vrancik1968": 0.3201351962387307,
+        "Zheng2024": 0.30959031333054
+      },
+      "reduction_vs_raw_partial_r2_facility": -0.22132997129359033,
+      "reduction_vs_raw_intercept_spread_std": -0.01358521643753452
+    },
+    "B_flip_gap_pow_+1.0": {
+      "label": "B_flip_gap_pow_+1.0",
+      "r2_pooled_single_curve": 0.7329393021155834,
+      "r2_fixed_effects_common_slope": 0.9180021996157974,
+      "partial_r2_of_facility_dummies": 0.6929619332467591,
+      "common_slope_in_fixed_effects_model": -0.5189881515833772,
+      "per_facility_intercept": {
+        "Guo2024": 6.330044190173241,
+        "Liu2024": 6.859262858344482,
+        "Vrancik1968": 9.296766110304187,
+        "Zheng2024": 5.786363191989798
+      },
+      "intercept_spread_std": 1.3414675924197825,
+      "intercept_spread_range": 3.510402918314389,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.760030165664779,
+        "Liu2024": 0.8450500720090124,
+        "Vrancik1968": 0.8585737598652401,
+        "Zheng2024": 0.5889086033361182
+      },
+      "reduction_vs_raw_partial_r2_facility": -2.0480488226435365,
+      "reduction_vs_raw_intercept_spread_std": -1.9233556015884714
+    },
+    "C_flip_asp_pow_-1.0": {
+      "label": "C_flip_asp_pow_-1.0",
+      "r2_pooled_single_curve": 0.10905559461055336,
+      "r2_fixed_effects_common_slope": 0.7983540898674198,
+      "partial_r2_of_facility_dummies": 0.7736717252919532,
+      "common_slope_in_fixed_effects_model": -0.41058878575037294,
+      "per_facility_intercept": {
+        "Guo2024": 4.620915121207579,
+        "Liu2024": 5.019515524858087,
+        "Vrancik1968": 2.8389528948946534,
+        "Zheng2024": 4.513197653425273
+      },
+      "intercept_spread_std": 0.8351714416908084,
+      "intercept_spread_range": 2.1805626299634335,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.5832026724685877,
+        "Liu2024": 0.11301781867220424,
+        "Vrancik1968": 0.4684096790671913,
+        "Zheng2024": 0.0668466861290034
+      },
+      "reduction_vs_raw_partial_r2_facility": -2.403057337276557,
+      "reduction_vs_raw_intercept_spread_std": -0.8200239246551473
+    },
+    "D_flip_blockage_form": {
+      "label": "D_flip_blockage_form",
+      "r2_pooled_single_curve": 0.7839379162810667,
+      "r2_fixed_effects_common_slope": 0.9154245823040171,
+      "partial_r2_of_facility_dummies": 0.6085596498920944,
+      "common_slope_in_fixed_effects_model": -0.3850045789717804,
+      "per_facility_intercept": {
+        "Guo2024": -0.7874995077750272,
+        "Liu2024": 1.15480040124212,
+        "Vrancik1968": 3.202999407074363,
+        "Zheng2024": 0.5672659674999376
+      },
+      "intercept_spread_std": 1.4365628828429977,
+      "intercept_spread_range": 3.99049891484939,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 1.1829845214801118,
+        "Liu2024": 0.9445662028037426,
+        "Vrancik1968": 0.8008420530371593,
+        "Zheng2024": 0.6642137460502128
+      },
+      "reduction_vs_raw_partial_r2_facility": -1.6767985878690923,
+      "reduction_vs_raw_intercept_spread_std": -2.1305893443298283
+    },
+    "E_flip_conf_direct": {
+      "label": "E_flip_conf_direct",
+      "r2_pooled_single_curve": 0.7435293078623122,
+      "r2_fixed_effects_common_slope": 0.9146908464512268,
+      "partial_r2_of_facility_dummies": 0.6673727011935754,
+      "common_slope_in_fixed_effects_model": -0.5161005965218548,
+      "per_facility_intercept": {
+        "Guo2024": 6.388377839478088,
+        "Liu2024": 6.957680703677433,
+        "Vrancik1968": 9.2692035107716,
+        "Zheng2024": 5.989656528935493
+      },
+      "intercept_spread_std": 1.2702823967459396,
+      "intercept_spread_range": 3.2795469818361074,
+      "per_facility_pooled_residual_std": {
+        "Guo2024": 0.7629464282417018,
+        "Liu2024": 0.8340880628472654,
+        "Vrancik1968": 0.8504910431668962,
+        "Zheng2024": 0.5806162685078342
+      },
+      "reduction_vs_raw_partial_r2_facility": -1.9354925264172547,
+      "reduction_vs_raw_intercept_spread_std": -1.7682272617767554
+    }
+  },
+  "non_predictive_oracle_per_group": {
+    "Pi_gap": {
+      "best_fit_exponent_minimizing_intercept_spread": 0.03000000000000025,
+      "resulting_intercept_spread_std": 0.4573345388616334,
+      "raw_intercept_spread_std_for_reference": 0.4588793753626366,
+      "note": "This is a per-dataset numerical optimum (a fit), reported ONLY as a diagnostic of what magnitude/sign of exponent would even be needed -- it is NOT a proposed predictive law and was not evaluated out-of-sample."
+    },
+    "Pi_confinement": {
+      "best_fit_exponent_minimizing_intercept_spread": -0.1499999999999999,
+      "resulting_intercept_spread_std": 0.4587155375800408,
+      "raw_intercept_spread_std_for_reference": 0.4588793753626366,
+      "note": "This is a per-dataset numerical optimum (a fit), reported ONLY as a diagnostic of what magnitude/sign of exponent would even be needed -- it is NOT a proposed predictive law and was not evaluated out-of-sample."
+    },
+    "Pi_aspect_axial": {
+      "best_fit_exponent_minimizing_intercept_spread": -0.27,
+      "resulting_intercept_spread_std": 0.366135148057278,
+      "raw_intercept_spread_std_for_reference": 0.4588793753626366,
+      "note": "This is a per-dataset numerical optimum (a fit), reported ONLY as a diagnostic of what magnitude/sign of exponent would even be needed -- it is NOT a proposed predictive law and was not evaluated out-of-sample."
+    }
+  },
+  "summary": {
+    "raw_intercept_spread_std": 0.4588793753626366,
+    "raw_partial_r2_facility": 0.22734607401916926,
+    "best_theory_candidate_by_intercept_spread": "A_DN_IV_gap_pow_+0.1",
+    "best_candidate_intercept_spread_std": 0.4845076942132519,
+    "best_candidate_reduction_vs_raw": -0.0558497945791574,
+    "best_candidate_partial_r2_facility": 0.22392374015026245
+  }
+}

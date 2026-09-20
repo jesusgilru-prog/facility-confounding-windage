@@ -1,0 +1,96 @@
+{
+  "per_facility": {
+    "Guo2024": {
+      "n_train": 69,
+      "n_test": 45,
+      "held_out_r2_log": -1.328466110137298,
+      "held_out_rmse_log": 2.6210782036900273,
+      "held_out_median_abs_resid_log": 2.6384426046540272,
+      "mean_pred_std_log_on_held_out_facility": 0.476583117765846,
+      "mean_pred_std_log_on_own_training": 0.1512414513914357,
+      "std_ratio_heldout_over_train": 3.151140863706584,
+      "corr_abs_resid_vs_pred_std_within_heldout": 0.7811180598460382,
+      "fitted_kernel": "1.22**2 * RBF(length_scale=[1.73, 0.999, 2.72, 1.13]) + WhiteKernel(noise_level=0.0879)",
+      "log_marginal_likelihood_train": -34.37018689556781
+    },
+    "Liu2024": {
+      "n_train": 94,
+      "n_test": 20,
+      "held_out_r2_log": 0.8707461345028558,
+      "held_out_rmse_log": 0.3341240696584317,
+      "held_out_median_abs_resid_log": 0.2643908163919009,
+      "mean_pred_std_log_on_held_out_facility": 0.41262979597358873,
+      "mean_pred_std_log_on_own_training": 0.37489594138863913,
+      "std_ratio_heldout_over_train": 1.1006515419857066,
+      "corr_abs_resid_vs_pred_std_within_heldout": -0.5612059876159159,
+      "fitted_kernel": "1.11**2 * RBF(length_scale=[1.19, 3.95, 100, 1.41]) + WhiteKernel(noise_level=0.0612)",
+      "log_marginal_likelihood_train": -21.337692396887846
+    },
+    "Vrancik1968": {
+      "n_train": 73,
+      "n_test": 41,
+      "held_out_r2_log": -0.6009646258434669,
+      "held_out_rmse_log": 1.5653296377054766,
+      "held_out_median_abs_resid_log": 1.4262168502725885,
+      "mean_pred_std_log_on_held_out_facility": 1.3835972942227601,
+      "mean_pred_std_log_on_own_training": 0.40479179710011515,
+      "std_ratio_heldout_over_train": 3.4180467690667204,
+      "corr_abs_resid_vs_pred_std_within_heldout": 0.9063696314786348,
+      "fitted_kernel": "1.04**2 * RBF(length_scale=[1.64, 7.1, 100, 2.3]) + WhiteKernel(noise_level=0.0875)",
+      "log_marginal_likelihood_train": -27.233826286045478
+    },
+    "Zheng2024": {
+      "n_train": 106,
+      "n_test": 8,
+      "held_out_r2_log": 0.43941782060875445,
+      "held_out_rmse_log": 0.41491580567487313,
+      "held_out_median_abs_resid_log": 0.4318143447126743,
+      "mean_pred_std_log_on_held_out_facility": 0.39832953310136776,
+      "mean_pred_std_log_on_own_training": 0.35270793846522813,
+      "std_ratio_heldout_over_train": 1.1293466623820752,
+      "corr_abs_resid_vs_pred_std_within_heldout": -0.9636817935340425,
+      "fitted_kernel": "1.06**2 * RBF(length_scale=[1.19, 3.47, 100, 1.32]) + WhiteKernel(noise_level=0.0561)",
+      "log_marginal_likelihood_train": -18.827940011987877
+    }
+  },
+  "meta": {
+    "n_total": 114,
+    "features": [
+      "log_Re_Omega",
+      "log_Pi_gap",
+      "log_Pi_confinement",
+      "log_Pi_aspect_axial"
+    ],
+    "kernel_bounds": {
+      "constant": [
+        0.001,
+        1000.0
+      ],
+      "length_scale": [
+        0.01,
+        100.0
+      ],
+      "noise": [
+        1e-10,
+        10.0
+      ]
+    },
+    "n_restarts_optimizer": 10
+  },
+  "lofo_cv": {
+    "pooled_r2_log": -0.9197169863599335,
+    "pooled_rmse_log": 1.903880717115289,
+    "pooled_corr_abs_resid_vs_pred_std": -0.0179044343357672
+  },
+  "comparison_to_prior_best": {
+    "solo_reynolds_lofo_pooled_r2": 0.4526,
+    "solo_reynolds_per_facility_r2_approx": {
+      "Vrancik1968": 0.468,
+      "Guo2024_aka_Xia2024": -2.36,
+      "Liu2024": -61.7,
+      "Zheng2024": -9.59
+    },
+    "gp_beats_solo_reynolds_pooled": false,
+    "note": "cifras solo-Reynolds citadas del contexto de la tarea (linea previa ya cerrada), no recalculadas aqui."
+  }
+}

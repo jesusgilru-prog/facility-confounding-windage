@@ -1,0 +1,205 @@
+{
+  "slug": "daily_nece_residual_gbm",
+  "n_total": 114,
+  "facilities": [
+    "Guo2024",
+    "Liu2024",
+    "Vrancik1968",
+    "Zheng2024"
+  ],
+  "physics_baseline": "C_M = 0.051 * Pi_gap^0.1 * Re_Omega^(-0.2)  (Daily & Nece 1960, regime IV, zero fitted parameters)",
+  "residual_target": "z = log(Cp) - log(C_M_daily_nece)",
+  "residual_model": "sklearn GradientBoostingRegressor, hyperparameters chosen by inner KFold(4) grid search on the 3 training facilities only per outer fold",
+  "residual_model_features": [
+    "Pi_confinement",
+    "Pi_gap",
+    "Pi_aspect_axial"
+  ],
+  "note_on_feature_choice": "Re_Omega excluded from residual-model features on purpose: it is already inside the physics baseline, so re-adding it would let the GBM relearn its own per-facility Reynolds correction, defeating the point of the physics-baseline framing.",
+  "param_grid": {
+    "n_estimators": [
+      30,
+      60,
+      100
+    ],
+    "max_depth": [
+      1,
+      2,
+      3
+    ],
+    "learning_rate": [
+      0.03,
+      0.1
+    ],
+    "subsample": [
+      0.8,
+      1.0
+    ]
+  },
+  "baseline_alone_per_facility": {
+    "Guo2024": {
+      "n": 45,
+      "r2_log_own_mean": -4.574653651963222,
+      "median_ratio_obs_over_pred": 5.553243991216653
+    },
+    "Liu2024": {
+      "n": 20,
+      "r2_log_own_mean": -1662.8552292261093,
+      "median_ratio_obs_over_pred": 35.54267184686098
+    },
+    "Vrancik1968": {
+      "n": 41,
+      "r2_log_own_mean": -46.03106181013256,
+      "median_ratio_obs_over_pred": 43.749012127119656
+    },
+    "Zheng2024": {
+      "n": 8,
+      "r2_log_own_mean": -808.8199493729576,
+      "median_ratio_obs_over_pred": 22.54403403221623
+    }
+  },
+  "baseline_alone_pooled_r2_log_all114": -4.132773379098825,
+  "chosen_gbm_params_per_outer_fold": {
+    "Guo2024": {
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 100,
+      "subsample": 0.8
+    },
+    "Liu2024": {
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 60,
+      "subsample": 0.8
+    },
+    "Vrancik1968": {
+      "learning_rate": 0.1,
+      "max_depth": 1,
+      "n_estimators": 100,
+      "subsample": 1.0
+    },
+    "Zheng2024": {
+      "learning_rate": 0.1,
+      "max_depth": 2,
+      "n_estimators": 100,
+      "subsample": 1.0
+    }
+  },
+  "lofo_results": {
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "r2_log_corrected_own_mean": -4.642410051969234,
+        "r2_log_baseline_alone_own_mean": -4.574653651963222,
+        "median_ratio_obs_over_corrected_pred": 0.1583070122984502,
+        "gbm_best_params": {
+          "learning_rate": 0.1,
+          "max_depth": 3,
+          "n_estimators": 100,
+          "subsample": 0.8
+        },
+        "gbm_feature_importances": {
+          "Pi_confinement": 0.4569298886267157,
+          "Pi_gap": 0.4939695424025283,
+          "Pi_aspect_axial": 0.04910056897075603
+        }
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "r2_log_corrected_own_mean": -37.27459889662835,
+        "r2_log_baseline_alone_own_mean": -1662.8552292261093,
+        "median_ratio_obs_over_corrected_pred": 1.6961219321170597,
+        "gbm_best_params": {
+          "learning_rate": 0.1,
+          "max_depth": 3,
+          "n_estimators": 60,
+          "subsample": 0.8
+        },
+        "gbm_feature_importances": {
+          "Pi_confinement": 0.033379985890680135,
+          "Pi_gap": 0.04947759793914025,
+          "Pi_aspect_axial": 0.9171424161701796
+        }
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "r2_log_corrected_own_mean": -5.9392452187348335,
+        "r2_log_baseline_alone_own_mean": -46.03106181013256,
+        "median_ratio_obs_over_corrected_pred": 3.9117681744839774,
+        "gbm_best_params": {
+          "learning_rate": 0.1,
+          "max_depth": 1,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "gbm_feature_importances": {
+          "Pi_confinement": 0.18846987997851722,
+          "Pi_gap": 0.23891864460508136,
+          "Pi_aspect_axial": 0.5726114754164013
+        }
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "r2_log_corrected_own_mean": -18.480369371524233,
+        "r2_log_baseline_alone_own_mean": -808.8199493729576,
+        "median_ratio_obs_over_corrected_pred": 0.6418542780275931,
+        "gbm_best_params": {
+          "learning_rate": 0.1,
+          "max_depth": 2,
+          "n_estimators": 100,
+          "subsample": 1.0
+        },
+        "gbm_feature_importances": {
+          "Pi_confinement": 0.022721974753506423,
+          "Pi_gap": 0.030253630078439297,
+          "Pi_aspect_axial": 0.9470243951680543
+        }
+      }
+    },
+    "pooled_r2_log_corrected": -0.23538414644766892,
+    "pooled_r2_log_baseline_alone_same_folds": -4.132773379098825,
+    "pooled_rmse_log_corrected": 1.5272922334769674,
+    "pooled_rmse_log_baseline_alone": 3.1131294246025663
+  },
+  "within_facility_residual_vs_geometry_correlation": {
+    "Guo2024": {
+      "Pi_confinement": -0.020557886618465464,
+      "Pi_gap": 0.020557886618465453,
+      "Pi_aspect_axial": 0.660679051464409
+    },
+    "Liu2024": {
+      "Pi_confinement": null,
+      "Pi_gap": null,
+      "Pi_aspect_axial": null
+    },
+    "Vrancik1968": {
+      "Pi_confinement": 0.8100263565364481,
+      "Pi_gap": -0.8074123188090092,
+      "Pi_aspect_axial": -0.34659858910490415
+    },
+    "Zheng2024": {
+      "Pi_confinement": null,
+      "Pi_gap": null,
+      "Pi_aspect_axial": null
+    }
+  },
+  "decision_rule": {
+    "requires": "pooled_r2_log_corrected > 0.3 (substantially positive) AND every per_facility r2_log_corrected >= 0",
+    "pass": false
+  },
+  "known_baselines_for_comparison": {
+    "best_prior_direct_Cp_pooled_r2_log_range": [
+      -109,
+      -0.34
+    ],
+    "maml_pooled_r2_log_but_catastrophic_per_facility": {
+      "pooled": 0.74,
+      "worst_per_facility": -5.6
+    },
+    "reynolds_exponent_bootstrap_ci_excludes_zero": [
+      -0.524,
+      -0.203
+    ]
+  },
+  "conclusion": "Baseline-alone (Daily-Nece regime IV, zero fitted params) pooled R2_log = -4.1328 across all 114 points (matches prior daily_nece_regime_check_results.json naive figure of -4.13). GBM-corrected (baseline + learned geometry-only residual), strict LOFO: pooled R2_log = -0.2354 vs. baseline-alone-under-LOFO R2_log = -4.1328. Per-facility corrected R2_log: {'Guo2024': -4.642410051969234, 'Liu2024': -37.27459889662835, 'Vrancik1968': -5.9392452187348335, 'Zheng2024': -18.480369371524233} DECISION RULE FAILS. The residual-correction framing does not rescue cross-facility generalization: the GBM cannot learn a geometry-to-residual mapping from 3 facilities that transfers to a 4th, for the same root-cause reason as every other model in this project (facility, geometry_type and Pi-group values are almost perfectly confounded -- each facility occupies its own disjoint region of Pi-group space, so held-out geometry is extrapolation, not interpolation, for the residual model too)."
+}

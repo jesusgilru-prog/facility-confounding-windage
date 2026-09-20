@@ -1,0 +1,56 @@
+{
+  "slug": "simclr_pi_embed",
+  "method": "SimCLR-style contrastive pretraining (real torch, NT-Xent) on log-Pi features -> frozen embedding -> RidgeCV to log(Cp), strict per-fold LOFO with fold-specific standardization (no leakage of held-out facility into pretraining or scaling).",
+  "libraries_used": [
+    "torch",
+    "numpy",
+    "pandas",
+    "scikit-learn"
+  ],
+  "torch_version": "2.13.0+cpu",
+  "substituted_proxy": false,
+  "hyperparameters": {
+    "embed_dim": 8,
+    "hidden": 32,
+    "noise_std": 0.12,
+    "epochs": 600,
+    "lr": 0.002,
+    "weight_decay": 0.0001,
+    "temperature": 0.3,
+    "seed": 0
+  },
+  "final_contrastive_loss_by_fold": {
+    "Guo2024": 2.685902512073517,
+    "Liu2024": 3.2642007946968077,
+    "Vrancik1968": 3.0783957719802855,
+    "Zheng2024": 3.3176360726356506
+  },
+  "per_facility_r2_log": {
+    "Guo2024": -9.924532167033988,
+    "Liu2024": -7.851491674124661,
+    "Vrancik1968": -16.2888956336957,
+    "Zheng2024": -1.1287235704802727
+  },
+  "pooled_r2_log": -1.561471939069781,
+  "pooled_n": 114,
+  "decision_rule": {
+    "pooled_positive": false,
+    "pooled_substantially_positive_ge_0.3": false,
+    "all_facilities_nonneg": false,
+    "clears_decision_rule": false
+  },
+  "known_baselines_for_reference": {
+    "best_linear_4pred_pooled_r2_log": -0.885,
+    "reynolds_only_pooled_r2_log": 0.4526,
+    "reynolds_only_per_facility_r2_log_note": "positive pooled but -2.36/-61.7/-9.59/+0.468 per facility -- FAILS decision rule",
+    "already_failed_family": [
+      "MLP",
+      "RandomForest",
+      "GradientBoosting",
+      "KernelRidge (2 variants)",
+      "plain GaussianProcess",
+      "symbolic regression (genetic)",
+      "Huber/robust regression"
+    ]
+  }
+}

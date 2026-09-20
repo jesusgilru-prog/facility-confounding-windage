@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite both the paper and this deposit."
+title: "Cross-facility windage power corpus, analysis code and results"
+abstract: >-
+  Replication package for the manuscript "Detecting and Diagnosing Facility
+  Confounding in Empirical Scaling Laws: A Cross-Facility Validation Protocol
+  Applied to Windage Power in Rotor-Stator Systems". Contains the 114-row
+  cross-facility windage corpus, the analysis scripts (structure search, LOFO
+  cross-validation, facility-cluster bootstrap, robustness checks, a 16-method
+  learning sweep, the identifiability index and the confounding-versus-artifact
+  diagnostic), the result files they write and the figures of the manuscript.
+type: dataset
+authors:
+  - family-names: "Gil Ruiz"
+    given-names: "Jesús"
+    orcid: "https://orcid.org/0000-0003-0675-2038"
+    affiliation: "Science and Aerospace Department, Universidad Europea de Madrid, Villaviciosa de Odón, Spain"
+    email: jesus.gil@universidadeuropea.es
+  - family-names: "Cardinale"
+    given-names: "Yudith"
+    orcid: "https://orcid.org/0000-0002-5966-0113"
+    affiliation: "Grupo de Investigación en Ciencia de Datos, Universidad Internacional de Valencia, Valencia, Spain"
+  - family-names: "Ariza Ruiz"
+    given-names: "David"
+    orcid: "https://orcid.org/0000-0001-8782-7219"
+    affiliation: "Escuela Superior de Ingeniería, Ciencia y Tecnología, Universidad Internacional de Valencia, Valencia, Spain"
+keywords:
+  - windage power
+  - scaling laws
+  - rotor-stator systems
+  - domain confounding
+  - leave-one-facility-out cross-validation
+  - identifiability diagnostics
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-09-20

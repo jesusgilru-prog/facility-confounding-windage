@@ -1,0 +1,63 @@
+{
+  "approach": "domain_adversarial_neural_network (DANN, gradient reversal)",
+  "slug": "dann",
+  "library": "torch 2.13.0+cpu (CPU, local venv .venv_dann)",
+  "substituted_proxy": false,
+  "features": [
+    "Re_Omega",
+    "Pi_confinement",
+    "Pi_gap",
+    "Pi_aspect_axial"
+  ],
+  "target": "Cp",
+  "log_space": true,
+  "protocol": "Leave-One-Facility-Out, pooled residual R2 in log(Cp) space, predictions ensembled over 10 random seeds per fold",
+  "hyperparameters": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "n_epochs": 400,
+    "lr": 0.003,
+    "weight_decay": 0.003,
+    "hidden_dims": [
+      16,
+      8
+    ],
+    "lambda_max": 0.5,
+    "grl_gamma": 10.0
+  },
+  "pooled_r2_log": -1.7106098498735602,
+  "per_facility_r2_log": {
+    "Guo2024": -11.188235490191758,
+    "Liu2024": -17.664974537972977,
+    "Vrancik1968": -15.265752427219873,
+    "Zheng2024": -65.74137681879189
+  },
+  "all_facilities_r2_nonneg": false,
+  "clears_decision_rule": false,
+  "baselines_for_reference": {
+    "best_linear_4pred_pooled_r2": -0.885,
+    "reynolds_only_pooled_r2": 0.4526,
+    "reynolds_only_per_facility": {
+      "note": "positive pooled R2 was an artifact; per-facility R2 was -2.36, -61.7, -9.59, +0.468 -> fails decision rule"
+    },
+    "already_failed_methods": [
+      "plain MLP",
+      "Random Forest",
+      "Gradient Boosting",
+      "kernel ridge (2 variants)",
+      "plain (non-hierarchical) GP",
+      "symbolic regression (genetic search)",
+      "Huber/robust regression"
+    ]
+  }
+}

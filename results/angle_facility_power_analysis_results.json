@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "n_rows": 114,
+    "n_facilities": 4,
+    "facilities": [
+      "Guo2024",
+      "Liu2024",
+      "Vrancik1968",
+      "Zheng2024"
+    ],
+    "n_per_facility": {
+      "Guo2024": 45,
+      "Liu2024": 20,
+      "Vrancik1968": 41,
+      "Zheng2024": 8
+    },
+    "rng_seed": 20260818,
+    "n_monte_carlo_reps_per_K": 300
+  },
+  "pooled_fixed_effect_fit": {
+    "coef_names": [
+      "const",
+      "log_Re",
+      "log_gap",
+      "log_conf",
+      "log_asp"
+    ],
+    "coef": {
+      "const": 4.002988470335041,
+      "log_Re": -0.44736997872939666,
+      "log_gap": 0.09984181557863991,
+      "log_conf": -3.7212797482143043,
+      "log_asp": 0.5248519739590018
+    },
+    "in_sample_r2": 0.8697779720376049,
+    "note": "Same predictor family as the 'M6' winner structure selected elsewhere in this project (scaling_law_search.py); refit here for self-containment of this angle."
+  },
+  "within_vs_between_facility_predictor_spread": {
+    "note": "Sanity check for the eta^2 confound already documented: within-facility SD of the near-fully-confounded predictors is essentially zero (facilities occupy near-point locations in Pi_confinement/Pi_gap/Pi_aspect_axial space); only log_Re_Omega varies meaningfully within a facility.",
+    "log_Pi_confinement_within_facility_sd": {
+      "Guo2024": 0.008767952200451831,
+      "Liu2024": 5.551115123125783e-17,
+      "Vrancik1968": 0.004919327154927445,
+      "Zheng2024": 2.7755575615628914e-17
+    }
+  },
+  "part_A_variance_components": {
+    "method": "unbalanced one-way random-effects ANOVA (method of moments) on pooled-OLS residuals, grouped by facility",
+    "MSB": 2.0703869628814697,
+    "MSW": 0.19835805303300058,
+    "df_between": 3,
+    "df_within": 110,
+    "n0_unbalanced": 25.807017543859647,
+    "tau2_hat_between_facility_variance": 0.07253952947747298,
+    "sigma2_hat_within_facility_variance": 0.19835805303300058,
+    "tau2_over_sigma2_point_estimate": 0.3656999469812535,
+    "F_obs_MSB_over_MSW": 10.43762494753375,
+    "p_value_H0_tau2_is_zero": 4.2461030346219175e-06,
+    "tau2_95CI_burdick_graybill_style": [
+      0.017096262141780772,
+      1.1115731550061347
+    ],
+    "interpretation": "With only k=4 facilities (3 df between-facility), the 95% CI on tau2 (the facility-to-facility variance component) is extremely wide relative to the point estimate -- we can barely even measure the quantity that governs whether more facilities would help."
+  },
+  "part_A2_estimation_precision_scan": {
+    "note": "Holding the observed F_obs ratio and average per-facility n fixed, how much would the CI half-width on tau2/sigma2 shrink if we had k_hyp facilities instead of 4 (pure estimation-precision argument, no simulation)?",
+    "ci_width_ratio_vs_k4": {
+      "4": 0.9055093875038472,
+      "6": 0.37677122959370934,
+      "8": 0.24870277106543184,
+      "12": 0.1601730612800743,
+      "16": 0.12456906613044955,
+      "24": 0.09194100857081994,
+      "32": 0.07587668772736146,
+      "48": 0.059123267063173945,
+      "64": 0.05004537282883263,
+      "96": 0.03995216489162784,
+      "128": 0.03421654684408006
+    },
+    "k_hyp_for_ci_width_leq_25pct_of_current": 8
+  },
+  "part_B_monte_carlo_lofo_vs_facility_count": {
+    "note": "Synthetic facilities = real covariate blocks resampled with replacement from the 4 observed facilities (same X-ranges/leverage), each given a FRESH random offset ~N(0,tau2_hat) and fresh noise ~N(0,sigma2_hat) generated from the pooled fixed-effect law. Strict LOFO across K synthetic facilities, averaged over Monte Carlo replicates.",
+    "by_K": {
+      "4": {
+        "pooled_r2_mean": -614.059387137477,
+        "pooled_r2_median": 0.18500682591784778,
+        "pooled_r2_p05": -29.313987373778097,
+        "pooled_r2_p95": 0.8179111459918502,
+        "per_facility_r2_p05_mean": -933.1546876822065,
+        "per_facility_r2_median_mean": -0.9044392700872135,
+        "frac_facilities_nonneg_r2_mean": 0.46416666666666667
+      },
+      "8": {
+        "pooled_r2_mean": -7.916114669775504,
+        "pooled_r2_median": 0.7819014703856197,
+        "pooled_r2_p05": -0.967191598755072,
+        "pooled_r2_p95": 0.8804844976954838,
+        "per_facility_r2_p05_mean": -28.890386546127885,
+        "per_facility_r2_median_mean": 0.15896676107072052,
+        "frac_facilities_nonneg_r2_mean": 0.6608333333333334
+      },
+      "16": {
+        "pooled_r2_mean": 0.8062427196081204,
+        "pooled_r2_median": 0.833870263471199,
+        "pooled_r2_p05": 0.696455679018216,
+        "pooled_r2_p95": 0.8787213700727197,
+        "per_facility_r2_p05_mean": -1.0726380738716443,
+        "per_facility_r2_median_mean": 0.2430007765704752,
+        "frac_facilities_nonneg_r2_mean": 0.7129166666666666
+      },
+      "32": {
+        "pooled_r2_mean": 0.8458011831403595,
+        "pooled_r2_median": 0.8486989205634834,
+        "pooled_r2_p05": 0.8030902120126998,
+        "pooled_r2_p95": 0.8798677284881751,
+        "per_facility_r2_p05_mean": -0.9061320315425375,
+        "per_facility_r2_median_mean": 0.2897883076989847,
+        "frac_facilities_nonneg_r2_mean": 0.7490625
+      },
+      "64": {
+        "pooled_r2_mean": 0.8527291300034835,
+        "pooled_r2_median": 0.8556163704147706,
+        "pooled_r2_p05": 0.8251254928802487,
+        "pooled_r2_p95": 0.8727131260621249,
+        "per_facility_r2_p05_mean": -0.8744140955066722,
+        "per_facility_r2_median_mean": 0.30103337508808425,
+        "frac_facilities_nonneg_r2_mean": 0.7652604166666667
+      },
+      "128": {
+        "pooled_r2_mean": 0.8550484226445252,
+        "pooled_r2_median": 0.8559146456084118,
+        "pooled_r2_p05": 0.8378690113992595,
+        "pooled_r2_p95": 0.8693155942033088,
+        "per_facility_r2_p05_mean": -0.8862523388023295,
+        "per_facility_r2_median_mean": 0.3048404235972824,
+        "frac_facilities_nonneg_r2_mean": 0.7625
+      },
+      "256": {
+        "pooled_r2_mean": 0.857130015148922,
+        "pooled_r2_median": 0.8571636475533115,
+        "pooled_r2_p05": 0.8469112530932051,
+        "pooled_r2_p95": 0.8669267225148133,
+        "per_facility_r2_p05_mean": -0.86772572328011,
+        "per_facility_r2_median_mean": 0.3077506965464165,
+        "frac_facilities_nonneg_r2_mean": 0.7662890625
+      },
+      "1024": {
+        "pooled_r2_mean": 0.8579791814531086,
+        "pooled_r2_median": 0.8579624607838174,
+        "pooled_r2_p05": 0.853418307247901,
+        "pooled_r2_p95": 0.8629450269557603,
+        "per_facility_r2_p05_mean": -0.8994468837931209,
+        "per_facility_r2_median_mean": 0.3084178078649689,
+        "frac_facilities_nonneg_r2_mean": 0.7648795572916667
+      }
+    },
+    "bracket_under_tau2_uncertainty": {
+      "tau2_lo95": {
+        "4": {
+          "pooled_r2_mean": -2206.0553966162147,
+          "per_facility_r2_p05_mean": -4912.175556549006
+        },
+        "32": {
+          "pooled_r2_mean": 0.8760979213614777,
+          "per_facility_r2_p05_mean": -0.2575552845105354
+        },
+        "256": {
+          "pooled_r2_mean": 0.8837084535175328,
+          "per_facility_r2_p05_mean": -0.263997336363134
+        },
+        "2048": {
+          "pooled_r2_mean": 0.8838877150925407,
+          "per_facility_r2_p05_mean": -0.270906975417864
+        }
+      },
+      "tau2_point": {
+        "4": {
+          "pooled_r2_mean": -8097.554734162007,
+          "per_facility_r2_p05_mean": -17113.1104087817
+        },
+        "32": {
+          "pooled_r2_mean": 0.8450506340542767,
+          "per_facility_r2_p05_mean": -0.9483933894963835
+        },
+        "256": {
+          "pooled_r2_mean": 0.8580317207941611,
+          "per_facility_r2_p05_mean": -0.8776331057371328
+        },
+        "2048": {
+          "pooled_r2_mean": 0.8580288214414045,
+          "per_facility_r2_p05_mean": -0.879084658757638
+        }
+      },
+      "tau2_hi95": {
+        "4": {
+          "pooled_r2_mean": -13.47937134391997,
+          "per_facility_r2_p05_mean": -178.91573026578553
+        },
+        "32": {
+          "pooled_r2_mean": 0.47810630480356736,
+          "per_facility_r2_p05_mean": -14.338706267834926
+        },
+        "256": {
+          "pooled_r2_mean": 0.5474418886533383,
+          "per_facility_r2_p05_mean": -14.164823215931932
+        },
+        "2048": {
+          "pooled_r2_mean": 0.5549742907863778,
+          "per_facility_r2_p05_mean": -14.433334624572018
+        }
+      }
+    },
+    "per_facility_type_diagnostic_at_K256": {
+      "Guo2024": {
+        "n_points_this_facility_type": 45,
+        "n_synthetic_units_sampled": 3871,
+        "mean_r2": 0.2686438736423692,
+        "median_r2": 0.3593008400511355,
+        "p05_r2": -0.3390347880126373,
+        "frac_negative_r2": 0.13846551278739344
+      },
+      "Liu2024": {
+        "n_points_this_facility_type": 20,
+        "n_synthetic_units_sampled": 3800,
+        "mean_r2": 0.1695578199965472,
+        "median_r2": 0.30268616361973333,
+        "p05_r2": -0.6878124200884277,
+        "frac_negative_r2": 0.22447368421052633
+      },
+      "Vrancik1968": {
+        "n_points_this_facility_type": 41,
+        "n_synthetic_units_sampled": 3883,
+        "mean_r2": 0.2783409537139301,
+        "median_r2": 0.37374960086458575,
+        "p05_r2": -0.3740729612242854,
+        "frac_negative_r2": 0.14447592067988668
+      },
+      "Zheng2024": {
+        "n_points_this_facility_type": 8,
+        "n_synthetic_units_sampled": 3806,
+        "mean_r2": -0.20954183991798725,
+        "median_r2": 0.10065681157350953,
+        "p05_r2": -1.9390779921567107,
+        "frac_negative_r2": 0.42038885969521805
+      }
+    },
+    "per_facility_type_diagnostic_note": "Breaks the persistent negative per-facility R2 tail down by which real facility TYPE the synthetic unit was cloned from. The smallest facility (Zheng2024, n=8) is much worse (mean R2, frac_negative) than the larger ones, showing part -- not all -- of the persistent floor in worst-facility R2 is a small-sample-size artifact (a single held-out facility's own R2 is itself a noisy statistic when n is small), layered on top of the genuine tau2 effect.",
+    "asymptotic_ceiling_K_to_infinity_proxy_K1024": {
+      "pooled_r2": 0.8579791814531086,
+      "worst_5pct_facility_r2": -0.8994468837931209
+    },
+    "K_meeting_project_decision_rule_pooled_r2_ge_0.3_and_worst5pct_ge_0": null
+  },
+  "headline_conclusions": [
+    "Between-facility variance component tau2_hat = 0.073 (log-Cp^2 units) vs within-facility sigma2_hat = 0.198: facility identity contributes 26.8% of total residual variance not explained by the fixed-effect law.",
+    "That tau2 estimate itself has a 95% CI of [0.017, 1.112] with only k=4 facilities (3 degrees of freedom) -- ratio of upper to point estimate is 15.3x, i.e. the number that would tell us 'how many facilities are needed' is itself not reliably measurable from 4 facilities.",
+    "Purely from estimation-precision (Part A2, no simulation assumptions): to shrink the CI on the tau2/sigma2 ratio to <=25% of its current width at the SAME observed effect size, one would need on the order of 8 facilities.",
+    "Monte Carlo LOFO simulation (Part B): the MEAN pooled LOFO R2 at K=4 (-614.1) is dominated by rare near-singular training draws (when resampling-with-replacement happens to include few distinct real facility types, the near-total facility/predictor confound described above makes the training design matrix nearly rank-deficient) -- the MEDIAN is a more honest summary: 0.19 at K=4, rising to 0.83 at K=16 and an asymptotic ceiling near 0.86 by K~32-64 (values stop changing materially beyond that). This ceiling is comfortably positive on the POOLED metric -- so, in this optimistic same-facility-type simulation, more facilities would in principle be expected to fix the pooled-R2 side of generalization.",
+    "But the project's actual decision rule needs EVERY held-out facility to be non-negative, not just the pooled average -- and that does NOT converge with K. The worst-5%-of-facilities R2 stays pinned near -0.90 from K=32 all the way to K=1024 (frac. of facilities with R2>=0 plateaus near 76%, never reaching 100%). The per-facility-type breakdown (Part B2) shows this floor is not uniform: it is driven disproportionately by the smallest facility type (Zheng-sized, n=8: mean R2=-0.21, 42% of draws negative) versus the largest (n=41-45: mean R2 0.27 to 0.28, 14-14% negative). So part of the 'never converges' result is a genuine tau2 effect and part is a small-held-out-sample-size statistical artifact (a single facility's own R2 is itself a noisy statistic when n~8) -- both are real, and both argue for MORE points per future facility, not just more facilities.",
+    "IMPORTANT CAVEAT: Part B's synthetic facilities are statistically-exchangeable clones of the 4 known facility TYPES (identical covariate ranges/leverage, only the offset and noise are redrawn) -- not genuinely novel geometry families. This makes the reported convergence an optimistic best case: real new facilities could differ MORE than a random redraw of the same 4 (the already-documented 11.7x spread in per-facility Reynolds-exponent estimates is evidence of exactly that), so the true number of facilities needed to actually clear the pooled+worst-facility bar is >= what is reported here, quite possibly unbounded if genuinely new geometries carry even larger idiosyncratic offsets than tau2_hat captures."
+  ]
+}

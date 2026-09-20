@@ -1,0 +1,389 @@
+{
+  "protocol": "Leave-One-FACILITY-Out (LOFO), log-space R2, pooled residuals across all 4 held-out folds",
+  "facilities": [
+    "Guo2024",
+    "Vrancik1968",
+    "Liu2024",
+    "Zheng2024"
+  ],
+  "n_rows": 114,
+  "excluded_predictor": "Pi_blockage (exact algebraic identity of Pi_aspect_axial and Pi_confinement; confirmed here corr(Pi_aspect_axial*Pi_confinement, Pi_blockage) = 0.9999; no candidate form below uses the Pa*Pc product for this reason)",
+  "known_baselines": {
+    "best_linear_4_predictor_pooled_r2_log": -0.885,
+    "reynolds_only_pooled_r2_log": 0.4526,
+    "reynolds_only_per_facility_r2_log": {
+      "note": "positive pooled R2 was an artifact; per-facility values were -2.36, -61.7, -9.59, +0.468 (order of facilities as stated in task spec, not necessarily matching FACILITIES order here)"
+    },
+    "already_failed_black_box_methods": [
+      "plain MLP",
+      "Random Forest",
+      "Gradient Boosting",
+      "kernel ridge regression (2 variants)",
+      "plain (non-hierarchical) Gaussian Process",
+      "symbolic regression via genetic search",
+      "Huber/robust regression"
+    ]
+  },
+  "forms": {
+    "daily_nece_anchor": {
+      "description": "Cp = C * Pg^0.1 * Re^-0.2 (Daily-Nece regime IV exponents fixed, only C free)",
+      "n_params": 1,
+      "pooled_r2_log": -0.344683148879509,
+      "per_facility_r2_log": {
+        "Guo2024": -5.221811957842789,
+        "Vrancik1968": -6.009941104406378,
+        "Liu2024": -81.94932828947354,
+        "Zheng2024": -2.4173084018025075
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          0.6869327851186486
+        ],
+        "Vrancik1968": [
+          -0.569329241846446
+        ],
+        "Liu2024": [
+          -0.1961074636105907
+        ],
+        "Zheng2024": [
+          -0.07199184012422866
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "full_power_law": {
+      "description": "Cp = C * Re^a * Pg^b * Pc^c * Pa^d (generalized Buckingham-Pi power law)",
+      "n_params": 5,
+      "pooled_r2_log": -0.8848004601757813,
+      "per_facility_r2_log": {
+        "Guo2024": -8.986612172352109,
+        "Vrancik1968": -1.8542073410554738,
+        "Liu2024": -118.63018479751776,
+        "Zheng2024": -553.7587153676391
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          -0.7459091937009991,
+          -0.24442508308664812,
+          -0.42829709960681867,
+          1.0504867705445855,
+          -0.6892167803009832
+        ],
+        "Vrancik1968": [
+          9.529819779334753,
+          -0.4623406442542835,
+          1.2359529328149816,
+          10.108241022677882,
+          1.0808262656659389
+        ],
+        "Liu2024": [
+          0.7443615550750001,
+          -0.3302171357285511,
+          -0.25031256958955556,
+          -6.7462905183654405,
+          0.5107399655217463
+        ],
+        "Zheng2024": [
+          0.1377938525813505,
+          -0.37276329080896375,
+          -0.4386444679584322,
+          -22.58809656874361,
+          0.7999382280717144
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "rational_confinement_saturation": {
+      "description": "Cp = C * Re^a * Pg^b / (1+k*Pc)^c (rational confinement saturation)",
+      "n_params": 5,
+      "pooled_r2_log": -10.002872336077129,
+      "per_facility_r2_log": {
+        "Guo2024": -2.5821105009257668,
+        "Vrancik1968": -171.76056474945744,
+        "Liu2024": -110.09592256870613,
+        "Zheng2024": -115.29568762283955
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          3.048005122707349,
+          -0.2678218524989221,
+          -0.1868974588116948,
+          -7.605067757287765,
+          5226.143486296918
+        ],
+        "Vrancik1968": [
+          -269.2143849921728,
+          -0.5713920916042416,
+          3.5993949275694836,
+          13.403757113070046,
+          -21.223663368705527
+        ],
+        "Liu2024": [
+          85.38626209090852,
+          -0.4902384186988891,
+          -0.4437416894897054,
+          15.432809918866012,
+          5.395081655268378
+        ],
+        "Zheng2024": [
+          158.73724128681744,
+          -0.5908636916847214,
+          -0.4512577799900732,
+          14.029325965708454,
+          11.075126141185049
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "exponential_confinement_decay": {
+      "description": "Cp = C * Re^a * Pg^b * exp(-k*Pc) * Pa^d (exponential confinement decay)",
+      "n_params": 5,
+      "pooled_r2_log": -0.9963201685526162,
+      "per_facility_r2_log": {
+        "Guo2024": -9.042681960154793,
+        "Vrancik1968": -4.283634653297167,
+        "Liu2024": -114.1923894679173,
+        "Zheng2024": -464.587637244951
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          -2.0064550730837447,
+          -0.24428255862824894,
+          -0.42659420299777234,
+          -1.2710439513156542,
+          -0.6950710532586446
+        ],
+        "Vrancik1968": [
+          -0.5281431704052612,
+          -0.4725231032363652,
+          0.8423164635706553,
+          -9.25528813699827,
+          1.089849273897118
+        ],
+        "Liu2024": [
+          8.783280981961285,
+          -0.3300385300395364,
+          -0.27404189047871,
+          8.172374121470018,
+          0.522319338646903
+        ],
+        "Zheng2024": [
+          25.067127172688355,
+          -0.37548388418589207,
+          -0.45947855732181975,
+          25.019841909459622,
+          0.8114795389656618
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "reynolds_exponent_modulation": {
+      "description": "Cp = C * Re^(a+b*Pc) * Pg^c * Pa^d (confinement-modulated Re exponent, regime shift)",
+      "n_params": 5,
+      "pooled_r2_log": -3.387901416465672,
+      "per_facility_r2_log": {
+        "Guo2024": -8.655091837471995,
+        "Vrancik1968": -45.5744558996079,
+        "Liu2024": -117.3479475484242,
+        "Zheng2024": -380.42798860900535
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          -0.9613982697707127,
+          -0.26221833005400935,
+          0.022937359684698663,
+          -0.45640759348347454,
+          -0.6682436984455239
+        ],
+        "Vrancik1968": [
+          5.064764172822597,
+          -0.40964379561198017,
+          -0.09436301673232651,
+          -0.6009183178834547,
+          1.1080385853403594
+        ],
+        "Liu2024": [
+          1.2235141075995908,
+          0.21063956432488828,
+          -0.5807737508795285,
+          -0.2557221566359922,
+          0.5495325573382228
+        ],
+        "Zheng2024": [
+          2.6853189587936432,
+          1.03998838828268,
+          -1.55138755541369,
+          -0.2904743640796058,
+          0.8454607312260721
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "rational_aspect_coupling": {
+      "description": "Cp = C * Re^a * Pg^b * Pc^c * (1+k*Pa)^d (rational axial-aspect correction)",
+      "n_params": 6,
+      "pooled_r2_log": -66.22774722542026,
+      "per_facility_r2_log": {
+        "Guo2024": -8.986597474455298,
+        "Vrancik1968": -1089.8017944940116,
+        "Liu2024": -118.63017122923256,
+        "Zheng2024": -553.7587203960798
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          13.818466253074687,
+          -0.2444250892674052,
+          -0.42829703484003895,
+          1.050487749555938,
+          21.131785775669435,
+          -0.6892165535745478
+        ],
+        "Vrancik1968": [
+          -3.1974495723095893,
+          -0.3559379559357768,
+          -1.1846460891809742,
+          -0.7796105740408492,
+          -0.41126825091203517,
+          27.86463443154045
+        ],
+        "Liu2024": [
+          -16.24377360019298,
+          -0.33021713739668607,
+          -0.25031251412733774,
+          -6.7462904371963,
+          33.261806195304565,
+          0.5107400161680639
+        ],
+        "Zheng2024": [
+          -24.00620043963894,
+          -0.3727633022857701,
+          -0.4386444788685431,
+          -22.588096969767193,
+          30.182323598727642,
+          0.7999382244153435
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "gap_confinement_ratio": {
+      "description": "Cp = C * Re^a * (Pg/Pc)^b * Pa^d (universal gap/confinement similarity group)",
+      "n_params": 4,
+      "pooled_r2_log": -2.6052829502895847,
+      "per_facility_r2_log": {
+        "Guo2024": -8.758185102672817,
+        "Vrancik1968": -35.29352298865057,
+        "Liu2024": -83.57749380656124,
+        "Zheng2024": -25.14556901714766
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          -0.9074965211742996,
+          -0.24121555031261432,
+          -0.45114637842334154,
+          -0.6735527052413303
+        ],
+        "Vrancik1968": [
+          5.552938777600646,
+          -0.4909787602037186,
+          -0.36609146809885135,
+          1.1067228761948424
+        ],
+        "Liu2024": [
+          3.9188755259908232,
+          -0.42560519976012084,
+          0.13692002530447728,
+          0.484406975653625
+        ],
+        "Zheng2024": [
+          6.061706152196444,
+          -0.506918330828937,
+          0.36606575758041227,
+          0.5573317544313161
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    },
+    "two_regime_additive": {
+      "description": "Cp = (C1*Re^a1 + C2*Re^a2) * Pg^b * Pc^c (additive two-regime windage)",
+      "n_params": 6,
+      "pooled_r2_log": -10.896987311846637,
+      "per_facility_r2_log": {
+        "Guo2024": -9.025896967172724,
+        "Vrancik1968": -171.76027514757973,
+        "Liu2024": -110.09392182482877,
+        "Zheng2024": -115.29513872687875
+      },
+      "fitted_params_per_fold": {
+        "Guo2024": [
+          7.56028126024334,
+          -0.8502150867343933,
+          -7.115197295421161,
+          0.22655620620320738,
+          -0.17909292754263842,
+          -2.499488504314189
+        ],
+        "Vrancik1968": [
+          -308.1216683371716,
+          -159.2322001163308,
+          15.26240380635226,
+          -0.5713923516417656,
+          3.599378166682282,
+          21.22352169539535
+        ],
+        "Liu2024": [
+          158.71086866084676,
+          -17.861362741021455,
+          2.124998939076748,
+          -0.4902383667837193,
+          -0.4437418891705962,
+          -5.395083790137373
+        ],
+        "Zheng2024": [
+          50.22662414303495,
+          -8.5031941140274,
+          3.3606478959986665,
+          -0.5908635503424482,
+          -0.4512598088565031,
+          -11.075207117539962
+        ]
+      },
+      "fit_failed": false,
+      "clears_decision_rule": false
+    }
+  },
+  "best_form_by_pooled_r2": "daily_nece_anchor",
+  "best_form_result": {
+    "description": "Cp = C * Pg^0.1 * Re^-0.2 (Daily-Nece regime IV exponents fixed, only C free)",
+    "n_params": 1,
+    "pooled_r2_log": -0.344683148879509,
+    "per_facility_r2_log": {
+      "Guo2024": -5.221811957842789,
+      "Vrancik1968": -6.009941104406378,
+      "Liu2024": -81.94932828947354,
+      "Zheng2024": -2.4173084018025075
+    },
+    "fitted_params_per_fold": {
+      "Guo2024": [
+        0.6869327851186486
+      ],
+      "Vrancik1968": [
+        -0.569329241846446
+      ],
+      "Liu2024": [
+        -0.1961074636105907
+      ],
+      "Zheng2024": [
+        -0.07199184012422866
+      ]
+    },
+    "fit_failed": false,
+    "clears_decision_rule": false
+  }
+}

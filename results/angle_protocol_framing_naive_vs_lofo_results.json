@@ -1,0 +1,30 @@
+{
+  "random_forest": {
+    "naive_shuffled_kfold5_r2_log_mean": 0.9570383532451363,
+    "naive_shuffled_kfold5_r2_log_std": 0.00614378555313802,
+    "naive_shuffled_kfold10_r2_log_mean": 0.9613000213582097,
+    "naive_shuffled_kfold10_r2_log_std": 0.004473996483616167,
+    "strict_lofo_pooled_r2_log": -0.5073518230045262,
+    "strict_lofo_per_facility_r2_log": {
+      "Guo2024": -8.769880717715447,
+      "Liu2024": -20.647056411722133,
+      "Vrancik1968": -1.1666769627587543,
+      "Zheng2024": -13.18108366488579
+    },
+    "gap_kfold5_minus_lofo": 1.4643901762496625
+  },
+  "gradient_boosting": {
+    "naive_shuffled_kfold5_r2_log_mean": 0.9599324719051656,
+    "naive_shuffled_kfold5_r2_log_std": 0.00735234465570002,
+    "naive_shuffled_kfold10_r2_log_mean": 0.9631190181881214,
+    "naive_shuffled_kfold10_r2_log_std": 0.005233372921295065,
+    "strict_lofo_pooled_r2_log": -0.5688983672188876,
+    "strict_lofo_per_facility_r2_log": {
+      "Guo2024": -9.322633180540981,
+      "Liu2024": -21.318130829203465,
+      "Vrancik1968": -0.9185449479178025,
+      "Zheng2024": -11.52256578898634
+    },
+    "gap_kfold5_minus_lofo": 1.5288308391240533
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "per_facility": {
+    "Guo2024": {
+      "n_total_facility": 45,
+      "tau2": 5.4257202960145295e-06,
+      "sigma2": 0.047833450338256055,
+      "b0_hat_global": -0.7459091033734563,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -8.986612059551172,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "lambda=0 (no calibration), identical to the original pure LOFO"
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -8.82138129021807,
+          "std_r2": 0.048160342267733094,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.00011341655036739902
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -9.115919887649264,
+          "std_r2": 1.0687797133721442,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.00034017248872179564
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -9.148431708248498,
+          "std_r2": 0.7332588532922367,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.0005668256022191406
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -9.042281093291148,
+          "std_r2": 1.4157816463697843,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.0011330089859375074
+        }
+      }
+    },
+    "Liu2024": {
+      "n_total_facility": 20,
+      "tau2": 0.005675448037184181,
+      "sigma2": 0.19392323959627833,
+      "b0_hat_global": 0.7443614647669788,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -118.6301860603597,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "lambda=0 (no calibration), identical to the original pure LOFO"
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -112.78148162080583,
+          "std_r2": 3.295647537324541,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.028434295357725077
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -103.8484206121553,
+          "std_r2": 12.78089436790002,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.08071285950075326
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -103.76462352746273,
+          "std_r2": 34.116224049439516,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.1276526268126985
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -91.08099559315752,
+          "std_r2": 30.45103362497074,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.22640416698803367
+        }
+      }
+    },
+    "Vrancik1968": {
+      "n_total_facility": 41,
+      "tau2": 0.012696678521095777,
+      "sigma2": 0.20695058659006482,
+      "b0_hat_global": 9.52981968876629,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -1.8542073187456056,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "lambda=0 (no calibration), identical to the original pure LOFO"
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -1.8456767953537998,
+          "std_r2": 0.09887609764867275,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.05780485595698246
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -1.9082019934311163,
+          "std_r2": 0.18923751983253162,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.15544375960427367
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -1.8988258350402714,
+          "std_r2": 0.19993508447965352,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.23474636136450777
+        },
+        "10": {
+          "feasible": true,
+          "mean_r2": -1.9946008223154266,
+          "std_r2": 0.3591414853691894,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.3802341415367146
+        }
+      }
+    },
+    "Zheng2024": {
+      "n_total_facility": 8,
+      "tau2": 0.00057748836472145,
+      "sigma2": 0.17276973129246,
+      "b0_hat_global": 0.13779392495406326,
+      "by_n_cal": {
+        "0": {
+          "feasible": true,
+          "mean_r2": -553.7587044467028,
+          "std_r2": 0.0,
+          "n_reps_used": 1,
+          "note": "lambda=0 (no calibration), identical to the original pure LOFO"
+        },
+        "1": {
+          "feasible": true,
+          "mean_r2": -1376.2727724026092,
+          "std_r2": 2148.1009285112623,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.0033313967530804044
+        },
+        "3": {
+          "feasible": true,
+          "mean_r2": -1647.508404154957,
+          "std_r2": 2585.899118910068,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.009928041767026973
+        },
+        "5": {
+          "feasible": true,
+          "mean_r2": -13710.523096531135,
+          "std_r2": 28614.005241546096,
+          "n_reps_used": 20,
+          "lambda_last_rep": 0.016437938584491187
+        },
+        "10": {
+          "feasible": false,
+          "reason": "facility Zheng2024 has only 8 points; holding out 10 for calibration leaves -2 < 2 for testing",
+          "mean_r2": null,
+          "std_r2": null,
+          "n_reps_used": 0
+        }
+      }
+    }
+  },
+  "pooled_by_n_cal": {
+    "1": {
+      "mean_r2_pooled": -0.8594553795566364,
+      "std_r2_pooled": 0.018085067603298626,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute to this pooled round."
+    },
+    "3": {
+      "mean_r2_pooled": -0.8179778180758814,
+      "std_r2_pooled": 0.03060412537616066,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute to this pooled round."
+    },
+    "5": {
+      "mean_r2_pooled": -0.7428989686137879,
+      "std_r2_pooled": 0.029956104225708647,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": false,
+      "note": "all 4 facilities contribute to this pooled round."
+    },
+    "10": {
+      "mean_r2_pooled": -0.683270527499946,
+      "std_r2_pooled": 0.062918105189463,
+      "n_reps_used": 20,
+      "any_rep_skipped_zheng2024": true,
+      "note": "Zheng2024 (n=8) cannot supply test points for the pooled round when n_cal=10 (8-10<2); it is excluded ONLY from that pooled round, the other 3 facilities still contribute."
+    },
+    "0": {
+      "mean_r2_pooled": -0.8848004392997484,
+      "std_r2_pooled": 0.0,
+      "n_reps_used": 1,
+      "any_rep_skipped_zheng2024": false,
+      "note": "lambda=0 across all 4 facilities = original pure LOFO (consistency check, should be -0.885)"
+    }
+  },
+  "sanity_check_vs_original_lofo": {
+    "Guo2024": {
+      "n_test": 45,
+      "r2_log_ncal0": -8.986612059551172,
+      "note": "should match lofo_cv.per_facility.<f>.held_out_r2_log from scaling_law_search_results.json (same model, same test set = whole facility, lambda=0)"
+    },
+    "Liu2024": {
+      "n_test": 20,
+      "r2_log_ncal0": -118.6301860603597,
+      "note": "should match lofo_cv.per_facility.<f>.held_out_r2_log from scaling_law_search_results.json (same model, same test set = whole facility, lambda=0)"
+    },
+    "Vrancik1968": {
+      "n_test": 41,
+      "r2_log_ncal0": -1.8542073187456056,
+      "note": "should match lofo_cv.per_facility.<f>.held_out_r2_log from scaling_law_search_results.json (same model, same test set = whole facility, lambda=0)"
+    },
+    "Zheng2024": {
+      "n_test": 8,
+      "r2_log_ncal0": -553.7587044467028,
+      "note": "should match lofo_cv.per_facility.<f>.held_out_r2_log from scaling_law_search_results.json (same model, same test set = whole facility, lambda=0)"
+    }
+  },
+  "config": {
+    "rng_seed": 12345,
+    "n_repeats": 20,
+    "n_cal_grid": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "min_test_points": 2,
+    "model_form": "log(Cp) = b0 + q*log(Re) + p*log(Pi_gap) + r*log(Pi_confinement) + t*log(Pi_aspect_axial), identical to the winning model M6 from scaling_law_search.py",
+    "shrinkage": "single-parameter James-Stein/empirical-Bayes (the intercept only): lambda = tau2/(tau2+sigma2/n_cal), tau2 and sigma2 estimated from the 3 training facilities in each LOFO round. Slopes are NEVER refit with data from the excluded facility."
+  }
+}

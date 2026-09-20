@@ -1,0 +1,1731 @@
+{
+  "method": "Bayesian Model Averaging con pesos = softmax(alpha * LOFO_R2_normalizado), calculado con nested-LOFO (leakage-free) por fold exterior",
+  "n_points": 114,
+  "n_structures": 28,
+  "structure_names": [
+    "M0_null",
+    "M1_Re",
+    "M2_Re_g",
+    "M3_Re_gap",
+    "M4_Re_conf",
+    "M5_Re_gap_conf",
+    "M6_Re_gap_conf_asp",
+    "M7_Re_gap_conf_Mtip",
+    "M8_Re_gap_conf_cross",
+    "M9full_Re_gap_conf_Mtip_cross",
+    "N1_Re_Mtip",
+    "N2_Mtip_only",
+    "N3_g_only",
+    "N4_M6_plus_g",
+    "N5_M6_plus_Mtip",
+    "N6_Re_Mtip_g",
+    "N7_Re_conf_Mtip",
+    "N8_Re_conf_slender",
+    "N9_Re_x_g_combined",
+    "N10_Re_x_g_plus_conf_gap",
+    "N11_M6_plus_Mtip_x_gap",
+    "N12_M6_plus_Mtip_x_conf",
+    "N13_M6_plus_g_x_conf",
+    "N14_M6_plus_g_x_gap",
+    "N15_Mtip_x_gap_only",
+    "N16_g_x_conf_only",
+    "N17_M6_full_plus_g_plus_Mtip",
+    "M10_Re_logcorrection"
+  ],
+  "alpha_primary": 5.0,
+  "alphas_tested": [
+    1.0,
+    3.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "individual_structures_lofo_ranking_pooled_r2": [
+    [
+      "M10_Re_logcorrection",
+      0.4670681779510456
+    ],
+    [
+      "M1_Re",
+      0.4525971784455688
+    ],
+    [
+      "N1_Re_Mtip",
+      0.4492020042633028
+    ],
+    [
+      "M4_Re_conf",
+      0.4080535485056558
+    ],
+    [
+      "N7_Re_conf_Mtip",
+      0.39182684762356057
+    ],
+    [
+      "M3_Re_gap",
+      0.36903924578509784
+    ],
+    [
+      "M2_Re_g",
+      0.36676256149447806
+    ],
+    [
+      "N6_Re_Mtip_g",
+      0.35902823457479194
+    ],
+    [
+      "N9_Re_x_g_combined",
+      -0.4481664284897411
+    ],
+    [
+      "N15_Mtip_x_gap_only",
+      -0.6045709775205539
+    ],
+    [
+      "N2_Mtip_only",
+      -0.6118314300698751
+    ],
+    [
+      "N14_M6_plus_g_x_gap",
+      -0.7617857957523384
+    ],
+    [
+      "N4_M6_plus_g",
+      -0.7617857957523455
+    ],
+    [
+      "N13_M6_plus_g_x_conf",
+      -0.7617857957523455
+    ],
+    [
+      "M6_Re_gap_conf_asp",
+      -0.8848004392997477
+    ],
+    [
+      "N3_g_only",
+      -1.1512850872427953
+    ],
+    [
+      "N16_g_x_conf_only",
+      -1.157412119160206
+    ],
+    [
+      "M0_null",
+      -1.1990583656891731
+    ],
+    [
+      "N5_M6_plus_Mtip",
+      -1.610556561302956
+    ],
+    [
+      "N12_M6_plus_Mtip_x_conf",
+      -1.6105565613029782
+    ],
+    [
+      "N11_M6_plus_Mtip_x_gap",
+      -1.6105565613029973
+    ],
+    [
+      "M8_Re_gap_conf_cross",
+      -2.04288992949358
+    ],
+    [
+      "M9full_Re_gap_conf_Mtip_cross",
+      -2.206693067419252
+    ],
+    [
+      "N8_Re_conf_slender",
+      -4.533270847929591
+    ],
+    [
+      "N17_M6_full_plus_g_plus_Mtip",
+      -6.276636148736293
+    ],
+    [
+      "M5_Re_gap_conf",
+      -10.00390423611898
+    ],
+    [
+      "M7_Re_gap_conf_Mtip",
+      -10.196314560406007
+    ],
+    [
+      "N10_Re_x_g_plus_conf_gap",
+      -101.80117154688202
+    ]
+  ],
+  "individual_lofo_detail": {
+    "M0_null": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -9.40436281378329,
+          "held_out_rmse_log": 2.627881550334326
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -164.9496997609027,
+          "held_out_rmse_log": 1.1255059963449106
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -9.3982195113056,
+          "held_out_rmse_log": 1.8107416763027306
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -29.00739363988752,
+          "held_out_rmse_log": 0.5944409988589031
+        }
+      },
+      "pooled_r2_log": -1.1990583656891731,
+      "pooled_rmse_log": 2.037696547041183
+    },
+    "M1_Re": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.360583794947481,
+          "held_out_rmse_log": 1.4935006163639901
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -61.71087236992049,
+          "held_out_rmse_log": 0.691880353700191
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.4675971092959127,
+          "held_out_rmse_log": 0.40972947688982037
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -9.594527038034817,
+          "held_out_rmse_log": 0.3532119630237192
+        }
+      },
+      "pooled_r2_log": 0.4525971784455688,
+      "pooled_rmse_log": 1.0166574494063998
+    },
+    "M2_Re_g": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.4537972389205063,
+          "held_out_rmse_log": 1.514071765353531
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -162.55377732663,
+          "held_out_rmse_log": 1.1173516302914581
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.44777510564847167,
+          "held_out_rmse_log": 0.417287136562811
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -10.020901371629089,
+          "held_out_rmse_log": 0.36024932476045624
+        }
+      },
+      "pooled_r2_log": 0.36676256149447806,
+      "pooled_rmse_log": 1.0934638332567772
+    },
+    "M3_Re_gap": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.6756579861126863,
+          "held_out_rmse_log": 1.5619444664264204
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -87.52845395732734,
+          "held_out_rmse_log": 0.8220552694460973
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.12085777974581757,
+          "held_out_rmse_log": 0.5265099409620347
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -11.198216118489494,
+          "held_out_rmse_log": 0.3790031149336352
+        }
+      },
+      "pooled_r2_log": 0.36903924578509784,
+      "pooled_rmse_log": 1.0914963930702348
+    },
+    "M4_Re_conf": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.599145033361996,
+          "held_out_rmse_log": 1.5456021583824855
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -69.00085213888934,
+          "held_out_rmse_log": 0.7309896721527777
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.4765575399503986,
+          "held_out_rmse_log": 0.40626693811061004
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -25.151993932996174,
+          "held_out_rmse_log": 0.5549412664669475
+        }
+      },
+      "pooled_r2_log": 0.4080535485056558,
+      "pooled_rmse_log": 1.057212628427803
+    },
+    "M5_Re_gap_conf": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.5896919899721826,
+          "held_out_rmse_log": 1.5435710856760474
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -110.09392190103799,
+          "held_out_rmse_log": 0.9208835751955142
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -171.76025776762836,
+          "held_out_rmse_log": 7.380723374295374
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -115.29513002699909,
+          "held_out_rmse_log": 1.1702411942218083
+        }
+      },
+      "pooled_r2_log": -10.00390423611898,
+      "pooled_rmse_log": 4.55821213006953
+    },
+    "M6_Re_gap_conf_asp": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.986612059551168,
+          "held_out_rmse_log": 2.574584388755977
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -118.63018606035955,
+          "held_out_rmse_log": 0.9556084177859963
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.8542073187456043,
+          "held_out_rmse_log": 0.948680042841675
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -553.7587044467027,
+          "held_out_rmse_log": 2.555916609227836
+        }
+      },
+      "pooled_r2_log": -0.8848004392997477,
+      "pooled_rmse_log": 1.886487007845539
+    },
+    "M7_Re_gap_conf_Mtip": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.5401632454290635,
+          "held_out_rmse_log": 1.5328853942879417
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -112.6012398994722,
+          "held_out_rmse_log": 0.9312174666958063
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -175.0732119889416,
+          "held_out_rmse_log": 7.451155900673517
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -111.92728382293238,
+          "held_out_rmse_log": 1.1531719202349362
+        }
+      },
+      "pooled_r2_log": -10.196314560406007,
+      "pooled_rmse_log": 4.597891060392745
+    },
+    "M8_Re_gap_conf_cross": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -6.666537719644549,
+          "held_out_rmse_log": 2.255784873625713
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -106.9409482509206,
+          "held_out_rmse_log": 0.9077216462782295
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -29.286160958814193,
+          "held_out_rmse_log": 3.0902891698485315
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -189.83716059152826,
+          "held_out_rmse_log": 1.4990844203197782
+        }
+      },
+      "pooled_r2_log": -2.04288992949358,
+      "pooled_rmse_log": 2.3969791307023014
+    },
+    "M9full_Re_gap_conf_Mtip_cross": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -6.666499607815423,
+          "held_out_rmse_log": 2.2557792666491583
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -108.36841843745985,
+          "held_out_rmse_log": 0.913704036607613
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -32.02625348595872,
+          "held_out_rmse_log": 3.227057187919194
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -185.77910909962307,
+          "held_out_rmse_log": 1.483060156222748
+        }
+      },
+      "pooled_r2_log": -2.206693067419252,
+      "pooled_rmse_log": 2.460649905409731
+    },
+    "N1_Re_Mtip": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.342713696231394,
+          "held_out_rmse_log": 1.4895244354671744
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -63.03460606315643,
+          "held_out_rmse_log": 0.6991445050992076
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.3985648662589636,
+          "held_out_rmse_log": 0.43548319852324485
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -11.3991913904911,
+          "held_out_rmse_log": 0.3821125479161753
+        }
+      },
+      "pooled_r2_log": 0.4492020042633028,
+      "pooled_rmse_log": 1.019805399444264
+    },
+    "N2_Mtip_only": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -7.05743168320978,
+          "held_out_rmse_log": 2.3125778291546077
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -90.92572020607955,
+          "held_out_rmse_log": 0.8376799066239023
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -5.377137419387772,
+          "held_out_rmse_log": 1.4180446137948355
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -103.13461374780343,
+          "held_out_rmse_log": 1.1073685186420952
+        }
+      },
+      "pooled_r2_log": -0.6118314300698751,
+      "pooled_rmse_log": 1.744540039210216
+    },
+    "N3_g_only": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.939915677064464,
+          "held_out_rmse_log": 2.568558088509272
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -863.9229919571172,
+          "held_out_rmse_log": 2.569498086510845
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.484293666324826,
+          "held_out_rmse_log": 0.8850717374915141
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -20.414867425938553,
+          "held_out_rmse_log": 0.5021717905561827
+        }
+      },
+      "pooled_r2_log": -1.1512850872427953,
+      "pooled_rmse_log": 2.0154411188880674
+    },
+    "N4_M6_plus_g": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -7.203173711858273,
+          "held_out_rmse_log": 2.333398938269352
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -100.15882817304445,
+          "held_out_rmse_log": 0.8787421786046982
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.7661213275743801,
+          "held_out_rmse_log": 0.9339263297148173
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -880.1459131472121,
+          "held_out_rmse_log": 3.2212062508361363
+        }
+      },
+      "pooled_r2_log": -0.7617857957523455,
+      "pooled_rmse_log": 1.8238859738653337
+    },
+    "N5_M6_plus_Mtip": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.784172718862367,
+          "held_out_rmse_log": 2.5483559949506103
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -139.2605020603591,
+          "held_out_rmse_log": 1.034730551275543
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -14.119652569320946,
+          "held_out_rmse_log": 2.183473435968681
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -559.5679154214266,
+          "held_out_rmse_log": 2.569264025577223
+        }
+      },
+      "pooled_r2_log": -1.610556561302956,
+      "pooled_rmse_log": 2.2201774385263255
+    },
+    "N6_Re_Mtip_g": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.4240985887726825,
+          "held_out_rmse_log": 1.507548080550321
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -177.05794677785468,
+          "held_out_rmse_log": 1.1658435066813109
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.44457972688444847,
+          "held_out_rmse_log": 0.4184926844794513
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -13.165436427450635,
+          "held_out_rmse_log": 0.40842244158086616
+        }
+      },
+      "pooled_r2_log": 0.35902823457479194,
+      "pooled_rmse_log": 1.100121319688907
+    },
+    "N7_Re_conf_Mtip": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.565389646317103,
+          "held_out_rmse_log": 1.538337196392645
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -70.230828317687,
+          "held_out_rmse_log": 0.7373837708327688
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.13928912023998252,
+          "held_out_rmse_log": 0.5209615285689433
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -24.6529883716624,
+          "held_out_rmse_log": 0.549621356557873
+        }
+      },
+      "pooled_r2_log": 0.39182684762356057,
+      "pooled_rmse_log": 1.071605055061753
+    },
+    "N8_Re_conf_slender": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.774560066058462,
+          "held_out_rmse_log": 1.5828188444727176
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -138.0266240893972,
+          "held_out_rmse_log": 1.0301692118440244
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -76.13258831819462,
+          "held_out_rmse_log": 4.93169215542353
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -634.8198587008608,
+          "held_out_rmse_log": 2.736287091486878
+        }
+      },
+      "pooled_r2_log": -4.533270847929591,
+      "pooled_rmse_log": 3.232303227856127
+    },
+    "N9_Re_x_g_combined": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -6.959281002969199,
+          "held_out_rmse_log": 2.2984494707366103
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -403.60495394046615,
+          "held_out_rmse_log": 1.7574184261964887
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.2406489430438007,
+          "held_out_rmse_log": 0.48932601734864595
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -24.519404463606115,
+          "held_out_rmse_log": 0.5481884552737987
+        }
+      },
+      "pooled_r2_log": -0.4481664284897411,
+      "pooled_rmse_log": 1.6535996401919915
+    },
+    "N10_Re_x_g_plus_conf_gap": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.596717655934613,
+          "held_out_rmse_log": 2.5238259448728786
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -468.97912461589186,
+          "held_out_rmse_log": 1.8940823696377487
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1667.1112983626506,
+          "held_out_rmse_log": 22.934512798071808
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -2165.5182602740647,
+          "held_out_rmse_log": 5.050981693100859
+        }
+      },
+      "pooled_r2_log": -101.80117154688202,
+      "pooled_rmse_log": 13.932214859200618
+    },
+    "N11_M6_plus_Mtip_x_gap": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.784172718862363,
+          "held_out_rmse_log": 2.54835599495061
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -139.26050206036433,
+          "held_out_rmse_log": 1.0347305512755622
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -14.119652569321623,
+          "held_out_rmse_log": 2.18347343596873
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -559.567915421422,
+          "held_out_rmse_log": 2.569264025577213
+        }
+      },
+      "pooled_r2_log": -1.6105565613029973,
+      "pooled_rmse_log": 2.2201774385263433
+    },
+    "N12_M6_plus_Mtip_x_conf": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.784172718862404,
+          "held_out_rmse_log": 2.548355994950615
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -139.26050206035842,
+          "held_out_rmse_log": 1.0347305512755405
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -14.119652569321298,
+          "held_out_rmse_log": 2.1834734359687062
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -559.5679154214191,
+          "held_out_rmse_log": 2.569264025577206
+        }
+      },
+      "pooled_r2_log": -1.6105565613029782,
+      "pooled_rmse_log": 2.2201774385263353
+    },
+    "N13_M6_plus_g_x_conf": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -7.2031737118582715,
+          "held_out_rmse_log": 2.3333989382693514
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -100.15882817304318,
+          "held_out_rmse_log": 0.8787421786046926
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.7661213275744054,
+          "held_out_rmse_log": 0.9339263297148215
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -880.1459131472124,
+          "held_out_rmse_log": 3.2212062508361368
+        }
+      },
+      "pooled_r2_log": -0.7617857957523455,
+      "pooled_rmse_log": 1.8238859738653337
+    },
+    "N14_M6_plus_g_x_gap": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -7.203173711858247,
+          "held_out_rmse_log": 2.3333989382693483
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -100.15882817304724,
+          "held_out_rmse_log": 0.8787421786047103
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.766121327574396,
+          "held_out_rmse_log": 0.9339263297148199
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -880.1459131471987,
+          "held_out_rmse_log": 3.221206250836112
+        }
+      },
+      "pooled_r2_log": -0.7617857957523384,
+      "pooled_rmse_log": 1.8238859738653301
+    },
+    "N15_Mtip_x_gap_only": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -7.195949639653566,
+          "held_out_rmse_log": 2.3323712655774687
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -425.7152294748054,
+          "held_out_rmse_log": 1.8047982000655354
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.3301067184396559,
+          "held_out_rmse_log": 0.45959978613501934
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -283.2977953820465,
+          "held_out_rmse_log": 1.8297062160757134
+        }
+      },
+      "pooled_r2_log": -0.6045709775205539,
+      "pooled_rmse_log": 1.740606487059594
+    },
+    "N16_g_x_conf_only": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -8.990917013822054,
+          "held_out_rmse_log": 2.5751392452882387
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -851.2693296845291,
+          "held_out_rmse_log": 2.5506331956261934
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -1.571711878663244,
+          "held_out_rmse_log": 0.9005092168468559
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -26.754091168603207,
+          "held_out_rmse_log": 0.5716867449389554
+        }
+      },
+      "pooled_r2_log": -1.157412119160206,
+      "pooled_rmse_log": 2.0183091469643033
+    },
+    "N17_M6_full_plus_g_plus_Mtip": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -6.095626640402257,
+          "held_out_rmse_log": 2.1701683208214724
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -37.522381911850914,
+          "held_out_rmse_log": 0.5422707057967627
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -103.07458911513545,
+          "held_out_rmse_log": 5.728611352426834
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -30.836115409608865,
+          "held_out_rmse_log": 0.6122864559476604
+        }
+      },
+      "pooled_r2_log": -6.276636148736293,
+      "pooled_rmse_log": 3.7066916627703845
+    },
+    "M10_Re_logcorrection": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -2.360583794947481,
+          "held_out_rmse_log": 1.4935006163639901
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -55.31217790148112,
+          "held_out_rmse_log": 0.6556329017576674
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": 0.6227385569414989,
+          "held_out_rmse_log": 0.34490398930458216
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -8.189801382553505,
+          "held_out_rmse_log": 0.3289634745967852
+        }
+      },
+      "pooled_r2_log": 0.4670681779510456,
+      "pooled_rmse_log": 1.0031293977866917
+    }
+  },
+  "best_individual_structure": {
+    "name": "M10_Re_logcorrection",
+    "pooled_r2_log": 0.4670681779510456,
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "held_out_r2_log": -2.360583794947481,
+        "held_out_rmse_log": 1.4935006163639901
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "held_out_r2_log": -55.31217790148112,
+        "held_out_rmse_log": 0.6556329017576674
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "held_out_r2_log": 0.6227385569414989,
+        "held_out_rmse_log": 0.34490398930458216
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "held_out_r2_log": -8.189801382553505,
+        "held_out_rmse_log": 0.3289634745967852
+      }
+    }
+  },
+  "nested_inner_lofo_r2_used_for_weights": {
+    "M0_null": {
+      "Guo2024": -0.2157637695067085,
+      "Liu2024": -1.842187938970412,
+      "Vrancik1968": -2.0372965100670988,
+      "Zheng2024": -1.389071125448969
+    },
+    "M1_Re": {
+      "Guo2024": -0.21349563585117792,
+      "Liu2024": 0.6975597092068846,
+      "Vrancik1968": -1.0555398620553222,
+      "Zheng2024": 0.40248708894062146
+    },
+    "M2_Re_g": {
+      "Guo2024": -0.6078041436133514,
+      "Liu2024": 0.6457567936004097,
+      "Vrancik1968": -1.5888370876545368,
+      "Zheng2024": 0.33777404279428247
+    },
+    "M3_Re_gap": {
+      "Guo2024": -6.995674930902499,
+      "Liu2024": 0.14792176997564643,
+      "Vrancik1968": -2.068801370329479,
+      "Zheng2024": -26.723399337076483
+    },
+    "M4_Re_conf": {
+      "Guo2024": -0.4463372963731933,
+      "Liu2024": 0.48129082614184915,
+      "Vrancik1968": -1.7762692554346051,
+      "Zheng2024": -0.8025425585084842
+    },
+    "M5_Re_gap_conf": {
+      "Guo2024": -5.240723573659198,
+      "Liu2024": 0.3838790513203757,
+      "Vrancik1968": -2.0051804121030474,
+      "Zheng2024": -29.905977646923624
+    },
+    "M6_Re_gap_conf_asp": {
+      "Guo2024": -44.50842086469552,
+      "Liu2024": -2.5697695457879792,
+      "Vrancik1968": -0.21207110393692075,
+      "Zheng2024": -2.161596746172039
+    },
+    "M7_Re_gap_conf_Mtip": {
+      "Guo2024": -3.7280689470813613,
+      "Liu2024": -7.201378071173293,
+      "Vrancik1968": -2.773055313512989,
+      "Zheng2024": -80.8978782216666
+    },
+    "M8_Re_gap_conf_cross": {
+      "Guo2024": -6.490465531374298,
+      "Liu2024": 0.12819268858018373,
+      "Vrancik1968": -1.906182829731328,
+      "Zheng2024": -4.566110951298967
+    },
+    "M9full_Re_gap_conf_Mtip_cross": {
+      "Guo2024": -1.87613074459022,
+      "Liu2024": -11.549780666160032,
+      "Vrancik1968": -1.536153914898521,
+      "Zheng2024": -12.158868849730554
+    },
+    "N1_Re_Mtip": {
+      "Guo2024": -0.3367564799866152,
+      "Liu2024": 0.6966615552109315,
+      "Vrancik1968": -1.1579076686864385,
+      "Zheng2024": 0.4330059428643328
+    },
+    "N2_Mtip_only": {
+      "Guo2024": -0.10060548257992608,
+      "Liu2024": -1.1511641882826855,
+      "Vrancik1968": -1.6197704590416238,
+      "Zheng2024": -0.6025216714697892
+    },
+    "N3_g_only": {
+      "Guo2024": -0.8081987430914976,
+      "Liu2024": -0.7962154505597667,
+      "Vrancik1968": -2.431561809686064,
+      "Zheng2024": -1.2844881090835218
+    },
+    "N4_M6_plus_g": {
+      "Guo2024": -130.22346594343273,
+      "Liu2024": -2.6716791313417447,
+      "Vrancik1968": -2.2266192238122384,
+      "Zheng2024": -35.992902364524504
+    },
+    "N5_M6_plus_Mtip": {
+      "Guo2024": -51.007102620436676,
+      "Liu2024": -0.5419886124082418,
+      "Vrancik1968": -0.5139928999865895,
+      "Zheng2024": -24.484194836794387
+    },
+    "N6_Re_Mtip_g": {
+      "Guo2024": -0.6485653183450453,
+      "Liu2024": 0.663992457867522,
+      "Vrancik1968": -7.108547726968499,
+      "Zheng2024": -13.939296350957646
+    },
+    "N7_Re_conf_Mtip": {
+      "Guo2024": -0.35381310333429794,
+      "Liu2024": 0.48393436676330615,
+      "Vrancik1968": -1.8834732414296549,
+      "Zheng2024": -1.390091809269805
+    },
+    "N8_Re_conf_slender": {
+      "Guo2024": -26.745779884759678,
+      "Liu2024": -3.2722914930467164,
+      "Vrancik1968": -0.672131272246252,
+      "Zheng2024": -1.3853743838744617
+    },
+    "N9_Re_x_g_combined": {
+      "Guo2024": -13.003202082306222,
+      "Liu2024": 0.024092184041886622,
+      "Vrancik1968": -2.369764976836621,
+      "Zheng2024": -0.9083687592734135
+    },
+    "N10_Re_x_g_plus_conf_gap": {
+      "Guo2024": -42.69671451625126,
+      "Liu2024": 0.19418670524352177,
+      "Vrancik1968": -4.0748386003522485,
+      "Zheng2024": -65.66167000146633
+    },
+    "N11_M6_plus_Mtip_x_gap": {
+      "Guo2024": -51.5598531638643,
+      "Liu2024": -0.30699624684620375,
+      "Vrancik1968": -0.4988226260121602,
+      "Zheng2024": -24.48419483679442
+    },
+    "N12_M6_plus_Mtip_x_conf": {
+      "Guo2024": -52.89660890407693,
+      "Liu2024": -0.3870822869443469,
+      "Vrancik1968": -0.4949952574778296,
+      "Zheng2024": -24.484194836794277
+    },
+    "N13_M6_plus_g_x_conf": {
+      "Guo2024": -244.55743878597113,
+      "Liu2024": -14.733203495436008,
+      "Vrancik1968": -2.2192495502391534,
+      "Zheng2024": -35.992902364524504
+    },
+    "N14_M6_plus_g_x_gap": {
+      "Guo2024": -134.51052362105136,
+      "Liu2024": -2.349148093888217,
+      "Vrancik1968": -2.2237223041934215,
+      "Zheng2024": -35.9929023645249
+    },
+    "N15_Mtip_x_gap_only": {
+      "Guo2024": -0.5297504485023397,
+      "Liu2024": -0.9479459669389916,
+      "Vrancik1968": -2.0880140298414434,
+      "Zheng2024": -0.708681564503385
+    },
+    "N16_g_x_conf_only": {
+      "Guo2024": -345.26362537146906,
+      "Liu2024": -75.67718121051105,
+      "Vrancik1968": -2.4214881649036504,
+      "Zheng2024": -1.2572180339763563
+    },
+    "N17_M6_full_plus_g_plus_Mtip": {
+      "Guo2024": -82.10341292699518,
+      "Liu2024": -2.7246032558005258,
+      "Vrancik1968": -3884015.47700948,
+      "Zheng2024": -10016971.58507605
+    },
+    "M10_Re_logcorrection": {
+      "Guo2024": -0.21349563585117792,
+      "Liu2024": 0.6976134387771922,
+      "Vrancik1968": -1.0525530383937984,
+      "Zheng2024": 0.41810960699731714
+    }
+  },
+  "ensemble_bma_lofo_weighted_by_alpha": {
+    "1.0": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -5.172185045902349,
+          "held_out_rmse_log": 2.024032635319147,
+          "top3_weights": [
+            [
+              "N2_Mtip_only",
+              0.039731734590689974
+            ],
+            [
+              "M1_Re",
+              0.03971874192363932
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.03971874192363932
+            ]
+          ]
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -141.63001259973151,
+          "held_out_rmse_log": 1.0434341295697955,
+          "top3_weights": [
+            [
+              "M10_Re_logcorrection",
+              0.037681060797141515
+            ],
+            [
+              "M1_Re",
+              0.037681034288572786
+            ],
+            [
+              "N1_Re_Mtip",
+              0.03768059116891953
+            ]
+          ]
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -9.709043588354502,
+          "held_out_rmse_log": 1.8376057872951137,
+          "top3_weights": [
+            [
+              "M6_Re_gap_conf_asp",
+              0.03653920054840674
+            ],
+            [
+              "N12_M6_plus_Mtip_x_conf",
+              0.036539197886774046
+            ],
+            [
+              "N11_M6_plus_Mtip_x_gap",
+              0.03653919785076775
+            ]
+          ]
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -125.7590793352059,
+          "held_out_rmse_log": 1.221755086113672,
+          "top3_weights": [
+            [
+              "N1_Re_Mtip",
+              0.036539242918177395
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.03653924286383955
+            ],
+            [
+              "M1_Re",
+              0.036539242806852765
+            ]
+          ]
+        }
+      },
+      "pooled_r2_log": -0.6562777922686394,
+      "pooled_rmse_log": 1.7684293772033453
+    },
+    "3.0": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -4.8930508296805995,
+          "held_out_rmse_log": 1.9777351637443872,
+          "top3_weights": [
+            [
+              "N2_Mtip_only",
+              0.04538620168047683
+            ],
+            [
+              "M1_Re",
+              0.04534169103925856
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.04534169103925856
+            ]
+          ]
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -137.7641062738817,
+          "held_out_rmse_log": 1.0291961408316697,
+          "top3_weights": [
+            [
+              "M10_Re_logcorrection",
+              0.040346810760477705
+            ],
+            [
+              "M1_Re",
+              0.04034672560877833
+            ],
+            [
+              "N1_Re_Mtip",
+              0.04034530222294344
+            ]
+          ]
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -9.198207104248972,
+          "held_out_rmse_log": 1.7932420761503305,
+          "top3_weights": [
+            [
+              "M6_Re_gap_conf_asp",
+              0.03696891658676655
+            ],
+            [
+              "N12_M6_plus_Mtip_x_conf",
+              0.03696890850796338
+            ],
+            [
+              "N11_M6_plus_Mtip_x_gap",
+              0.036968908398674165
+            ]
+          ]
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -128.82957367871668,
+          "held_out_rmse_log": 1.236463876949876,
+          "top3_weights": [
+            [
+              "N1_Re_Mtip",
+              0.03696904670294318
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.03696904653801212
+            ],
+            [
+              "M1_Re",
+              0.036969046365040815
+            ]
+          ]
+        }
+      },
+      "pooled_r2_log": -0.5854660629432671,
+      "pooled_rmse_log": 1.7302131426726115
+    },
+    "5.0": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -4.715855982346105,
+          "held_out_rmse_log": 1.9477745214758473,
+          "top3_weights": [
+            [
+              "N2_Mtip_only",
+              0.04938908282743028
+            ],
+            [
+              "M1_Re",
+              0.04930838205118417
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.04930838205118417
+            ]
+          ]
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -137.59809655108495,
+          "held_out_rmse_log": 1.028580319845735,
+          "top3_weights": [
+            [
+              "M10_Re_logcorrection",
+              0.042479702225191006
+            ],
+            [
+              "M1_Re",
+              0.042479552803373004
+            ],
+            [
+              "N1_Re_Mtip",
+              0.04247705511689103
+            ]
+          ]
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -9.129202949126734,
+          "held_out_rmse_log": 1.7871649695661789,
+          "top3_weights": [
+            [
+              "M6_Re_gap_conf_asp",
+              0.037027878320899085
+            ],
+            [
+              "N12_M6_plus_Mtip_x_conf",
+              0.037027864834753295
+            ],
+            [
+              "N11_M6_plus_Mtip_x_gap",
+              0.037027864652314134
+            ]
+          ]
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -129.2535503036592,
+          "held_out_rmse_log": 1.2384811542000838,
+          "top3_weights": [
+            [
+              "N1_Re_Mtip",
+              0.037028095872764344
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.03702809559744019
+            ],
+            [
+              "M1_Re",
+              0.0370280953086942
+            ]
+          ]
+        }
+      },
+      "pooled_r2_log": -0.5568020360018213,
+      "pooled_rmse_log": 1.714501332036197
+    },
+    "10.0": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -4.453880571239843,
+          "held_out_rmse_log": 1.9026147247589276,
+          "top3_weights": [
+            [
+              "N2_Mtip_only",
+              0.05621100759880585
+            ],
+            [
+              "M1_Re",
+              0.05602746234554836
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.05602746234554836
+            ]
+          ]
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -137.9559457696032,
+          "held_out_rmse_log": 1.0299073199737123,
+          "top3_weights": [
+            [
+              "M10_Re_logcorrection",
+              0.04713047347438062
+            ],
+            [
+              "M1_Re",
+              0.04713014191326906
+            ],
+            [
+              "N1_Re_Mtip",
+              0.04712459981831389
+            ]
+          ]
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -9.1184524863496,
+          "held_out_rmse_log": 1.7862163287354982,
+          "top3_weights": [
+            [
+              "M6_Re_gap_conf_asp",
+              0.03703713824830433
+            ],
+            [
+              "N12_M6_plus_Mtip_x_conf",
+              0.037037111269272435
+            ],
+            [
+              "N11_M6_plus_Mtip_x_gap",
+              0.03703711090430301
+            ]
+          ]
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -129.31784397866014,
+          "held_out_rmse_log": 1.2387867761239049,
+          "top3_weights": [
+            [
+              "N1_Re_Mtip",
+              0.03703757356606768
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.03703757301527843
+            ],
+            [
+              "M1_Re",
+              0.03703757243763864
+            ]
+          ]
+        }
+      },
+      "pooled_r2_log": -0.5200868267280667,
+      "pooled_rmse_log": 1.6941635322900361
+    },
+    "20.0": {
+      "per_facility": {
+        "Guo2024": {
+          "n_test": 45,
+          "held_out_r2_log": -4.249877362392329,
+          "held_out_rmse_log": 1.866691805240393,
+          "top3_weights": [
+            [
+              "N2_Mtip_only",
+              0.06397419572770463
+            ],
+            [
+              "M1_Re",
+              0.06355708919723878
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.06355708919723878
+            ]
+          ]
+        },
+        "Liu2024": {
+          "n_test": 20,
+          "held_out_r2_log": -136.9494070374061,
+          "held_out_rmse_log": 1.026170431703701,
+          "top3_weights": [
+            [
+              "M10_Re_logcorrection",
+              0.055043383411791484
+            ],
+            [
+              "M1_Re",
+              0.055042608958243804
+            ],
+            [
+              "N1_Re_Mtip",
+              0.05502966465477475
+            ]
+          ]
+        },
+        "Vrancik1968": {
+          "n_test": 41,
+          "held_out_r2_log": -9.118323870914878,
+          "held_out_rmse_log": 1.7862049764205081,
+          "top3_weights": [
+            [
+              "M6_Re_gap_conf_asp",
+              0.03703736401192613
+            ],
+            [
+              "N12_M6_plus_Mtip_x_conf",
+              0.03703731005355308
+            ],
+            [
+              "N11_M6_plus_Mtip_x_gap",
+              0.037037309323610317
+            ]
+          ]
+        },
+        "Zheng2024": {
+          "n_test": 8,
+          "held_out_r2_log": -129.31441774916505,
+          "held_out_rmse_log": 1.2387704913406443,
+          "top3_weights": [
+            [
+              "N1_Re_Mtip",
+              0.037038234643601266
+            ],
+            [
+              "M10_Re_logcorrection",
+              0.0370382335420031
+            ],
+            [
+              "M1_Re",
+              0.03703823238670292
+            ]
+          ]
+        }
+      },
+      "pooled_r2_log": -0.4910564082304254,
+      "pooled_rmse_log": 1.6779080908113941
+    }
+  },
+  "ensemble_bma_primary_alpha": 5.0,
+  "ensemble_bma_primary_result": {
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "held_out_r2_log": -4.715855982346105,
+        "held_out_rmse_log": 1.9477745214758473,
+        "top3_weights": [
+          [
+            "N2_Mtip_only",
+            0.04938908282743028
+          ],
+          [
+            "M1_Re",
+            0.04930838205118417
+          ],
+          [
+            "M10_Re_logcorrection",
+            0.04930838205118417
+          ]
+        ]
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "held_out_r2_log": -137.59809655108495,
+        "held_out_rmse_log": 1.028580319845735,
+        "top3_weights": [
+          [
+            "M10_Re_logcorrection",
+            0.042479702225191006
+          ],
+          [
+            "M1_Re",
+            0.042479552803373004
+          ],
+          [
+            "N1_Re_Mtip",
+            0.04247705511689103
+          ]
+        ]
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "held_out_r2_log": -9.129202949126734,
+        "held_out_rmse_log": 1.7871649695661789,
+        "top3_weights": [
+          [
+            "M6_Re_gap_conf_asp",
+            0.037027878320899085
+          ],
+          [
+            "N12_M6_plus_Mtip_x_conf",
+            0.037027864834753295
+          ],
+          [
+            "N11_M6_plus_Mtip_x_gap",
+            0.037027864652314134
+          ]
+        ]
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "held_out_r2_log": -129.2535503036592,
+        "held_out_rmse_log": 1.2384811542000838,
+        "top3_weights": [
+          [
+            "N1_Re_Mtip",
+            0.037028095872764344
+          ],
+          [
+            "M10_Re_logcorrection",
+            0.03702809559744019
+          ],
+          [
+            "M1_Re",
+            0.0370280953086942
+          ]
+        ]
+      }
+    },
+    "pooled_r2_log": -0.5568020360018213,
+    "pooled_rmse_log": 1.714501332036197
+  },
+  "weights_by_fold_alpha_primary_full": {
+    "Guo2024": {
+      "M0_null": 0.049306762002726906,
+      "M1_Re": 0.04930838205118417,
+      "M2_Re_g": 0.04902753950120838,
+      "M3_Re_gap": 0.044694393009415564,
+      "M4_Re_conf": 0.04914234883929081,
+      "M5_Re_gap_conf": 0.04584518252718236,
+      "M6_Re_gap_conf_asp": 0.025957013536391176,
+      "M7_Re_gap_conf_Mtip": 0.04686083723912974,
+      "M8_Re_gap_conf_cross": 0.045022685049852566,
+      "M9full_Re_gap_conf_Mtip_cross": 0.04813498769030704,
+      "N1_Re_Mtip": 0.049220418254580074,
+      "N2_Mtip_only": 0.04938908282743028,
+      "N3_g_only": 0.04888542393420053,
+      "N4_M6_plus_g": 0.007499088840389559,
+      "N5_M6_plus_Mtip": 0.023624930546059294,
+      "N6_Re_Mtip_g": 0.048998599114941054,
+      "N7_Re_conf_Mtip": 0.04920825834203122,
+      "N8_Re_conf_slender": 0.03357392889797821,
+      "N9_Re_x_g_combined": 0.040969323025811036,
+      "N10_Re_x_g_plus_conf_gap": 0.026647252697928586,
+      "N11_M6_plus_Mtip_x_gap": 0.02343651883017627,
+      "N12_M6_plus_Mtip_x_conf": 0.022987056990157278,
+      "N13_M6_plus_g_x_conf": 0.0014312526371936254,
+      "N14_M6_plus_g_x_gap": 0.007047546901323976,
+      "N15_Mtip_x_gap_only": 0.04908300524702885,
+      "N16_g_x_conf_only": 0.0003327810224246674,
+      "N17_M6_full_plus_g_plus_Mtip": 0.015057018392472506,
+      "M10_Re_logcorrection": 0.04930838205118417
+    },
+    "Liu2024": {
+      "M0_null": 0.035972477929897266,
+      "M1_Re": 0.042479552803373004,
+      "M2_Re_g": 0.04233573327116541,
+      "M3_Re_gap": 0.040978187342238404,
+      "M4_Re_conf": 0.041882348273119145,
+      "M5_Re_gap_conf": 0.04161610516843396,
+      "M6_Re_gap_conf_asp": 0.034299193209489105,
+      "M7_Re_gap_conf_Mtip": 0.025327887370706903,
+      "M8_Re_gap_conf_cross": 0.040925294230142434,
+      "M9full_Re_gap_conf_Mtip_cross": 0.019053119026291372,
+      "N1_Re_Mtip": 0.04247705511689103,
+      "N2_Mtip_only": 0.03763720803590141,
+      "N3_g_only": 0.03852203565471081,
+      "N4_M6_plus_g": 0.03407112174140056,
+      "N5_M6_plus_Mtip": 0.039168537321345766,
+      "N6_Re_Mtip_g": 0.04238630500984303,
+      "N7_Re_conf_Mtip": 0.04188959721373159,
+      "N8_Re_conf_slender": 0.03275743934328344,
+      "N9_Re_x_g_combined": 0.04064733215067672,
+      "N10_Re_x_g_plus_conf_gap": 0.04110249060112693,
+      "N11_M6_plus_Mtip_x_gap": 0.039775771161058356,
+      "N12_M6_plus_Mtip_x_conf": 0.03956777401312453,
+      "N13_M6_plus_g_x_conf": 0.01546876562242637,
+      "N14_M6_plus_g_x_gap": 0.03479818304430295,
+      "N15_Mtip_x_gap_only": 0.03814127951628248,
+      "N16_g_x_conf_only": 0.00028622598213027,
+      "N17_M6_full_plus_g_plus_Mtip": 0.03395327762171567,
+      "M10_Re_logcorrection": 0.042479702225191006
+    },
+    "Vrancik1968": {
+      "M0_null": 0.03702779131796497,
+      "M1_Re": 0.03702783811528781,
+      "M2_Re_g": 0.03702781269464034,
+      "M3_Re_gap": 0.037027789816226064,
+      "M4_Re_conf": 0.03702780376032637,
+      "M5_Re_gap_conf": 0.03702779284883975,
+      "M6_Re_gap_conf_asp": 0.037027878320899085,
+      "M7_Re_gap_conf_Mtip": 0.03702775624664229,
+      "M8_Re_gap_conf_cross": 0.037027797567747836,
+      "M9full_Re_gap_conf_Mtip_cross": 0.03702781520588527,
+      "N1_Re_Mtip": 0.03702783323572626,
+      "N2_Mtip_only": 0.037027811220141676,
+      "N3_g_only": 0.03702777252456621,
+      "N4_M6_plus_g": 0.03702778229353973,
+      "N5_M6_plus_Mtip": 0.03702786392919284,
+      "N6_Re_Mtip_g": 0.03702754958794326,
+      "N7_Re_conf_Mtip": 0.03702779865024365,
+      "N8_Re_conf_slender": 0.03702785639121331,
+      "N9_Re_x_g_combined": 0.03702777547022809,
+      "N10_Re_x_g_plus_conf_gap": 0.03702769419478285,
+      "N11_M6_plus_Mtip_x_gap": 0.037027864652314134,
+      "N12_M6_plus_Mtip_x_conf": 0.037027864834753295,
+      "N13_M6_plus_g_x_conf": 0.037027782644829095,
+      "N14_M6_plus_g_x_gap": 0.03702778243162686,
+      "N15_Mtip_x_gap_only": 0.03702778890041822,
+      "N16_g_x_conf_only": 0.03702777300474533,
+      "N17_M6_full_plus_g_plus_Mtip": 0.0002494918816148038,
+      "M10_Re_logcorrection": 0.037027838257660595
+    },
+    "Zheng2024": {
+      "M0_null": 0.03702806219591393,
+      "M1_Re": 0.0370280953086942,
+      "M2_Re_g": 0.03702809411262376,
+      "M3_Re_gap": 0.03702759395304189,
+      "M4_Re_conf": 0.03702807303652494,
+      "M5_Re_gap_conf": 0.03702753513131231,
+      "M6_Re_gap_conf_asp": 0.03702804791758653,
+      "M7_Re_gap_conf_Mtip": 0.037026592690643616,
+      "M8_Re_gap_conf_cross": 0.03702800347580628,
+      "M9full_Re_gap_conf_Mtip_cross": 0.03702786314191472,
+      "N1_Re_Mtip": 0.037028095872764344,
+      "N2_Mtip_only": 0.037028076733444715,
+      "N3_g_only": 0.03702806412888653,
+      "N4_M6_plus_g": 0.037027422630510676,
+      "N5_M6_plus_Mtip": 0.03702763533900224,
+      "N6_Re_Mtip_g": 0.03702783023506597,
+      "N7_Re_conf_Mtip": 0.037028062177048994,
+      "N8_Re_conf_slender": 0.03702806226423955,
+      "N9_Re_x_g_combined": 0.0370280710805745,
+      "N10_Re_x_g_plus_conf_gap": 0.03702687428622965,
+      "N11_M6_plus_Mtip_x_gap": 0.03702763533900224,
+      "N12_M6_plus_Mtip_x_conf": 0.03702763533900224,
+      "N13_M6_plus_g_x_conf": 0.037027422630510676,
+      "N14_M6_plus_g_x_gap": 0.037027422630510676,
+      "N15_Mtip_x_gap_only": 0.03702807477132655,
+      "N16_g_x_conf_only": 0.03702806463291019,
+      "N17_M6_full_plus_g_plus_Mtip": 0.0002494933474677415,
+      "M10_Re_logcorrection": 0.03702809559744019
+    }
+  },
+  "control_uniform_average_ensemble_no_weighting": {
+    "per_facility": {
+      "Guo2024": {
+        "n_test": 45,
+        "held_out_r2_log": -5.395164655981362
+      },
+      "Liu2024": {
+        "n_test": 20,
+        "held_out_r2_log": -149.87298469278466
+      },
+      "Vrancik1968": {
+        "n_test": 41,
+        "held_out_r2_log": -10.727973513725951
+      },
+      "Zheng2024": {
+        "n_test": 8,
+        "held_out_r2_log": -119.99064954020743
+      }
+    },
+    "pooled_r2_log": -0.7517377199578383,
+    "pooled_rmse_log": 1.81867740935261
+  },
+  "comparison_summary": {
+    "best_individual_structure": "M10_Re_logcorrection",
+    "best_individual_pooled_r2_log": 0.4670681779510456,
+    "bma_lofo_weighted_pooled_r2_log_at_alpha_primary": -0.5568020360018213,
+    "uniform_unweighted_average_pooled_r2_log": -0.7517377199578383,
+    "bma_beats_best_individual": false,
+    "bma_beats_uniform_average": true
+  },
+  "note_anti_leakage": "Los pesos de cada estructura para el fold donde se excluye la instalacion f se calculan con un LOFO ANIDADO restringido a las otras 3 instalaciones (entrena con 2, predice la 3a, para las 3 combinaciones dentro de esas 3), sin tocar nunca los puntos de f. La prediccion final del ensemble para f usa el modelo de cada estructura reentrenado en las 3 instalaciones de entrenamiento completas (no las 2 del interior) aplicado a f, ponderado por esos pesos anidados."
+}
