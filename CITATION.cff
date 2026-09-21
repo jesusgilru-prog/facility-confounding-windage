@@ -16,10 +16,10 @@ authors:
     orcid: "https://orcid.org/0000-0003-0675-2038"
     affiliation: "Science and Aerospace Department, Universidad Europea de Madrid, Villaviciosa de Odón, Spain"
     email: jesus.gil@universidadeuropea.es
-  - family-names: "Cardinale"
-    given-names: "Yudith"
-    orcid: "https://orcid.org/0000-0002-5966-0113"
-    affiliation: "Grupo de Investigación en Ciencia de Datos, Universidad Internacional de Valencia, Valencia, Spain"
+  - family-names: "Tena Moreno"
+    given-names: "Carlos Adrián"
+    orcid: "https://orcid.org/0009-0007-0707-1433"
+    affiliation: "Science and Aerospace Department, Universidad Europea de Madrid, Villaviciosa de Odón, Spain"
   - family-names: "Ariza Ruiz"
     given-names: "David"
     orcid: "https://orcid.org/0000-0001-8782-7219"
@@ -32,5 +32,5 @@ keywords:
   - leave-one-facility-out cross-validation
   - identifiability diagnostics
 license: CC-BY-4.0
-version: 1.0.1
-date-released: 2026-09-20
+version: 1.0.2
+date-released: 2026-09-21

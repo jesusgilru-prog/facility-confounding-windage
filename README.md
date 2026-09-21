@@ -3,9 +3,9 @@
 Replication package for the manuscript *"Detecting and Diagnosing
 Facility Confounding in Empirical Scaling Laws: A Cross-Facility
 Validation Protocol Applied to Windage Power in Rotor-Stator Systems"*
-by Jesús Gil Ruiz (Science and Aerospace Department, Universidad Europea
-de Madrid), Yudith Cardinale and David Ariza Ruiz (Universidad
-Internacional de Valencia).
+by Jesús Gil Ruiz and Carlos Adrián Tena Moreno (Science and Aerospace
+Department, Universidad Europea de Madrid) and David Ariza Ruiz
+(Universidad Internacional de Valencia).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22862639.svg)](https://doi.org/10.5281/zenodo.22862639)
 
